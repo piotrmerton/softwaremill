@@ -1,0 +1,49 @@
+/* 
+	Naming and structure guideline:
+	=================================
+	
+	- name-spaced components with an aid of BEM
+	- completely avoided IDs
+
+*/
+
+@import 'utilities/variables';
+@import 'utilities/mixins';
+
+/* recurring patterns and utility classes */
+@import 'utilities/reusables';
+
+@import 'base/fonts';
+@import 'base/reset';
+
+//basic and generic html elements, like body, img etc
+@import 'base/generic';
+@import 'base/ui';
+
+/* container widths and screen paddings */
+@import 'base/viewport';
+
+//text related generic html elements: headers (h1-h4), paragraphs etc;
+@import 'base/typography';
+
+//default layout grid definitions
+@import 'layout/grid';
+
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';
+
+@import 'components/nav';
+@import 'components/banner';
+@import 'components/button';
+@import 'components/cover';
+@import 'components/form';
+
+@import 'components/sections/events';
+@import 'components/sections/services';
+
+//specific subpages
+@import 'pages/index';
+
+//plugins
+@import 'vendor/tiny-slider';

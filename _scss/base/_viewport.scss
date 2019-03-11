@@ -1,0 +1,32 @@
+//generic viewport class constraining content width, treat it as a equivalent of "container" helper class
+
+.viewport {
+	width: 100%;
+	max-width: $viewport_width;
+	margin: 0 auto;
+
+
+	@media all and (max-width: $viewport_width + 172px) {
+		padding-left: 5.5rem;
+		padding-right: 5.5rem;	
+	}
+
+	//enhancement for tablet (not on design spec)
+	@media all and (max-width: $breakpoint_hd) {
+		padding-left: 3.75rem;
+		padding-right: 3.75rem;
+	}
+
+	
+	@media all and (max-width: $breakpoint_mobile) {
+		padding-left: $viewport-padding-mobile;
+		padding-right: $viewport-padding-mobile;
+	}	
+
+	@media all and (max-width: $breakpoint_phone) {
+		padding-left: $viewport-padding-phone;
+		padding-right: $viewport-padding-phone;
+	}
+				
+}
+

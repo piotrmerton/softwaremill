@@ -1,0 +1,89 @@
+/* UI (User Intefrace) */
+
+/* hamburger to x transformicon 
+ * source: https://codepen.io/designcouch/pen/Atyop 
+ */
+ .ui-nav {
+	display: block;
+	position: relative;
+	width: 55px;
+	height: 20px;
+
+	text-indent: -999em;
+	z-index: 999;
+
+	cursor: pointer;
+
+	span {
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background: #fff;
+		opacity: 1;
+		left: 0;
+				transform: rotate(0deg);
+				transition: .25s ease-in-out;       
+						
+		&:nth-child(1) {
+			top: 0px;
+		}  
+		&:nth-child(2),
+		&:nth-child(3) {
+			top: 8px;
+		}
+		&:nth-child(4) {
+			top: 16px;
+		}
+
+	}
+
+	&.menu--open {
+
+		 span {
+
+				&:nth-child(1) {
+					top: 10px;
+					width: 0%;
+					left: 50%;
+				}
+				&:nth-child(2) {
+					transform: rotate(20deg);               
+				}
+				&:nth-child(3) {
+					transform: rotate(-20deg);               
+				}
+				&:nth-child(4) {
+					top: 10px;
+					width: 0%;
+					left: 50%;               
+				}
+		 }
+	}
+}
+
+
+//inline svgs icons
+.ui-ico {
+
+	//paths, polygons, lines, rects etc controlled by additional class
+	.svg__ico {			
+		transition: all .2s ease-in-out;
+	}
+
+	svg {
+		height: 100%;
+	}
+
+	&.svg--stroke-black {
+		.svg__ico {
+			stroke: $black;
+		}
+	}
+	&.svg--stroke-white {
+		.svg__ico {
+			stroke: #fff;
+		}
+	}
+
+}

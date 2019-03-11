@@ -1,0 +1,72 @@
+<section id="banner" class="banner banner--{{ page.slug }}">
+	
+	{% block banner_content %}
+		<div class="banner__grid">
+			<section class="banner__content{% if text_black is not defined %} text--white{% endif %}">
+				<div class="viewport">
+					<div class="banner__subgrid grid--content">
+						{% block banner_header %}
+							
+							{% block banner_title %}
+								<h1 class="banner__title">{{ banner.title }}</h1>
+							{% endblock %}
+
+							{% block banner_desc %}
+								{% if banner.desc %}
+									<p class="banner__desc">{{ banner.desc }}</p>
+								{% endif %}
+							{% endblock %}
+							
+						{% endblock %}
+						
+						{% if banner.cta %}
+							<a class="banner__cta button{% if text_black is not defined %} button--white{% endif %}" href="{{ banner.cta.href }}">{{ banner.cta.text }}</a>
+						{% endif %}
+						
+						<a class="banner__scroll do-scroll-to" data-scroll-target="section-services" href="#">
+							<figure class="scroll__ico ui-ico ico--svg {% if text_black is defined %} svg--stroke-black{% endif %}">
+								{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+							</figure>
+						</a>						
+						
+					</div><!-- /banner__grid -->
+
+				</div>
+			</section><!-- /banner__content -->
+
+			{% if show_events != false %}
+				{% include '../sections/events.twig' %}
+			{% endif %}
+
+		</div><!-- /banner__grid -->
+	{% endblock %}
+
+	{% block banner_cover %}
+
+		{% if banner.cover %}
+			<figure class="banner__cover cover cover--overlay">
+				<picture>
+
+
+					{% if banner.cover.mobile %}
+						<source media="(max-width: 480px)"
+						srcset="{{ banner.cover.mobile }}">	
+					{% endif %}
+
+					{% if banner.cover.tablet %}
+						<source media="(max-width: 768px)"
+						srcset="{{ banner.cover.tablet }}">
+					{% endif %}
+
+					<source media="(min-width: 960px)"
+					srcset="{{ banner.cover.desktop }}">
+
+
+					<!-- fallback -->
+					<img src="{{ banner.cover.desktop }}" alt="{{ banner.cover.alt }}" />
+				</picture>				
+			</figure>
+		{% endif %}
+	{% endblock %}
+</section><!-- /banner -->
+

@@ -1,0 +1,14 @@
+//assets path defined in variables.scss
+
+@font-face {
+	font-family: 'EuclidCircularB-Regular';
+	src: 
+		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.eot?#iefix') format('embedded-opentype'),  
+		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.otf') format('opentype'),
+		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.woff') format('woff'),
+		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.ttf') format('truetype'),
+		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.svg#EuclidCircularB-Regular') format('svg');
+
+	font-weight: normal;
+	font-style: normal;
+}

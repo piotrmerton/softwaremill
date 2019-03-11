@@ -1,0 +1,21 @@
+//easy CSS gradient generator: https://cssgradient.io/
+
+@mixin linear-gradient($color1, $color2) {	
+	background: rgb(153,175,229);
+	background: linear-gradient(0deg, rgba($color1, 1) 0%, rgba($color2, 1) 75%);
+
+}
+
+// CSS triangle for nav.scss component
+@mixin submenu-indicator($size, $color) {
+	content: '';
+	display: block;
+	width: 0; 
+	height: 0; 
+	border-left: $size solid transparent;
+	border-right: $size solid transparent;
+	border-top: $size solid $color;	
+	transition: transform .2s ease-in-out;	
+	margin-left: $size;	
+	position: relative;
+}

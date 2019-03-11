@@ -1,0 +1,35 @@
+{% if services is defined %}
+	<section class="content__section section-services{% if cssClass %} {{ cssClass }}{% endif %}">
+		<div class="viewport">
+
+			<div class="section__header">
+				<h2>Main services</h2>
+			</div>
+
+			<ul class="services__grid grid--four-columns">
+				{% for service in services %}
+					<li class="grid__item item--service">
+						<a href="{{ service.url }}" title="{{ service.name }}">
+							<figure class="service__ico ui-ico ico--svg">
+								{{ source(assetsDirRoot~'svg/services/'~service.slug~'.svg' ) }}
+							</figure>							
+							<h3 data-mh="service-name" class="service__name">{{ service.name }}</h3>
+							{% if full is defined %}
+								<p class="service__desc">
+									{{ service.desc }}
+								</p>
+							{% endif %}
+
+							<span href="{{ service.url }}" class="button button--compact">Read more</span>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+
+			{% if page.slug != 'services' %}
+				<a class="section__cta button button--transparent" href="#">We do more! See all services</a>
+			{% endif %}
+
+		</div><!-- /viewport -->
+	</section>
+{% endif %}

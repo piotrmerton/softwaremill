@@ -1,0 +1,197 @@
+
+.banner {
+	
+	//linear gradient for background, see utlities/mixins.scss
+	@include linear-gradient( $blue, $silver );	
+	position: relative;
+
+	p {
+		font-size: 1.75em;		
+		@media all and (max-width: $breakpoint_fullhd - 1px) {
+			font-size: 1.25rem;
+			line-height: 1.6;
+		}
+	}
+
+	//outer grid (for banner__content and events component)
+	.banner__grid {
+		//overflow: hidden;
+
+	}
+	.banner__content {
+		min-height: 768px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		z-index: 2; //stay above cover
+
+	}	
+	@media 
+		all and (min-width: $breakpoint_mobile + 1px) and (min-height: 768px), //desktop: min height of a 1366x768 resolution
+	   	all and (max-width: $breakpoint_mobile) and (min-height: 667px) { //mobile: min height of a 375x667 resolution
+			.banner__content {
+				min-height: 0;
+				align-self: stretch;
+				@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+					min-height: 100vh;
+					display: flex;
+					align-items: center;					
+				}
+			}		
+			@media all and (min-width: $breakpoint_tablet-portrait) {
+				.banner__grid {
+					min-height: 100vh;
+					display: grid;
+					align-items: center;
+					//grid-template-rows: minmax(max-content, 100%);	
+					grid-template-rows: calc(100vh - 3.75rem) max-content; //magic number is the height of section-events, see components/sections/events.scss
+				}					
+			}	
+				
+	}
+
+
+	
+	.banner__scroll {
+		//by default, position on banner__subgrid
+		grid-column: 1 / -1;
+		display: inline-block;
+
+		//absolute positionining only if there is enough screen height (but still it isn't fully bulletproof for extra long banner__desc)
+		@media all and (min-width: $breakpoint_laptop + 1px) {
+			@media all and (min-height: 900px) {
+				position: absolute;
+				bottom: 5.625rem;
+			}			
+		}
+		@media all and (max-width: $breakpoint_laptop) {
+			@media all and (min-height: 768px) {
+				position: absolute;
+				bottom: 4.375rem;
+			}			
+		}
+
+		@media all and (min-width: $breakpoint_tablet + 1px) {
+			&:hover {
+				.svg__ico {
+					stroke: $purple;
+				}
+			}
+		}
+
+		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+			display: none;
+		}	
+		.scroll__ico {
+			width: 3.5rem;
+			transform: rotate(90deg);
+		}
+
+	}
+	
+
+
+
+
+	// @media all and (min-width: $breakpoint_mobile + 1px) {
+	// 	@media all and (min-height: 720px) {
+	// 		.banner__content {
+	// 			display: block;
+	// 			min-height: 0;
+	// 		}
+	// 		.banner__grid {
+	// 			min-height: 100vh;
+	// 			display: grid;
+	// 			align-items: center;
+	// 			grid-template-rows: minmax(max-content, 100%);	
+	// 		}
+	// 	}
+	// }
+
+	// @media all and (max-width: $breakpoint_mobile) {
+	// 	@media all and (min-height: 575px) {
+	// 		.banner__content {
+	// 			display: block;
+	// 			min-height: 0;
+	// 		}			
+	// 		.banner__grid {
+	// 			min-height: 100vh;
+	// 			display: grid;
+	// 			align-items: center;
+	// 			grid-template-rows: minmax(max-content, 100%);	
+	// 		}
+	// 	}		
+	// }		
+	// @media all and (max-width: $breakpoint_tablet-portrait - 1px) and (min-height: 667px) {
+	// 	.banner__content {
+	// 		min-height: 100vh;
+	// 		display: flex;
+	// 		align-items: center;
+	// 	}
+	// }
+	
+	//elements
+
+	//inner grid (for header, desc, cta)
+	.banner__subgrid {
+
+		align-items: start;
+		grid-row-gap: 3.75rem;
+
+		@media all and (min-width: $breakpoint_desktop + 1px) {
+
+			.banner__title,
+			.banner__desc {
+				grid-column: 1 / span 6;
+			}
+			.banner__cta {
+				grid-column: 10 / -1;				
+			}
+			.banner__desc,
+			.banner__cta {
+				grid-row-start: 2;
+			}
+
+		}
+
+		@media all and (max-width: $breakpoint_laptop) {
+			grid-row-gap: 2.75rem;
+		}
+
+		@media all and (max-width: $breakpoint_desktop) {
+
+			> * {
+				grid-column: 1 / -1;
+				grid-row: auto;
+			}
+			.banner__cta {
+
+				
+				margin-top: 1.5rem; //adds to row gap
+				
+				
+				@media all and (min-width: $breakpoint_mobile + 1px) {
+					grid-column: 1 / span 6;
+				}
+			}
+		}
+
+		@media all and (max-width: $breakpoint_mobile) {
+			
+			.banner__cta {
+
+				@media all and (min-width: $breakpoint_tablet-portrait) {
+					grid-column: 1 / span 4;
+				}
+			}
+		}
+
+		@media all and (max-width: 640px) {
+			grid-row-gap: 2.5rem;
+		}
+	}
+
+	//	banner modifiers and overrides specific for subpages are moved to pages/{pagename}.scss, 
+	//	i.e. banner--index modifier is in pages/index.scss and so on
+	
+}

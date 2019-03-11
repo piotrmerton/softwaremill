@@ -1,0 +1,33 @@
+<header id="header-top" class="header-top{% if text_black %} header--black{% endif %}">
+	<div class="viewport">
+		<div class="header__layout">
+
+			<section class="header__branding">
+				<a class="header__logo" href="#">
+					<figure class="logo__text">
+						{{ source(assetsDirRoot~'svg/logo-text.svg') }}
+					</figure>
+					<figure class="logo__shapes">
+						{{ source(assetsDirRoot~'svg/logo-shapes.svg') }}
+					</figure>					
+				</a>
+
+				<a class="header__ui ui-nav do-toggle-nav" href="#" role="button">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>				
+			</section>
+			
+			<section class="header__menu">
+				{% include '../components/nav.twig' %}
+			</section>
+
+			<section class="header__social">social media placeholder</section>
+
+
+		</div>
+	</div><!-- /viewport -->
+
+</header>

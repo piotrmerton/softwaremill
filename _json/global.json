@@ -1,0 +1,53 @@
+{
+	"assetsDirRoot" : "",
+	"site_title" : "softwaremill",
+
+	"events" : [
+		{
+			"name" : "Mobile Trends Conference 2019 Poland",
+			"location" : "Kraków",
+			"date" : "02/09/2019",
+			"url" : "#"
+		},
+		{
+			"name" : "Kotlin Workshops",
+			"location" : "Wrocław, Poland",
+			"date" : "9/03/2019",
+			"url" : "#"
+		},		
+		{
+			"name" : "Code Motion Rome",
+			"location" : "Italy",
+			"date" : "22/09/2019",
+			"url" : "#"
+		}	
+	],
+
+	"services" : [
+		{
+			"name" : "Big Data & Machine Learning",
+			"slug" : "big-data",
+			"desc" : "Our engineers build analytical models that help companies “learn” from data. While creating new applications we always focus on scalability and efficiency of our solutions.",
+			"url" : "#"
+		},
+		{
+			"name" : "Blockchain",
+			"slug" : "blockchain",
+			"desc" : "We offer MVP and proof of concept that will result in finding the development customisable, scalable and secure blockchain solutions.",
+			"url" : "#"
+		},
+		{
+			"name" : "Internet of things",
+			"slug" : "internet",
+			"desc" : "We build tailored IoT-powered business applications and provide professional assistance across the full-cycle of custom software development.",
+			"url" : "#"
+		},
+		{
+			"name" : "Backend development",
+			"slug" : "backend",
+			"desc" : "With the right enterprise software technology works for your business. We take care of the entire programming life cycle helping you achieve industry-specific goals.",
+			"url" : "#"
+		}						
+	]
+
+}

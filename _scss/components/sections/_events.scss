@@ -1,0 +1,86 @@
+.section-events {
+
+	background: #fff;
+
+	//banner__grid see banner.scss
+	align-self: end;
+
+	position: relative;
+	z-index: 2;
+
+	.section__layout {
+		display: flex;
+		align-items: center;
+		min-height: 3.75em;
+		justify-content: flex-end;
+	}
+
+
+	.events__nav {
+		display: flex;
+		align-items: center;
+		margin: 0 1rem;
+		a {
+			display: block;
+			width:  10px;
+			height: 10px;
+			border-radius: 50%;
+			text-indent: -999em;
+			border: 2px solid $black;
+			margin: 0 .325rem;
+			cursor: pointer;
+
+			//tiny-slider dependency dynamic class
+			&.tns-nav-active {
+				background: $black;
+			}
+
+			@media all and (min-width: $breakpoint_tablet + 1px) {
+				&:hover {
+					background: $purple;
+					border-color: $purple;
+				}
+			}
+		}
+	}
+
+	.events__list {		
+		flex-grow: 0;
+		.list__item {					
+			a {
+				font-size: .813em;
+				letter-spacing: .001rem;	
+				@media all and (min-width: $breakpoint_tablet-portrait) {
+					white-space: nowrap;
+				}			
+				
+			}
+		}
+	}
+
+	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+		
+		padding-top: 1.5rem;
+
+		.section__layout {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+		.events__calendar {
+			width: 100%;
+			max-width: 100% !important; //override JS inline style, see events.js
+		}
+		.events__nav {
+			margin-left: 2rem;
+		}
+		.events__list {
+			margin-top: 1rem;
+			.list__item {
+				a {
+					font-size: .875rem;
+				}
+			}
+		}
+	}
+
+}

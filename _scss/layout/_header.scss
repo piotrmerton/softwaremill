@@ -1,0 +1,236 @@
+.header-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: transparent;
+	
+	transition: background .2s ease-in-out;
+	z-index: 99;
+
+
+	.header__layout {
+		width: 100%;
+	}
+	.header__logo {
+		display: block;
+
+		.svg__ico {
+			transition: all .2s ease;
+		}
+		.logo__text {
+			width: 184px;
+			height: auto;			
+			.svg__ico {
+				fill: #fff;
+			}		
+			@media all and (min-width: $breakpoint_tablet + 1px) {
+				&:hover {
+					.svg__ico {
+						fill: $purple;
+					}					
+				}
+			}				
+		}
+		.logo__shapes {
+			width: 132px;
+			height: auto;
+			display: none;
+		}
+
+	}
+
+
+	@media all and (min-height: 360px) {
+		position: fixed;
+	}
+
+	@media all and (min-width: $breakpoint_desktop + 1px) {
+
+		.header__layout {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-column-gap: $grid_gutter_desktop;
+			//justify-content: space-between;
+			align-items: center;
+			min-height: 5.625em;
+
+			.header__branding {
+				grid-column: 1 / span 3;
+			}
+			.header__menu {
+				grid-column: 5 / -1;
+				@media all and (max-width: $breakpoint_laptop) {
+					grid-column-start: 4;
+				}
+			}			
+		}		
+
+		.header__ui,
+		.header__social {
+			display: none;
+		}
+
+		&.header--fixed,
+		&.header--black {
+			.header__menu {
+				//	override submenu indicator color based on header modifier,
+				//	see components/_nav.scss
+				.item--has-submenu {
+					&:not(.menu--open) {
+						> a {
+							&:after {
+								border-top-color: $black;
+							}
+							&:hover {
+								&:after {
+									border-top-color: $purple;
+								}
+							}						
+						}						
+					}
+				}
+				.item--cta {
+					> a {
+						border-color: $black;
+						&:hover {
+							border-color: $purple;
+						}
+					}
+				}
+			}			
+		}
+		&.header--fixed {
+			.logo__text {
+				display: none;
+			}
+			.logo__shapes {
+				display: block;
+			}
+		}
+	}
+	@media all and (max-width: $breakpoint_desktop) {
+
+		//just a double measure to override inline height if it happens to stay (see nav.js)
+		height: auto !important; 
+		overflow: hidden;
+
+		//TO DO: ;
+
+
+		.header__layout {
+			
+		}
+		.header__branding {
+			display: flex;
+			min-height: 7.5rem; //design spec
+			align-items: center;
+			justify-content: space-between;
+
+			transition: min-height .2s ease-in-out;
+		}
+
+		&.header--fixed {
+			.viewport {
+				background: #fff;
+			}
+			.header__branding {
+				min-height: 4rem;
+			}
+		}
+
+		//background color moved to container in order to avoid bg transition desynchronization
+		&.header--fixed,
+		&.menu--open {
+			.viewport {
+				background: #fff;
+			}
+		}
+
+		
+		&.menu--open {	
+			position: absolute;	
+			
+			
+			.header__layout {
+				display: grid;
+				grid-template-rows: min-content;		
+				min-height: 100vh;
+				align-items: start;
+
+
+				.header__social {
+					align-self: flex-end;
+				}
+			}
+					
+		}
+		&:not(.menu--open) {
+			.header__menu,
+			.header__social {
+				display: none;
+			}
+		}
+
+		
+		&.header--black,
+		&.header--fixed,
+		&.menu--open {
+			.header__ui {
+				span {
+					background: $black;
+				}
+			}
+			.header__logo {
+				.svg__ico {
+					fill: $black;
+				}
+			}
+		}
+			
+		
+	}	
+
+	@media all and (max-width: $breakpoint_phone) {
+		> .viewport {
+			//transition optimization for FF (see also nav.scss)
+			padding: 0;			
+		}
+		.header__branding {
+			padding-left: $viewport-padding-phone;
+			padding-right: $viewport-padding-phone;
+		}
+	}
+
+	&.header--fixed {
+		background: #fff;
+		border-bottom: 1px solid #ededed;
+	}
+
+	&.header--fixed,
+	&.header--black {
+		a {
+			color: $black;
+		}
+		.header__logo {
+			.logo__text {
+				.svg__ico {
+					fill: $black;
+				}
+				@media all and (min-width: $breakpoint_tablet + 1px) {
+					&:hover {
+						.svg__ico {
+							fill: $purple;
+						}
+					}
+				}				
+			}
+			.logo__shapes {
+				&:not(:hover){
+					.svg__ico {
+						fill: $black;
+					}
+				}
+			}
+		}		
+	}
+}

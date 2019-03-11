@@ -1,0 +1,39 @@
+//default style of generic html elements
+
+body {
+	font-family: 'EuclidCircularB-Regular';
+	font-size: 1em;
+	//overflow-x: hidden;
+
+	//hide page content while mobile menu is open (see _js/partials/nav.js)
+	//reason: we want scrollbar to interact with menu contents instead of page contents
+	@media all and (max-width: $breakpoint_desktop) {
+		&.menu--open {
+			.page-container {
+				display: none;
+			}
+		}	
+	}
+
+}
+
+a {
+	color: $black;
+	text-decoration: none;
+
+	@media all and (min-width: $breakpoint_tablet + 1px) {
+		//transition: color .2s;
+		&:hover {
+			color: $purple;
+		}
+	}
+}
+
+
+ul {
+	list-style-type: none
+}
+
+
+
+

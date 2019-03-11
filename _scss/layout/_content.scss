@@ -1,0 +1,93 @@
+//generic building block
+
+.content__section {
+	position: relative;
+	
+	&:not(.section--no-padding) {
+
+		padding: $horizontal-whitespace-desktop 0;
+
+		@media all and (max-width: $breakpoint_laptop) {
+			padding: $horizontal-whitespace-laptop 0;
+		}
+
+		@media all and (max-width: $breakpoint_phone) {
+			padding: $horizontal-whitespace-phone 0;
+		}
+	}	
+
+
+	//elements
+
+	.section__body {
+		position: relative;
+		z-index: 2; //above section__cover
+	}
+	.section__cover {
+		
+	}
+	.section__header {
+		&:not(.header--no-margin) {
+			margin-bottom: $horizontal-whitespace-desktop;
+			@media all and (max-width: $breakpoint_laptop) {
+				margin-bottom: $horizontal-whitespace-laptop;
+			}
+			@media all and (max-width: $breakpoint_phone) {
+				margin-bottom: $horizontal-whitespace-phone;
+			}
+		}
+	}
+
+	.section__cta {
+		&:not(.cta--no-margin) {
+			margin-top: $horizontal-whitespace-desktop;
+			@media all and (max-width: $breakpoint_laptop) {
+				margin-top: $horizontal-whitespace-laptop;
+			}
+			@media all and (max-width: $breakpoint_phone) {
+				margin-top: $horizontal-whitespace-phone;
+			}
+		}
+		
+		 
+	}
+
+	//modifiers enabling some simple composition...
+
+
+	//...regarding background color:
+	&.section--black {
+		background: $black;
+	}
+
+	//...regarding padding:
+	&.section--no-padding-top {
+		padding-top: 0;
+	}
+	&.section--no-padding-bottom {
+		padding-top: 0;
+	}
+
+	//override padding top due to embedded section-trends in banner
+	&.section--padding-offset {
+		padding-top: 3.75rem;
+		@media all and (max-width: $breakpoint_laptop) {
+			padding-top: 2.75rem
+		}
+		@media all and (max-width: $breakpoint_mobile) {
+			padding-top: 2.5rem;
+		}		
+	}	
+
+	//specific "full screen" section for galleries, video, or hero image
+	&.section--media {
+		min-height: 480px;
+		display: grid;
+		align-items: center;
+
+		@media all and (min-height: $breakpoint_phone) {
+			min-height: 100vh;
+		}
+	}
+
+}

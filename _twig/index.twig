@@ -1,0 +1,101 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/index.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+{% include 'components/sections/services.twig' with {'cssClass' : 'section--no-padding-top section--padding-offset'} %}
+
+<section class="content__section section-how-we-work section--media">
+	
+		<div class="section__body text--white">
+			<div class="viewport">
+				<div class="section__grid grid--two-columns">
+					<div class="grid__item">
+						<div class="section__header">
+							<h2>Our self-organized teams of developers are responsible end-to-end for the projects. Transparency is our priority.</h2>						
+						</div>
+						<a class="button button--transparent button--white" href="#">See more about How we work!</a>
+					</div>
+				</div>
+			</div><!-- /viewport -->
+		</div>
+		<figure class="section__cover cover cover--overlay">
+			<picture>
+		
+{# 				<source media="(max-width: 480px)"
+				srcset="{{ banner.cover.mobile }}">	 #}
+				
+				<source media="(max-width: 768px)"
+				srcset="assets/img/home/cover-how-we-work_tablet.jpg">
+				
+				<source media="(min-width: 960px)"
+				srcset="assets/img/home/cover-how-we-work.jpg">
+
+				<!-- fallback -->
+				<img src="assets/img/home/cover-how-we-work.jpg" />
+			</picture>	
+		</figure>
+	
+</section>
+
+<section class="content__section section-team section--black text--white">
+	<div class="viewport">
+		<div class="section__grid grid--content">
+			<div class="section__header">
+				<h2>We’ve been delivering custom software services remotely, worldwide, for over 9 years.</h2>
+			</div>
+			<div class="section__body">
+				<h3>There are 40 specialists in our team, mainly back-end software engineers, but also front-end senior engineers, DevOps, QA and UX. We’re very into open-source and we organize Scalar - conference for Scala language in Central Europe.</h3>
+			</div>
+			<a class="section__cta button button--transparent button--white" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+				</figure>
+				<span class="button__label">Meet the team</span>
+			</a>	
+		</div>
+	</div>
+</section>
+
+{% include 'components/sections/portfolio.twig' %}
+
+<section class="content__section section-tech section--black text--white">
+	<div class="viewport">
+		<div class="section__grid grid--two-columns">
+			<div class="grid__item">
+				<h2>Our tech stack</h2>
+			</div>
+			<div class="grid__item">
+				<h3>We’re Scala/Java professionals with experience in writing scalable, fault-tolerant, distributed applications using Scala (Akka, Play, Spark), Java, Kotlin and many other JVM-based technologies, storing data in relational (MySQL, Postgres) or NoSQL databases (Cassandra, Mongo, DynamoDB), deployed both in the cloud (AWS) or traditionally.</h3>
+			</div>			
+		</div>
+	</div>
+</section>
+
+<section class="content__section section-partners">
+	<div class="viewport">
+		<div class="section__header">
+			<h2>Our Partners</h2>
+		</div>
+	</div>
+</section>
+
+<pre>
+
+{# {{ dump() }} #}
+
+</pre>
+
+{% endblock %}
+
+

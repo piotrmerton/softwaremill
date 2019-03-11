@@ -1,0 +1,61 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: normal;
+}
+
+
+//	Extendable headers: for SEO reasons it is considered bad practice to have too many headings, 
+//	so let's take advantage of SASS inheritance for other elements to easily use headers styles)
+
+%generic-h1 {
+	font-size: 3.125em;
+	line-height: 1.4;
+	letter-spacing: .01em;
+
+	@media all and (max-width: $breakpoint_laptop) {
+		font-size: 2.5em;
+	}	
+	@media all and (max-width: $breakpoint_mobile) {
+		font-size: 1.75em;
+	}
+}
+%generic-h2 {
+	font-size: 2.5em;
+	line-height: 1.4;
+
+	@media all and (max-width: $breakpoint_laptop) {
+		font-size: 1.75em;
+	}
+}
+
+//or "big parapgraph"
+%generic-h3 {
+	font-size: 1.750em;
+	line-height: 1.5;
+	letter-spacing: .01em;
+	@media all and (max-width: $breakpoint_laptop) {
+		font-size: 1.25em;
+		line-height: 1.6;
+	}	
+}
+
+
+h1 {
+	@extend %generic-h1;
+}
+
+h2 {
+	@extend %generic-h2;
+}
+
+h3 {
+	@extend %generic-h3;
+}
+
+p {
+	font-size: 0.938em; //15px in xD source file
+	line-height: 1.5;
+}

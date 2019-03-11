@@ -1,0 +1,64 @@
+//generic form elements
+
+form {
+
+	input,
+	select,
+	textarea,
+	button {
+		font-family: 'EuclidCircularB-Regular';
+		font-size: .875em;
+		letter-spacing: .005em;
+		text-transform: uppercase;
+
+		background: transparent;
+
+		display: block;
+
+		color: $black;
+		border: 2px solid $black;
+		
+		padding: 1.25rem 1.75rem;
+
+		width: 100%;
+
+		-webkit-appearance: none;
+		border-radius: 0;
+		vertical-align: bottom;
+
+	}
+	textarea {
+		min-height: 10rem;
+	}
+	input,
+	select,
+	textarea {
+		border-bottom: 0;
+	}
+	button {
+		cursor: pointer;
+
+		@media all and (min-width: $breakpoint_tablet + 1px) {
+			transition: background .2s ease-in-out;
+			&:hover {
+				color: #fff;
+				background: $purple;
+				border-color: $purple;
+			}
+		}
+	}
+
+}
+
+//inputs placeholders
+::-webkit-input-placeholder { /* Edge */
+    color: $black;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $black;
+}
+
+::placeholder {
+    color: $black;
+}

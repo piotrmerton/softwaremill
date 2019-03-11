@@ -1,0 +1,62 @@
+
+//twelve on desktop to four columns on mobile layout grid
+.grid--content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $grid-gutter-desktop;
+    
+    // @media all and (min-width: $viewport_width + 1px) {
+    //     grid-template-columns: repeat(12, minmax(auto, $viewport_width/12));
+    // }    
+
+
+    // //enhancement for tablet (not on design spec)
+    // @media all and (max-width: $breakpoint_desktop) and (min-width: $breakpoint_mobile + 1px) {
+    //     grid-column-gap: 1rem;
+    // }
+
+    @media all and (max-width: $breakpoint_laptop) {
+        grid-column-gap: $grid-gutter-lapotp;
+    }
+    @media all and (max-width: $breakpoint_mobile) {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    @media all and (max-width: $breakpoint_phone) {
+        grid-template-columns: repeat(4, 1fr);
+    }    
+}
+
+
+.grid--two-columns {
+    display: grid;
+    grid-gap: $grid-gutter-desktop;
+
+    @media all and (max-width: $breakpoint_laptop) {
+        grid-column-gap: $grid-gutter-lapotp;
+    }
+
+    @media all and (min-width: $breakpoint_mobile + 1px) {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.grid--four-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $grid-gutter-desktop;
+
+    @media all and (max-width: $breakpoint_laptop) {
+        grid-column-gap: $grid-gutter-lapotp;
+    }
+    @media all and (max-width: $breakpoint_desktop) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 4.375rem;
+    }
+    @media all and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 4rem;
+    }
+}
+

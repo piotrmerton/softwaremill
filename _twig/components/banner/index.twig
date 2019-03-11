@@ -1,0 +1,12 @@
+
+{% extends "default.twig" %}
+
+{% block banner_header %}
+
+	<figure class="banner__logo">
+		{{ source(assetsDirRoot~'svg/logo-shapes.svg') }}
+	</figure>
+
+	{{ parent() }}
+
+{% endblock %}

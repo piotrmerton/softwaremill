@@ -1,0 +1,47 @@
+.section-services {
+	.service__name {
+		margin: 3.75rem 0 2rem; 
+	}	
+	.service__ico {
+		width: auto;
+		height: 6.25rem;
+	}
+
+	@media all and (max-width: $breakpoint_laptop) {
+		.service__name {
+			margin: 2.75rem 0 1.375em;
+		}
+		.service__ico {
+			height: 5rem;
+		}
+	}
+	@media all and (max-width: $breakpoint_mobile) {
+		.service__name {
+			margin-bottom: 1.375em;
+		}		
+	}
+	@media all and (max-width: 640px) {
+		.service__name {
+			margin: 0 0 1.25em;
+		}
+		.service__ico {
+			display: none;
+		}
+	}
+
+	.item--service {
+		a {
+			@media all and (min-width: $breakpoint_tablet + 1px) {
+				&:hover {
+					color: inherit;
+					.svg__ico {
+						stroke: $purple;
+					}
+					.button {
+						color: $purple;
+					}
+				}
+			}			
+		}
+	}
+}
