@@ -2,6 +2,12 @@
 	"assetsDirRoot" : "",
 	"site_title" : "softwaremill",
 
+	"contact" : {
+		"email" : "hello@softwaremill.com",
+		"phonenumber" : "+48 12 987 65 65",
+		"phonenumber_mobile" : "+44 600 123 456"
+	},
+
 	"events" : [
 		{
 			"name" : "Mobile Trends Conference 2019 Poland",
@@ -48,6 +54,19 @@
 			"desc" : "With the right enterprise software technology works for your business. We take care of the entire programming life cycle helping you achieve industry-specific goals.",
 			"url" : "#"
 		}						
+	],
+
+	"portfolio" : [
+		{
+			"name" : "Tipster",
+			"desc" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent.",
+			"url" : "#"
+		},
+		{
+			"name" : "High performance SMS",
+			"desc" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent.",
+			"url" : "#"
+		}
 	]
 
 }

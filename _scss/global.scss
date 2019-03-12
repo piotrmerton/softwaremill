@@ -39,8 +39,12 @@
 @import 'components/cover';
 @import 'components/form';
 
+@import 'components/blocks/contact';
+@import 'components/blocks/socialmedia';
+
 @import 'components/sections/events';
 @import 'components/sections/services';
+@import 'components/sections/portfolio';
 
 //specific subpages
 @import 'pages/index';

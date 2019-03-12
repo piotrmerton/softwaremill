@@ -6,8 +6,8 @@
 
 				<div class="section__grid grid--two-columns">
 
-					<div class="grid__item item--contact-data">
-
+					<div class="grid__item item--contact-data">						
+						{% include '../components/blocks/contact.twig' %}
 					</div>
 
 					<div class="grid__item item--form">
@@ -36,7 +36,11 @@
 
 					<div class="grid__item item--social">
 
-						<h2>Follow us</h2>
+						<div class="section__header">
+							<h2>Follow us</h2>
+						</div>
+
+						{% include '../components/blocks/socialmedia.twig' %}
 
 					</div>					
 

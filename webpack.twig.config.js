@@ -26,12 +26,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //default settings
 const HtmlWebpackPluginSettings = {
 
-	// only remove comments
-	// see: https://github.com/jantimon/html-webpack-plugin#generating-multiple-html-files,
-	// https://stackoverflow.com/a/39816574	
 	inject : false,
 	minify: {
-		collapseWhitespace: false,
+		collapseWhitespace: true,
 		removeComments: true,
 		removeRedundantAttributes: true,
 		removeScriptTypeAttributes: true,
@@ -67,6 +64,10 @@ module.exports = merge(baseConfig, {
 					{
 						loader: 'twig-html-loader',
 						options: {
+							namespaces: {
+								'layout': path.join(__dirname, '_twig/layout'),
+								'components': path.join(__dirname, '_twig/components'),
+							},
 							data: (context) => {
 								
 								let globalData = {};
@@ -89,27 +90,6 @@ module.exports = merge(baseConfig, {
 									localData = context.fs.readJsonSync(localDataFile, { throws: false });
 								}
 
-
-								//	deprecated: mapping all data files accordingly to templates list occurs
-								//	in exposing everything in "global" context
-
-								// twigTemplates.map(function(filename) {
-
-								// 	let jsonPath = path.join(__dirname, 'data/'+ filename +'.json');
-
-								// 	if( fs.existsSync( jsonPath )) {
-									
-								// 		data = {
-								// 			...data,
-								// 			...context.fs.readJsonSync(jsonPath, { throws: false })
-								// 		}
-										
-								// 	}
-
-								// });
-
-								
-
 								let twigContext = {
 									
 									...globalData,
@@ -119,7 +99,9 @@ module.exports = merge(baseConfig, {
 									"assetsDirRoot" : path.join(__dirname, '../assets/'),
 								};
 
-								//context.addDependency(data);
+								// Force webpack to watch file
+								context.addDependency(globalDataFile);
+								context.addDependency(localDataFile); 
 								return twigContext;
 							}
 						}

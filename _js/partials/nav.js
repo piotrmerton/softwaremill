@@ -60,6 +60,7 @@ export let nav = {
 				//bind event to <a>
 				item.addEventListener('click', (event) => {
 
+					//logic regarding toggling submenu needed only on desktop and mobile, on tablet everything is visible so no JS required
 					if( UI.windowWidth <= 480 ) {
 						self.toggleSubmenu(li);
 						event.preventDefault();
@@ -72,7 +73,7 @@ export let nav = {
 					}
 				});
 
-				//bind event to submenu__title
+				//bind event to submenu__title for "going back"
 				let submenuTitle = li.querySelector('.do-close-subnav');
 
 				if(submenuTitle !== null) {
@@ -122,13 +123,6 @@ export let nav = {
 	 */
 	closeMenu : function() {
 
-		// let header = document.querySelector(this.headerSelector);
-		// let button = document.querySelector(this.buttonSelector);
-
-		// document.body.classList.remove(this.openClass);
-		// header.classList.remove(this.openClass);
-		// button.classList.remove(openClass);	
-
 		this.reset();
 
 		//set previous scroll position
@@ -137,9 +131,7 @@ export let nav = {
 	},
 
 
-	toggleSubmenu : function (
-		el
-	) {
+	toggleSubmenu : function (el) {
 
 		let header = document.querySelector(this.headerSelector);
 		let parent = el.parentNode;
@@ -158,7 +150,7 @@ export let nav = {
 
 		if (!el.classList.contains(openClass)) {
 			el.classList.add(openClass);	
-			// add helper class  parent as well
+			// add helper class parent as well
 			parent.classList.add(openClass);
 		} else {
 			el.classList.remove(openClass);

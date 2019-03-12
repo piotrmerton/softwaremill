@@ -17,7 +17,7 @@
 			"desktop" : "assets/img/banner/home/desktop.jpg",
 			"tablet" : "assets/img/banner/home/tablet.jpg",
 			"mobile" : "assets/img/banner/home/mobile.jpg",
-			"alt" : "Text/caption for SEO reasons, feel free to leave empty"
+			"alt" : "Text/caption for SEO reasons"
 		}
 
 	}

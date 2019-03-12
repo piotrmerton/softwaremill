@@ -46,16 +46,24 @@
 		color: $black;
 
 		.button__ico {
-			width: 3.5rem;
+			height: 3.5rem;
 			margin-right: 2.5rem;
-			
+		}
+		.button__label {
+			line-height: normal;
 		}
 		.svg__ico {
 			stroke: $lightblue;
 		}
+		&.button--white {
+			color: #fff;			
+			.svg__ico {
+				stroke: #fff;
+			}
+		}		
 		@media all and (max-width: $breakpoint_laptop) {
 			.button__ico {
-				width: 2.75rem;
+				height: 2.75rem;
 				margin-right: 1.875rem;
 			}
 		}
@@ -67,9 +75,7 @@
 				}
 			}
 		}	
-		&.button--white {
-			color: #fff;
-		}	
+	
 	}
 	&.button--compact {
 		justify-content: unset;
@@ -87,7 +93,7 @@
 				color: $lightblue;
 			}
 		}
-		@media all and (max-width: 640px) {
+		@media all and (max-width: $breakopoint_tablet-small) {
 			color: $lightblue;
 		}
 	}

@@ -33,7 +33,7 @@ h5 {
 
 //or "big parapgraph"
 %generic-h3 {
-	font-size: 1.750em;
+	font-size: 1.75em;
 	line-height: 1.5;
 	letter-spacing: .01em;
 	@media all and (max-width: $breakpoint_laptop) {
@@ -57,5 +57,5 @@ h3 {
 
 p {
 	font-size: 0.938em; //15px in xD source file
-	line-height: 1.5;
+	line-height: 1.6; //24:15;
 }

@@ -32,12 +32,18 @@
     display: grid;
     grid-gap: $grid-gutter-desktop;
 
-    @media all and (max-width: $breakpoint_laptop) {
-        grid-column-gap: $grid-gutter-lapotp;
-    }
-
     @media all and (min-width: $breakpoint_mobile + 1px) {
         grid-template-columns: 1fr 1fr;
+    }
+
+    @media all and (max-width: $breakpoint_laptop) {
+        grid-column-gap: $grid-gutter-lapotp;
+    }    
+    @media all and (max-width: $breakpoint_mobile) {
+        grid-row-gap: $horizontal-whitespace-laptop;
+    }
+    @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+        grid-row-gap: $horizontal-whitespace-phone;
     }
 }
 
@@ -54,7 +60,7 @@
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 4.375rem;
     }
-    @media all and (max-width: 640px) {
+    @media all and (max-width: $breakopoint_tablet-small) {
         grid-template-columns: 1fr;
         grid-row-gap: 4rem;
     }

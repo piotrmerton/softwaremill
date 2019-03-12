@@ -1,11 +1,37 @@
 <section class="content__section section-portfolio">
 	<div class="viewport">
-		<div class="section__grid grid--two-column">
+		<div class="section__grid grid--two-columns">
 			<div class="grid__item item--portfolio">
-				<h2>Our portfolio speaks for itself.</h2>
+				<div class="section__header">
+					<h2>Our portfolio speaks for itself.</h2>
+				</div>
+
+				{% block portfolio_featured %}
+					{% if portfolio %}
+						<ul class="portfolio__grid grid--two-columns">
+							{% for casestudy in portfolio %}
+								<li class="grid__item item--casestudy">
+									<h3 data-mh="casestudy-name" class="item__name">{{ casestudy.name }}</h3>
+									<p class="item__desc">{{ casestudy.desc }}</p>
+									<a class="button button--compact" href="{{ casestudy.url }}">Read case study</a>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endif %}
+				{% endblock %}
+
+				<a class="section__cta button button--transparent" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+					</figure>
+					<span class="button__label">See our portfolio</span>
+				</a>
+
 			</div>
 			<div class="grid__item item--testimonials">
-				<h2>Client’s testimonials</h2>
+				<div class="section__header">
+					<h2>Client’s testimonials</h2>
+				</div>
 			</div>			
 		</div>
 	</div>

@@ -24,7 +24,12 @@
 						<div class="section__header">
 							<h2>Our self-organized teams of developers are responsible end-to-end for the projects. Transparency is our priority.</h2>						
 						</div>
-						<a class="button button--transparent button--white" href="#">See more about How we work!</a>
+						<a class="button button--transparent button--white" href="#">
+							<figure class="button__ico ui-ico">
+								{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+							</figure>
+							<span class="button__label">See more about How we work!</span>
+						</a>
 					</div>
 				</div>
 			</div><!-- /viewport -->
@@ -79,6 +84,12 @@
 				<h3>We’re Scala/Java professionals with experience in writing scalable, fault-tolerant, distributed applications using Scala (Akka, Play, Spark), Java, Kotlin and many other JVM-based technologies, storing data in relational (MySQL, Postgres) or NoSQL databases (Cassandra, Mongo, DynamoDB), deployed both in the cloud (AWS) or traditionally.</h3>
 			</div>			
 		</div>
+		<a class="section__cta button button--transparent button--white" href="#">
+			<figure class="button__ico ui-ico">
+				{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+			</figure>
+			<span class="button__label">Read tech blog</span>
+		</a>		
 	</div>
 </section>
 
@@ -89,12 +100,6 @@
 		</div>
 	</div>
 </section>
-
-<pre>
-
-{# {{ dump() }} #}
-
-</pre>
 
 {% endblock %}
 

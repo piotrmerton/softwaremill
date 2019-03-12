@@ -105,12 +105,17 @@
 					grid-template-columns: repeat(8, 1fr);
 					grid-column-gap: $grid-gutter-desktop;
 
-					a {
+					> a {
 						grid-column: 1 / 3;
 					}
 					> ul {
 						display: block;
 						grid-column: 3 / -1;
+						> li {
+							&:not(:last-child) {
+								margin-bottom: .5rem;
+							}
+						}
 						@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
 							grid-column-start: 4;
 						}
