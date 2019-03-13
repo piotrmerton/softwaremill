@@ -1,3 +1,4 @@
+//import { UI } from '../ui';
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider.module'
 
 export let events = {
@@ -5,23 +6,14 @@ export let events = {
 	selector : ".events__list",
 	navSelector : '.events__nav',
 	containerSelector: '.events__calendar',
+	axis : null,
 
 	initSlider : function() {
 
+		//are we changing axis based on viewport width?
+		//let axis = UI.windowWidth > 960 ? 'vertical' : 'horizontal';
 
-		//for horizontal slider to be aligned to the right edge, we need to apply fixed width to its container, otherwise
-		//the container in flex box model has automated width of all it's slide items
-		//this is ugly, and it would be best to settle for standard alignment of set axis to vertical
-
-
-		//we don't need to iterate through all list's items and check for widest, since all elements inherit block width of parent
-		let list = document.querySelector(this.selector);
-		let container = document.querySelector(this.containerSelector);
-		
-		container.style.maxWidth = list.offsetWidth+"px";
-
-		//now initialize slider
-		let slider = tns({
+		let settings = {
 			container: this.selector,
 			mode: 'carousel',
 			navContainer : this.navSelector,
@@ -31,14 +23,37 @@ export let events = {
 			autoplay: false,
 			controls: false,
 			nav: true,
-			//autoWidth: true,
-			viewportMax: 300,
-			loop: false,
-			//axis: 'vertical',
-		});	
+			loop: false,	
+			//axis,		
+		}
 
-		//do we need to differentiate slider behavior on desktop and mobile, i.e. vertical on desktop, horizontal on mobile?
 
+
+		//callback to ensure order of execution
+		this.resizeContainer(this.selector, this.containerSelector, () => {
+			let slider = tns( settings );
+		});
+
+		
+		//should you need to alter slider behavior based on viewport, bind resize event
+		// window.addEventListener('resize', () => { 
+			
+		// });
+
+	},
+
+	resizeContainer : function(selector, containerSelector, callback) {
+		//for horizontal slider to be aligned to the right edge, we need to apply fixed width to its container, otherwise
+		//the container in flex box model has automated width of all it's slide items
+		//this is ugly, and it would be best to settle for standard alignment of set axis to vertical
+
+		//we don't need to iterate through all list's items and check for widest, since all elements inherit block width of parent
+		let list = document.querySelector(selector);
+		let container = document.querySelector(containerSelector);
+		
+		container.style.maxWidth = list.offsetWidth+"px";	
+
+		if(callback) callback();
 	}
 
 }

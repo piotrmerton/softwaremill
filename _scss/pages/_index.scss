@@ -11,8 +11,12 @@
 			fill: #fff;
 		}
 
+		@media all and (min-width: $breakpoint_fullhd) {
+			// big logo only on >=fullhd
+			width: 240px;			
+		}
 		@media all and (min-width: $breakpoint_laptop + 1px) {
-			width: 240px;
+			
 			//a little direction for logo: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
 			//adjust logo a little to not cover up employee mouth
 			margin-top: 6rem;
@@ -20,6 +24,7 @@
 	}
 
 }
+
 
 .main-content {
 	&.content--index {
@@ -38,7 +43,50 @@
 					}
 				}
 			}
-	
+		}
+
+		.section-partners {
+			@media all and (max-width: $breakpoint_mobile) {
+				padding-bottom: 0;
+			}
+			.partners__list {
+				display: flex;
+				justify-content: space-between;
+
+				img {
+					width: auto;
+					height: 2.625em;
+					transition: all .4s;
+					filter: grayscale(100%);
+				}
+
+				a {
+					@media all and (min-width: $breakpoint_tablet + 1px) {
+						&:hover {
+							img {
+								filter: grayscale(0);
+							}
+						}				
+					}
+				}
+
+				@media all and (max-width: $breakpoint_mobile) {
+					li {
+						//padding: 0 1rem;
+						img {
+							width: 100%;
+							height: auto;
+							max-height: 2.625em;
+						}
+						&:nth-child(even) {
+							padding: 0 1.5rem;
+						}
+						&:nth-child(n+4) {
+							display: none;
+						}
+					}
+				}
+			}
 		}
 
 	}

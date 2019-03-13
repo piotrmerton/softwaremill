@@ -1,6 +1,6 @@
 <footer>
 	
-	<section class="footer__section content__section section--contact">
+	<section class="footer__section content__section section-contact">
 
 		<div class="viewport">
 
@@ -23,14 +23,20 @@
 	</section>
 
 
-	<section class="footer__section content__section section--footer-links section--black text--white">
+	<section class="footer__section content__section section--black text--white">
 		<div class="viewport">
 
 			<div class="section__grid grid--two-columns">
 
 					<div class="grid__item item--nav">
 
-						<h2>See also</h2>
+						<div class="section__header">
+							<h2>See also</h2>
+						</div>
+
+						<div class="footer__nav">
+							{% include '../components/nav-bottom.twig' %}
+						</div>
 
 					</div>
 
@@ -45,10 +51,13 @@
 					</div>					
 
 			</div><!-- /section__grid -->
-
-
-
 		</div><!-- /viewport -->
+	</section>
+
+	<section class="footer__section content__section section--black text--white section-copyrights">
+		<div class="viewport">
+			<p>&copy; 2019 SoftwareMill. All rights reserved. <a href="#">Privacy policy.</a>
+		</div>
 	</section>
 
 </footer>

@@ -2,6 +2,10 @@
 {% extends "layout/base.twig" %}
 
 
+{% block assetsHead %}
+	{{ parent() }}
+	<script type="text/javascript" src="https://static1.clutch.co/sites/all/modules/custom/clutch_widget/js/widget.js"></script>
+{% endblock %}
 
 
 {% block banner %}
@@ -26,7 +30,7 @@
 						</div>
 						<a class="button button--transparent button--white" href="#">
 							<figure class="button__ico ui-ico">
-								{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+								{{ source(assetsDirRoot~'svg/ui/arrow.svg' ) }}
 							</figure>
 							<span class="button__label">See more about How we work!</span>
 						</a>
@@ -64,7 +68,7 @@
 			</div>
 			<a class="section__cta button button--transparent button--white" href="#">
 				<figure class="button__ico ui-ico">
-					{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+					{{ source(assetsDirRoot~'svg/ui/arrow.svg' ) }}
 				</figure>
 				<span class="button__label">Meet the team</span>
 			</a>	
@@ -86,7 +90,7 @@
 		</div>
 		<a class="section__cta button button--transparent button--white" href="#">
 			<figure class="button__ico ui-ico">
-				{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+				{{ source(assetsDirRoot~'svg/ui/arrow.svg' ) }}
 			</figure>
 			<span class="button__label">Read tech blog</span>
 		</a>		
@@ -98,6 +102,41 @@
 		<div class="section__header">
 			<h2>Our Partners</h2>
 		</div>
+
+		{# dont need to embed svg source since we aren't interacting with style attritubes #}
+
+		<ul class="partners__list">
+			<li class="list__item item--partner">
+				<a target="_blank" href="https://www.mongodb.com/">
+					<img src="assets/svg/partners/mongodb.svg" alt="MongoDB" />
+				</a>
+			</li>
+			<li class="list__item item--partner">
+				<a target="_blank" href="https://aws.amazon.com/">
+					<img src="assets/svg/partners/aws.svg" alt="Amazon Web Services" />
+				</a>
+			</li>
+			<li class="list__item item--partner">
+				<a target="_blank" href="http://www.lightbend.com">
+					<img src="assets/svg/partners/lightbend.svg" alt="Lightbend" />
+				</a>
+			</li>
+			<li class="list__item item--partner">
+				<a target="_blank" href="https://www.mongodb.com/">
+					<img src="assets/svg/partners/mongodb.svg" alt="MongoDB" />
+				</a>
+			</li>
+			<li class="list__item item--partner">
+				<a target="_blank" href="https://aws.amazon.com/">
+					<img src="assets/svg/partners/aws.svg" alt="Amazon Web Services" />
+				</a>
+			</li>
+			<li class="list__item item--partner">
+				<a target="_blank" href="http://www.lightbend.com">
+					<img src="assets/svg/partners/mongodb.svg" alt="Lightbend" />
+				</a>
+			</li>									
+		</ul>
 	</div>
 </section>
 

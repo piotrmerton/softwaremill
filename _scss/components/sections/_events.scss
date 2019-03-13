@@ -69,12 +69,12 @@
 		.events__calendar {
 			width: 100%;
 			max-width: 100% !important; //override JS inline style, see events.js
+			margin-top: 1rem;
 		}
 		.events__nav {
 			margin-left: 2rem;
 		}
-		.events__list {
-			margin-top: 1rem;
+		.events__list {			
 			.list__item {
 				a {
 					font-size: .875rem;

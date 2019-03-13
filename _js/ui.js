@@ -13,7 +13,7 @@ export let UI = {
 	mobile : /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent),
 	windowWidth : window.innerWidth,
 	windowHeight : window.innerHeight,
-	debug : true,
+	debug : false,
 
 	//calculate and store viewport dimensions
 	//this method will be bound to window resize event so try not to overload it

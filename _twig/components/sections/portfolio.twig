@@ -22,7 +22,7 @@
 
 				<a class="section__cta button button--transparent" href="#">
 					<figure class="button__ico ui-ico">
-						{{ source(assetsDirRoot~'svg/arrow.svg' ) }}
+						{{ source(assetsDirRoot~'svg/ui/arrow.svg' ) }}
 					</figure>
 					<span class="button__label">See our portfolio</span>
 				</a>
@@ -31,6 +31,16 @@
 			<div class="grid__item item--testimonials">
 				<div class="section__header">
 					<h2>Client’s testimonials</h2>
+				</div>
+				<div class="testimonials__widget">
+
+					{#
+						clutch widget, see https://clutch.co/widgets-example
+						and remember to put <script> into <HEAD> by using assetsHead block (see layout/base.twig)
+					 #}
+
+					<div class="clutch-widget" data-url="https://clutch.co" data-widget-type="3" data-height="350" data-clutchcompany-id="33683"></div>
+
 				</div>
 			</div>			
 		</div>

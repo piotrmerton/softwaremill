@@ -4,6 +4,15 @@
 .text--white,
 .text--white * {
 	color: #fff;
+
+	a {		
+		color: #fff;
+		@media all and (min-width: $breakpoint_tablet + 1px) {
+			&:hover {
+				color: $purple;
+			}
+		}
+	}	
 }
 
 
