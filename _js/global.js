@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 } );
 
 window.addEventListener('resize', () => { 
-	UI.init() 
+	UI.recalc() 
 
 	/*
 	 *	additional measure if you need extra bulletproof mobile menu for browser manual resizing

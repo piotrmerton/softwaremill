@@ -28,11 +28,18 @@ export let events = {
 		}
 
 
+		//unfortunately we need to wait for custom fonts to load, since they dramatically alter
+		//text length...
+		window.onload = () => {
+			//callback to ensure order of execution
+			this.resizeContainer(this.selector, this.containerSelector, () => {
+				let slider = tns( settings );
+			});			
+		}
 
-		//callback to ensure order of execution
-		this.resizeContainer(this.selector, this.containerSelector, () => {
-			let slider = tns( settings );
-		});
+
+
+
 
 		
 		//should you need to alter slider behavior based on viewport, bind resize event

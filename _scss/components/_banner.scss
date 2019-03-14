@@ -34,6 +34,7 @@
 				align-self: stretch;
 				@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
 					min-height: 100vh;
+					min-height: calc(var(--vh, 1vh) * 100); //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/					
 					display: flex;
 					align-items: center;					
 				}
@@ -41,10 +42,13 @@
 			@media all and (min-width: $breakpoint_tablet-portrait) {
 				.banner__grid {
 					min-height: 100vh;
+					min-height: calc(var(--vh, 1vh) * 100); //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/					
 					display: grid;
-					align-items: center;
-					//grid-template-rows: minmax(max-content, 100%);	
-					grid-template-rows: calc(100vh - 3.75rem) max-content; //magic number is the height of section-events, see components/sections/events.scss
+					align-items: center;	
+					
+					//magic number is the height of section-events, see components/sections/events.scss
+					grid-template-rows: calc(100vh - 3.75rem) max-content; 
+					grid-template-rows: calc(var(--vh, 1vh) * 100 - 3.75rem) max-content; 
 				}					
 			}	
 				

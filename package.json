@@ -33,6 +33,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "list.js": "^1.5.0",
     "matchheight": "^0.1.2",
     "scroll-out": "^2.2.7",
     "tiny-slider": "^2.9.1"
