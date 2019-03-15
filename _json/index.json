@@ -1,6 +1,5 @@
 {
 	
-
 	"page" : {
 		"slug" : "index",
 		"title" : "Homepage"
@@ -17,7 +16,7 @@
 			"desktop" : "assets/img/banner/home/desktop.jpg",
 			"tablet" : "assets/img/banner/home/tablet.jpg",
 			"mobile" : "assets/img/banner/home/mobile.jpg",
-			"alt" : "Text/caption for SEO reasons"
+			"alt" : "Text/caption for SEO"
 		}
 
 	}

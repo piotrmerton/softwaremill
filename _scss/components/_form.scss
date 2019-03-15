@@ -16,7 +16,7 @@ form {
 		background: transparent;
 
 		display: flex;
-		align-content: center;
+		align-items: center;
 		min-height: 3.5rem;
 
 		color: $black;
@@ -43,6 +43,7 @@ form {
 		border-bottom: 0;
 	}
 	button {
+		align-items: center;
 		justify-content: center;
 		cursor: pointer;
 
@@ -51,7 +52,6 @@ form {
 			&:hover {
 				color: #fff;
 				background: $purple;
-				border-color: $purple;
 			}
 		}
 	}
@@ -62,13 +62,27 @@ form {
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: $black;
 }
+:hover::-webkit-input-placeholder {
+	color: $purple;
+}
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: $black;
 }
+:hover:-ms-input-placeholder {
+	color: $purple;
+}
+
 ::-moz-placeholder { /* Firefox 19+ */
  	color: $black;
 }
+:hover::-moz-placeholder {
+	color: $purple;
+}
+
 ::placeholder {
     color: $black;
+}
+:hover::placeholder {
+	color: $purple;
 }

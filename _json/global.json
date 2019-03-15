@@ -1,6 +1,10 @@
 {
-	"assetsDirRoot" : "",
+	
 	"site_title" : "softwaremill",
+	"base_url " : "",
+	"base_dir" : "",
+	"base_assetsDir" : "",
+	"root_assetsDir" : "",
 
 	"contact" : {
 		"email" : "hello@softwaremill.com",

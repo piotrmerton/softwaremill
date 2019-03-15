@@ -49,9 +49,25 @@
 					> a {
 						display: flex;
 						align-items: center;
+						
+						position: relative;
+						overflow: hidden;
+
+						//make space for submenu indicator
+						padding-right: 1.5rem;
+
 						&:after {
 							@include submenu-indicator(.5rem, #fff);
 						}
+						&:before {
+							@include submenu-indicator(.5rem, #fff);
+							transform: rotate(180deg) translateY(300%);
+						}
+						&:before,
+						&:after {
+							position: absolute;
+							right: 0;
+						}						
 						&:hover {
 							&:after {
 								border-top-color: $purple;
@@ -63,8 +79,15 @@
 						//nav__submenu
 						> a {
 							color: $purple;
+							overflow: hidden;
 							&:after {
-								transform: rotate(180deg);
+								transform: translateY(300%);
+							}
+							&:before {
+								transform: rotate(180deg) translateY(0);
+							}
+							&:before,
+							&:after {
 								border-top-color: $purple;
 							}
 						}

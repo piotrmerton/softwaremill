@@ -46,6 +46,8 @@
 
 	@media all and (min-width: $breakpoint_desktop + 1px) {
 
+		position: absolute;
+
 		.header__layout {
 			display: grid;
 			grid-template-columns: repeat(12, 1fr);
@@ -69,6 +71,12 @@
 		.header__socialmedia {
 			display: none;
 		}
+
+		&.header--fixed,
+		&.header--scrolling {
+			position: fixed;
+		}
+
 
 		&.header--fixed,
 		&.header--black {

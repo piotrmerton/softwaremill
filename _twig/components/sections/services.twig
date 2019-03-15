@@ -11,7 +11,7 @@
 					<li class="grid__item item--service">
 						<a href="{{ service.url }}" title="{{ service.name }}">
 							<figure class="service__ico ui-ico ico--svg">
-								{{ source(assetsDirRoot~'svg/services/'~service.slug~'.svg' ) }}
+								{{ source(root_assetsDir~'svg/services/'~service.slug~'.svg' ) }}
 							</figure>							
 							<h3 data-mh="service-name" class="service__name">{{ service.name }}</h3>
 							{% if full is defined %}
@@ -29,7 +29,7 @@
 			{% if page.slug != 'services' %}
 				<a class="section__cta button button--transparent" href="#">
 					<figure class="button__ico ui-ico">
-						{{ source(assetsDirRoot~'svg/ui/arrow.svg' ) }}
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
 					</figure>					
 					<span class="button__label">We do more! See all services</span>
 				</a>

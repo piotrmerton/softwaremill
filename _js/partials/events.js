@@ -37,10 +37,6 @@ export let events = {
 			});			
 		}
 
-
-
-
-
 		
 		//should you need to alter slider behavior based on viewport, bind resize event
 		// window.addEventListener('resize', () => { 

@@ -96,7 +96,7 @@ module.exports = merge(baseConfig, {
 									...localData,
 
 									//override assets directory root for twig templates (JS enviroment only, needed for embedding SVGs using {{source}})
-									"assetsDirRoot" : path.join(__dirname, '../assets/'),
+									"root_assetsDir" : path.join(__dirname, '../assets/'),
 								};
 
 								// Force webpack to watch file

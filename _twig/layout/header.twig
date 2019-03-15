@@ -1,14 +1,14 @@
-<header id="header-top" class="header-top{% if text_black %} header--black{% endif %}">
+<header id="header-top" class="header-top{% if text_black %} header--black{% endif %} animated">
 	<div class="viewport">
 		<div class="header__layout">
 
 			<section class="header__branding">
-				<a class="header__logo" href="#">
+				<a class="header__logo" href="{{ base_url }}">
 					<figure class="logo__text">
-						{{ source(assetsDirRoot~'svg/logo-text.svg') }}
+						{{ source(root_assetsDir~'svg/logo-text.svg') }}
 					</figure>
 					<figure class="logo__shapes">
-						{{ source(assetsDirRoot~'svg/logo-shapes.svg') }}
+						{{ source(root_assetsDir~'svg/logo-shapes.svg') }}
 					</figure>					
 				</a>
 

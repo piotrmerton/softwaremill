@@ -11,10 +11,7 @@
 			fill: #fff;
 		}
 
-		@media all and (min-width: $breakpoint_fullhd) {
-			// big logo only on >=fullhd
-			width: 240px;			
-		}
+
 		@media all and (min-width: $breakpoint_laptop + 1px) {
 			
 			//a little direction for logo: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
@@ -70,19 +67,18 @@
 					}
 				}
 
+				@media all and (max-width: $breakpoint_laptop) {
+					li {
+						text-align: center;
+					}
+				}
 				@media all and (max-width: $breakpoint_mobile) {
 					li {
-						//padding: 0 1rem;
+						padding: 0 1.5rem;
 						img {
 							width: 100%;
 							height: auto;
 							max-height: 2.625em;
-						}
-						&:nth-child(even) {
-							padding: 0 1.5rem;
-						}
-						&:nth-child(n+4) {
-							display: none;
 						}
 					}
 				}
