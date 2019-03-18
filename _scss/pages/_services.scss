@@ -1,0 +1,28 @@
+.main-content {
+	&.content--services {
+
+		.section-consulting {
+
+			.services__list {
+				h3 {
+					margin: 6.25rem 0 3.75rem; //reference point: Softwaremill_Website_Services_05;
+				}
+
+				@media all and (max-width: $breakpoint_laptop) {
+					h3 {
+						margin: 3.75rem 0 1.875rem; //ref: Softwaremill_WebsiteTablet_CompanyRemote_05;
+					}
+				}
+				@media all and (max-width: $breakpoint_mobile) {
+					h3 {
+						margin: 2.75rem 0 1.375rem; //ref: Softwaremill_WebsiteMobile_CompanyRemote_05;
+					}
+				}				
+			}
+
+
+		}
+
+	}
+
+}

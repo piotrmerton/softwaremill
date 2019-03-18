@@ -1,0 +1,154 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-strengths section--no-padding-top section--padding-offset">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>Our main strengths</h2>
+			</div>
+
+			<ul class="strengths__list grid--three-columns">
+				<li>
+					<h3>Maintainable, working software that brings real value to your business</h3>
+				</li>
+				<li>
+					<h3>Senior Software Developers with business mindset</h3>
+				</li>
+				<li>
+					<h3>Self-organization of teams and years of commercial experience</h3>
+				</li>
+				<li>
+					<h3>2-weeks free trial. If you like it - we will keep working</h3>
+				</li>
+				<li>
+					<h3>No “one size fits all” approach, we adapt to your needs and constraints</h3>
+				</li>
+				<li>
+					<h3>Transparent communication and Agile project methodology</h3>
+				</li>
+			</ul> 
+
+		</div><!-- /viewport -->
+	</section>
+
+
+
+	<section class="content__section section-team section--black text--white">
+		<div class="viewport">
+
+			<div class="section__grid grid--content">
+				<div class="section__header">
+					<h2>We know who needs to join the team at which stage and free you up from doing estimates on resource planning.</h2>
+				</div>
+
+				<div class="section__body">
+					<ul class="features__list grid--two-columns">
+						<li class="list__item">
+							<figure class="item__ico ui-ico ico--svg">
+								{{ source(root_assetsDir~'svg/team-dedicated.svg' ) }}
+							</figure>							
+							<h3>Dedicated Team</h3>
+							<ul class="text-list">
+								<li>Time and material contract</li>
+								<li>Transparent workflow</li>
+								<li>Need NDA? not a problem</li>
+								<li>End-to-end delivery</li>
+							</ul>
+							<a href="#" class="button button--white">Start 2-weeks trial</a>
+						</li>
+						<li class="list__item">
+							<figure class="item__ico ui-ico ico--svg">
+								{{ source(root_assetsDir~'svg/team-extension.svg' ) }}
+							</figure>							
+							<h3>Team Extension</h3>
+							<ul class="text-list">
+								<li>Time and material contract</li>
+								<li>Transparent workflow</li>
+								<li>Need NDA? not a problem</li>
+								<li>High communication standards</li>
+							</ul>
+							<a href="#" class="button button--white">Start 2-weeks trial</a>
+						</li>
+					</ul>
+				</div>		
+				
+				<a class="section__cta button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>
+					<span class="button__label">Learn in FAQ, how to choose best team type for your needs.</span>
+				</a>
+
+			</div>
+
+		</div><!-- /viewport -->
+	</section>
+
+
+	<section class="content__section section-reasons">
+		<div class="viewport">
+
+			<div class="section__header grid--two-columns">
+				<h2>7 reasons why you should choose SoftwareMill</h2>
+			</div>
+
+			<div class="section__body">
+				<ul class="reasons__list grid--four-columns">
+					<li>
+						<h3 data-mh="list-title">Experience</h3>
+						<p>We have years of experience in gathering business requirements, and developing software</p>
+					</li>
+					<li>
+						<h3 data-mh="list-title">Masters of planning</h3>
+						<p>Not 100% sure what you want right now? We can free you up from estimates and resource planning</p>
+					</li>					
+					<li>
+						<h3 data-mh="list-title">Technology advising</h3>
+						<p>Wondering witch technologies to choose? We help you implement the most effective one</p>
+					</li>
+					<li>
+						<h3 data-mh="list-title">In-house</h3>
+						<p>You do not outsource too far away</p>
+					</li>
+					<li>
+						<h3 data-mh="list-title">Communication</h3>
+						<p>We stay in touch by visiting our customers and inviting them to visit us</p>
+					</li>
+					<li>
+						<h3 data-mh="list-title">Trust</h3>
+						<p>You can be sure we will deliver what we have promised</p>
+					</li>
+					<li>
+						<h3 data-mh="list-title">Free trial</h3>
+						<p>The business is a matter of trust. Let’s get to know each other during 2-week trial first</p>
+					</li>
+				</ul>
+			</div>		
+
+			<a class="section__cta button button--transparent" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>
+				<span class="button__label">Read more about how we work</span>
+			</a>				
+
+		</div><!-- /viewport -->
+	</section>
+
+{% endblock %}
+
+
+
+

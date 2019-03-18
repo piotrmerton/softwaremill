@@ -39,6 +39,11 @@ footer {
 				padding: 0 0 1.375rem;
 			}
 		}
+
+		.section__grid {
+			grid-row-gap: 1.5rem;
+		}
+
 		p {
 			font-size: 0.813em;
 			line-height: 1.7;
@@ -50,4 +55,9 @@ footer {
 			}
 		}
 	}
+}
+
+.footer__credits {
+	font-family: 'roboto_ffibold', sans-serif;
+	font-size: .813em;
 }

@@ -59,7 +59,6 @@
 	.banner__scroll {
 		//by default, position on banner__subgrid
 		grid-column: 1 / -1;
-		display: inline-block;
 
 		//absolute positionining only if there is enough screen height (but still it isn't fully bulletproof for extra long banner__desc)
 		@media all and (min-width: $breakpoint_laptop + 1px) {
@@ -88,6 +87,7 @@
 		}	
 		.scroll__ico {
 			width: 3.5rem;
+			height: auto;
 			transform: rotate(90deg);
 		}
 
@@ -101,11 +101,18 @@
 		align-items: start;
 		grid-row-gap: 3.75rem;
 
+		.banner__cta {
+			min-width: 0;
+		}
+
 		@media all and (min-width: $breakpoint_desktop + 1px) {
 
 			.banner__title,
 			.banner__desc {
 				grid-column: 1 / span 6;
+			}
+			.banner__body {
+				grid-column: 1 / -1;
 			}
 			.banner__cta {
 				grid-column: 10 / -1;				
@@ -140,6 +147,12 @@
 		}
 
 		@media all and (max-width: $breakpoint_mobile) {
+
+			//for this particular dimensions additional padding helps prevents banner content overlapping with absolute header
+			//header height at this point is 7.5rem, but on height less than 667px fixed banner kicks in
+			@media all and (max-height: 768px) and (min-height: 667px) {
+				padding-top: 4rem;
+			}
 			
 			.banner__cta {
 

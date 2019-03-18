@@ -1,0 +1,21 @@
+{
+	
+	"page" : {
+		"slug" : "contact",
+		"title" : "Contact"
+	},
+
+	"banner" : {
+		"title" : "Contact Us",
+		"desc" : "",
+		"cta" : "",
+		"cover" : {
+			"desktop" : "assets/img/banner/default/desktop.jpg",
+			"tablet" : "assets/img/banner/default/tablet.jpg",
+			"mobile" : "assets/img/banner/default/mobile.jpg",
+			"alt" : "Text/caption for SEO"
+		}
+
+	}
+
+}

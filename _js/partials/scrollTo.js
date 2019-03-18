@@ -24,7 +24,7 @@ export let scrollTo = {
 				let target = buttons[i].dataset.scrollTarget;
 
 				window.scrollTo({
-					top: document.querySelector('.'+target).offsetTop - offset,
+					top: document.querySelector('#'+target).offsetTop - offset,
 					behavior: 'smooth',
 				});				
 				

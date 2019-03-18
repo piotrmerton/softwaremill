@@ -5,10 +5,11 @@
 	align-items: center;
 	justify-content: center;
 
+	min-width: 16em;
 	min-height: 4rem;
 	padding: 0 1rem;
 
-	font-size: 1.25em;
+	font-size: 1.75em;
 	line-height: 1.5;
 
 	cursor: pointer;
@@ -16,6 +17,10 @@
 	//default
 	background: $black;
 	color: #fff;
+
+	@media all and (max-width: $breakpoint_laptop) {
+		font-size: 1.25em;
+	}
 
 	@media all and (min-width: $breakpoint_tablet + 1px) {
 
@@ -25,6 +30,9 @@
 			background: $purple;
 			color: #fff;
 		}
+	}
+	@media all and (max-width: $breakpoint_phone) {
+		width: 100%;
 	}
 
 	//modifiers
@@ -58,9 +66,14 @@
 		&.button--white {
 			color: #fff;			
 			.svg__ico {
-				stroke: #fff;
+				stroke: $lightblue;
 			}
 		}		
+		&.button--white-arrow {
+			.svg__ico {
+				stroke: #fff;
+			}			
+		}
 		@media all and (max-width: $breakpoint_laptop) {
 			.button__ico {
 				height: 2.75rem;

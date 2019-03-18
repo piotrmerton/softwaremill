@@ -15,6 +15,13 @@
 	}	
 }
 
+//flat, paragraph-based list
+.text-list {
+	li {
+		@extend %generic-p;
+	}
+}
+
 
 //inline svgs via html-webpack-inline-svg-plugin
 .ico {

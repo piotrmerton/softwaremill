@@ -6,10 +6,10 @@
 		justify-content: space-between;
 	}
 	.socialmedia__ico {
-		svg {
-			min-width: 1.5rem;
-			height: 1.5rem;
-		}
+		
+		min-width: 1.5rem;
+		height: 1.5rem;
+
 		@media all and (min-width: $breakpoint_tablet + 1px) {
 			&:hover {
 				.svg__ico {

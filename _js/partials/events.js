@@ -10,6 +10,8 @@ export let events = {
 
 	initSlider : function() {
 
+		if( document.querySelector(this.selector) === null ) return;
+
 		//are we changing axis based on viewport width?
 		//let axis = UI.windowWidth > 960 ? 'vertical' : 'horizontal';
 

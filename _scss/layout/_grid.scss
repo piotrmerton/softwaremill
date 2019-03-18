@@ -40,29 +40,56 @@
         grid-column-gap: $grid-gutter-lapotp;
     }    
     @media all and (max-width: $breakpoint_mobile) {
-        grid-row-gap: $horizontal-whitespace-laptop;
+        grid-row-gap: $vertical-whitespace-laptop;
     }
     @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-        grid-row-gap: $horizontal-whitespace-phone;
+        grid-row-gap: $vertical-whitespace-phone;
     }
+}
+
+
+.grid--three-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: $grid-gutter-desktop;
+    grid-row-gap: $vertical-whitespace-desktop;
+
+
+    @media all and (max-width: $breakpoint_laptop) {
+        grid-column-gap: $grid-gutter-lapotp;
+        grid-row-gap: $vertical-whitespace-laptop;
+    }
+
+    @media all and (max-width: $breakpoint_desktop) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media all and (max-width: $breakopoint_tablet-small) {
+        grid-template-columns: 1fr;
+        grid-row-gap: $vertical-whitespace-phone;
+    }
+
+
 }
 
 
 .grid--four-columns {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: $grid-gutter-desktop;
+
+    grid-column-gap: $grid-gutter-desktop;
+    grid-row-gap: $vertical-whitespace-desktop;
 
     @media all and (max-width: $breakpoint_laptop) {
         grid-column-gap: $grid-gutter-lapotp;
+        grid-row-gap: $vertical-whitespace-laptop;
     }
     @media all and (max-width: $breakpoint_desktop) {
         grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 4.375rem;
     }
     @media all and (max-width: $breakopoint_tablet-small) {
         grid-template-columns: 1fr;
-        grid-row-gap: 4rem;
+        grid-row-gap: $vertical-whitespace-phone;
     }
 }
 

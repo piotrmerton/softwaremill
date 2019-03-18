@@ -1,0 +1,24 @@
+{
+	
+	"page" : {
+		"slug" : "how-we-work",
+		"title" : "How We Work"
+	},
+
+	"banner" : {
+		"title" : "How We Work",
+		"desc" : "We understand that only true cooperation will result in working software satisfying your needs. Our self-organized teams of senior developers are responsible end-to-end for the project to help you bring your ideas to life.",
+		"cta" : {
+			"href" : "#",
+			"text" : "Contact us now"
+		},
+		"cover" : {
+			"desktop" : "assets/img/banner/how-we-work/desktop.jpg",
+			"tablet" : "assets/img/banner/how-we-work/tablet.jpg",
+			"mobile" : "",
+			"alt" : "Text/caption for SEO"
+		}
+
+	}
+
+}

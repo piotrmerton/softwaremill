@@ -3,7 +3,10 @@
  *	TO DO: refactor using filesystem or glob?
  */
 const twigTemplates = [
-	'index'
+	'index',
+	'how-we-work',
+	'services',
+	'contact'
 ];
 
 /*

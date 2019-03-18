@@ -42,6 +42,39 @@ h5 {
 	}	
 }
 
+%header-whitespace {
+	margin-bottom: $vertical-whitespace-desktop;
+	@media all and (max-width: $breakpoint_laptop) {
+		margin-bottom: $vertical-whitespace-laptop;
+	}
+	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+		margin-bottom: $vertical-whitespace-phone;
+	}	
+}
+%header-whitespace-medium {
+	margin-bottom: 3.75rem; //design spec: 60px;
+
+	@media all and (max-width: $breakpoint_laptop) {
+		margin-bottom: 2.75rem; //spec: 44px;
+	}
+	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+		margin-bottom: 2.5rem; // spec: 40px;
+	}	
+}
+%paragraph-whitespace {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+%generic-p {
+	font-size: 0.938em; //15px in xD source file
+	line-height: 1.6; //24:15;
+	letter-spacing: .01em;	
+}
+
+
+
 
 h1 {
 	@extend %generic-h1;
@@ -49,13 +82,21 @@ h1 {
 
 h2 {
 	@extend %generic-h2;
+
+	&:not(.header--no-margin) {
+		@extend %header-whitespace;
+	}	
 }
 
 h3 {
 	@extend %generic-h3;
+
+	&:not(.header--no-margin) {
+		@extend %header-whitespace-medium;
+	}	
 }
 
 p {
-	font-size: 0.938em; //15px in xD source file
-	line-height: 1.6; //24:15;
+	@extend %generic-p;
+	@extend %paragraph-whitespace;
 }

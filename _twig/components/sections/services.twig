@@ -14,7 +14,7 @@
 								{{ source(root_assetsDir~'svg/services/'~service.slug~'.svg' ) }}
 							</figure>							
 							<h3 data-mh="service-name" class="service__name">{{ service.name }}</h3>
-							{% if full is defined %}
+							{% if desc is defined %}
 								<p data-mh="service-desc" class="service__desc">
 									{{ service.desc }}
 								</p>

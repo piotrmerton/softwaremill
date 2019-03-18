@@ -1,0 +1,181 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	{% include 'components/sections/services.twig' with {'desc' : true, 'cssClass' : 'section--no-padding-top section--padding-offset'} %}
+
+	<section class="content__section section-due-dilligence section--black text--white">
+		<div class="viewport">
+			<div class="section__grid grid--two-columns">
+				<div class="section__body">
+					<div class="section__header header--no-margin">
+						<h2>We are among the top 5% of all companies screened by Digital Knights</h2>
+					</div>
+
+					<a class="section__cta button button--transparent button--white" href="#">
+						<figure class="button__ico ui-ico">
+							{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+						</figure>
+						<span class="button__label">Check out our Tech due diligence</span>
+					</a>
+				</div>
+			</div>
+		</div><!-- /viewport -->
+	</section>
+
+
+	<section class="content__section section-other-services">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>Other services</h2>
+			</div>
+			<div class="section__body">
+				<ul class="services__list grid--four-columns">
+					<li class="list__item">
+						<h3>DevOps as a service</h3>
+						<ul class="text-list">
+							<li>Continuous Integration/Continuous Delivery</li>
+							<li>Site Reliability Engineering</li>
+							<li>Automation and monitoring</li>
+							<li>Configuration management</li>
+							<li>Infrastructure as code</li>
+							<li>Cluster management and orchestration (DC/OS, Kubernetes, ECS)</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<h3>Enterprise solutions</h3>
+						<ul class="text-list">
+							<li>Business process automation, workflows</li>
+							<li>Business intelligence, data mining</li>
+							<li>Order and inventory management</li>
+							<li>ERP, CRM</li>
+							<li>Financial industry (transaction processing, credit and risk management)</li>
+							<li>Telco (VoIP, SMS)</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<h3>Web & Mobile apps</h3>
+						<ul class="text-list">
+							<li>Web 2.0, mobile & online applications</li>
+							<li>Social network sites</li>
+							<li>Interactive, rich user interfaces</li>
+							<li>Portals, Reporting UI</li>
+							<li>Software as a Service (SaaS)</li>
+							<li>Native Android and iOS apps</li>
+							<li>Integrating with APIs</li>
+							<li>Responsive, clean and interactive UI/UX</li>
+							<li>Synchronization and integration with third parties</li>
+							<li>Branding and personal touch</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<h3>UX/UI</h3>
+						<ul class="text-list">
+							<li>User interfaces for web and mobile applications</li>
+							<li>Design / UX Audit</li>
+							<li>Iterative approach to designing</li>
+							<li>Usability tests</li>
+						</ul>
+					</li>															
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="content__section section--technologies section--no-padding-top">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>Technologies</h2>
+			</div>
+			<div class="section__body">
+				<ul class="tech__list grid--four-columns">
+					<li class="list__item">
+						<h3>Languages</h3>
+						<ul class="text-list">
+							<li>Scala</li>
+							<li>Java</li>
+							<li>Node.js</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<h3>Databases</h3>
+						<ul class="text-list">
+							<li>Scala</li>
+							<li>Java</li>
+							<li>Node.js</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<h3>Frameworks</h3>
+						<ul class="text-list">
+							<li>Scala</li>
+							<li>Java</li>
+							<li>Node.js</li>
+						</ul>
+					</li>
+					<li class="list__item">
+						<h3>Deployment</h3>
+						<ul class="text-list">
+							<li>Scala</li>
+							<li>Java</li>
+							<li>Node.js</li>
+						</ul>
+					</li>															
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="content__section section-consulting section--black text--white">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>Consulting</h2>
+				<h3>We take your mind off software development. We can also help you in a few other ways:</h3>
+			</div>
+			<div class="section__body">
+				<ul class="services__list grid--four-columns">
+					<li>
+						<figure class="service__ico ui-ico ico--svg">
+							{{ source(root_assetsDir~'svg/consulting-technology.svg' ) }}
+						</figure>						
+						<h3>Technology consulting and audits</h3>
+						<p>We will help you implement and improve your new tech stack from the very beginning to a final shipment of an efficient and scalable product.</p>
+					</li>
+					<li>
+						<figure class="service__ico ui-ico ico--svg">
+							{{ source(root_assetsDir~'svg/consulting-architecture.svg' ) }}
+						</figure>						
+						<h3>Software architecture consulting</h3>
+						<p>Let’s create an MVP or a proof of concept that will result in implementing the most effective technologies to use & develop customisable, scalable and secure blockchain solutions.</p>
+						<p>Need functional programming consulting? Code reviews and mentoring for Scala, Akka - we are here to help.</p>
+					</li>
+					<li>
+						<figure class="service__ico ui-ico ico--svg">
+							{{ source(root_assetsDir~'svg/consulting-support.svg' ) }}
+						</figure>						
+						<h3>Support and rescue of projects</h3>
+						<p>We build tailored IoT-powered business applications and provide professional assistance across the full-cycle of custom software development.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,43 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/contact.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-contact">
+		<div class="viewport">
+
+			<div class="section__grid grid--two-columns">
+				<div class="grid__item item--header">
+					<h2>We work worldwide from Poland</h2>
+				</div>
+
+				<div class="grid__item item--address">
+					<address class="address-block" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						<p itemprop="name">SoftwareMill spółka z ograniczoną odpowiedzialnością sp. k.</p>
+						<p itemprop="streetAddress">ul. Na Uboczu 8/87</p>
+						<p>
+							<span itemprop="postalCode">02-791</span>
+							<span itemprop="addressLocality">Warszawa</span>
+						</p>
+					</address>
+				</div>
+			</div>
+
+		</div><!-- /viewport -->
+	</section>
+
+{% endblock %}
+
+
+
+

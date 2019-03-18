@@ -6,8 +6,7 @@ export let partners = {
 
 	initSlider : function() {
 
-
-		console.log( 'partners init');
+		if( document.querySelector(this.selector) === null ) return;
 
 		let settings = {
 			container: this.selector,
@@ -25,7 +24,7 @@ export let partners = {
 				1366 : {
 					items: 6
 				},
-				960 : {
+				1080 : {
 					items : 5
 				},
 				640 : {
@@ -35,8 +34,9 @@ export let partners = {
 			}
 		};
 
-
 		let slider = tns( settings );
+		
+		
 
 	}
 

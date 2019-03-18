@@ -66,22 +66,32 @@
 //inline svgs icons
 .ui-ico {
 
+	width: auto;
+	height: 6.25rem;
+
+	@media all and (max-width: $breakpoint_laptop) {
+		height: 5rem;
+	}
+
+
 	//paths, polygons, lines, rects etc controlled by additional class
 	.svg__ico {			
 		transition: all .2s ease-in-out;
 	}
 
+
+
 	svg {
-		width: auto;
+		//width: auto;
 		height: 100%;
 	}
 
-	&.svg--stroke-black {
+	&.ico--stroke-black {
 		.svg__ico {
 			stroke: $black;
 		}
 	}
-	&.svg--stroke-white {
+	&.ico--stroke-white {
 		.svg__ico {
 			stroke: #fff;
 		}

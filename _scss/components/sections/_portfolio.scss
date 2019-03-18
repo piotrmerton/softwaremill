@@ -11,7 +11,7 @@
 
 	.item--casestudy {
 		.item__desc {
-			margin: 3.75rem 0 1.875rem;
+			margin-bottom: 1.875rem;
 		}
 
 		@media all and (min-width: $breakpoint_laptop + 1px) {
@@ -24,12 +24,12 @@
 		}
 		@media all and (max-width: $breakpoint_laptop) {
 			.item__desc {
-				margin: 2.75rem 0 1.375rem;
+				margin-bottom: 1.375rem;
 			}
 		}
 		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
 			.item__desc {
-				margin: 2.5rem 0 1.25rem;
+				margin-bottom: 1.25rem;
 			}
 		}
 	}

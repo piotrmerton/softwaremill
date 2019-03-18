@@ -1,18 +1,14 @@
 .section-services {
 	.service__name {
-		margin: 3.75rem 0 2rem; 
+		margin: 3.75rem 0 1.875rem; 
 	}	
-	.service__ico {
-		width: auto;
-		height: 6.25rem;
+	.service__desc {
+		margin-bottom: 1.875rem;
 	}
 
 	@media all and (max-width: $breakpoint_laptop) {
 		.service__name {
 			margin: 2.75rem 0 1.375em;
-		}
-		.service__ico {
-			height: 5rem;
 		}
 	}
 	@media all and (max-width: $breakpoint_mobile) {

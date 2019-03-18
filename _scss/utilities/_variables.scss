@@ -5,12 +5,14 @@ $assetsPath: "..";
 
 //grid
 $grid-gutter-desktop: 2.75rem;
+//$grid-gutter-lapotp: 2.125rem;
 $grid-gutter-lapotp: 2.75rem;
+$grid-gutter-mobile: 2rem;
 
-//horizontal margins/paddings
-$horizontal-whitespace-desktop: 6.25rem;
-$horizontal-whitespace-laptop: 4.375rem;
-$horizontal-whitespace-phone: 4rem;
+//vertical margins/paddings
+$vertical-whitespace-desktop: 6.25rem;
+$vertical-whitespace-laptop: 4.375rem;
+$vertical-whitespace-phone: 4rem;
 
 //colors
 $black: #19191E;

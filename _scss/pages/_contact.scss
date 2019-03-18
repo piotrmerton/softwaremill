@@ -1,0 +1,78 @@
+
+//modifier of generic .banner, see components/banner.scss
+.banner--contact {
+
+
+	@media all and (min-width: $breakpoint_laptop + 1px) {
+		.banner__title {
+			//a little direction: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
+			//adjust logo a little to not cover up employee mouth
+			margin-top: 6rem;			
+		}
+
+	}
+
+	.banner__body {
+		h3,
+		.contact-data {
+			font-size: 1.875em;
+		}
+		.contact-data {
+			li {
+				line-height: 1.4;
+			}
+		}
+
+		@media all and (max-width: $breakpoint_laptop) {
+			h3,
+			.contact-data {
+				font-size: 1.75em;
+			}
+		}
+		@media all and (max-width: $breakpoint_mobile) {
+			.body__grid {
+				grid-row-gap: 3.75rem;
+			}
+			h3 {
+				margin-bottom: 1rem;
+			}
+			h3,
+			.contact-data {
+				font-size: 1.5em;
+			}
+		}
+		@media all and (max-width: 480px) {
+			h3,
+			.contact-data {
+				font-size: 1.25em;
+			}			
+		}
+
+		// @media all and (max-height: 720px) {
+		// 	.body__grid {
+		// 		grid-row-gap: 2rem;
+		// 	}
+		// }
+
+	}
+
+}
+
+
+.main-content {
+	&.content--contact {
+
+		.section-contact {
+			@media all and (max-width: $breakpoint_mobile) {
+				padding-bottom: 0;
+			}			
+		}
+
+		.address-block {
+			p {
+				@extend %generic-h3;
+			}
+		}
+
+	}
+}
