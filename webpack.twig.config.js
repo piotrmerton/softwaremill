@@ -6,6 +6,7 @@ const twigTemplates = [
 	'index',
 	'how-we-work',
 	'services',
+	'ebook',
 	'contact'
 ];
 

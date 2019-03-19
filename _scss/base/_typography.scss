@@ -52,13 +52,13 @@ h5 {
 	}	
 }
 %header-whitespace-medium {
-	margin-bottom: 3.75rem; //design spec: 60px;
+	margin-bottom: 3.75rem; 
 
 	@media all and (max-width: $breakpoint_laptop) {
-		margin-bottom: 2.75rem; //spec: 44px;
+		margin-bottom: 2.75rem; 
 	}
 	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-		margin-bottom: 2.5rem; // spec: 40px;
+		margin-bottom: 2.5rem; 
 	}	
 }
 %paragraph-whitespace {

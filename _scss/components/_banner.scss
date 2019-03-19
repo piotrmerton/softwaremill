@@ -6,7 +6,8 @@
 	position: relative;
 
 	p {
-		font-size: 1.75em;		
+		font-size: 1.75em;	
+		margin: 0;	
 		@media all and (max-width: $breakpoint_fullhd - 1px) {
 			font-size: 1.25rem;
 			line-height: 1.6;

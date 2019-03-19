@@ -1,0 +1,73 @@
+
+{% extends "layout/base.twig" %}
+
+
+{% block header %}
+	{% include 'layout/header.twig' with {'text_black' : 'true'} %}
+{% endblock %}
+
+{% block banner %}
+
+	{% include 'components/banner/ebook.twig' with {'text_black' : 'true'} %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-blockchain section--no-padding-top section--padding-offset">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>Blockchain is the first native digital medium for peer-to peer value exchange and can revolutionize the process for operating in various business areas, if the right problem is addressed with the right technology.</h2>
+				<h3>Finding a real use-cases and being an early adopter can prove pivotal in retaining and growing both market share and profitability.</h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="content__section section-features section--black text--white">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>In this ebook you will learn:</h2>
+			</div>
+			<ul class="features__list grid--three-columns">
+				<li>
+					<h3>The experts perspective on the future of blockchain</h3>
+				</li>
+				<li>
+					<h3>What questions to ask before blockchain adoption</h3>
+				</li>
+				<li>
+					<h3>How to find the right tech partner to put your idea into life</h3>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+
+	<section class="content__section section-author">
+		<div class="viewport">
+			<div class="section__grid grid--content">
+				<div class="grid__item item--body">
+					<div class="section__header">
+						<h2>From the author</h2>
+					</div>
+					<h3>Incorporating data audit into the design of a system can radically change its architecture. For example, it might turn out that event sourcing is the way to go! Or that it would be beneficial to capture additional meta-data for machine learning models. Don’t throw data away!</h3>
+
+					<h3>Adam Warski</h3>
+					<p>CTO and co-founder</p>
+				</div>
+				<div class="grid__item item--ebook">
+					{% include 'components/ebook.twig' with ebook %}
+					<a class="ebook__cta button" href="#">Download</a>
+				</div>
+
+		</div>
+	</section>
+
+	
+
+{% endblock %}
+
+
+
+

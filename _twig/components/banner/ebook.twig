@@ -1,0 +1,38 @@
+{% extends "default.twig" %}
+
+{% block banner_header %}
+
+
+
+	{{ parent() }}
+
+
+	{% include '../ebook.twig' with { ebook, 'transparent' : true } %}
+
+{% endblock %}
+
+
+{# {% block banner_content %}
+
+
+	<div class="banner__subgrid grid--content">
+		
+		<h1 class="banner__title">{{ banner.title }}</h1>
+		
+		<div class="banner__desc">
+			<p>{{ banner.desc }}</p>
+			<a class="banner__cta button button--white" href="{{ banner.cta.href }}">{{ banner.cta.text }}</a>
+		</div>
+				
+		{% include '../ebook.twig' with ebook %}
+		
+		<a class="banner__scroll do-scroll-to" data-scroll-target="content" href="#">
+			<figure class="scroll__ico ui-ico ico--svg {% if text_black is defined %} ico--stroke-black{% endif %}">
+				{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+			</figure>
+		</a>						
+		
+	</div><!-- /banner__subgrid -->
+
+	
+{% endblock %} #}

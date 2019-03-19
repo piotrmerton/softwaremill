@@ -1,0 +1,158 @@
+//modifier of generic .banner, see components/banner.scss
+.banner--ebook {
+
+
+
+	.banner__subgrid {
+
+
+		@media all and (min-width: $breakpoint_fullhd) {
+			.ebook {
+				
+			}
+		}
+
+
+		
+		@media all and (min-width: $breakpoint_desktop + 1px) {
+
+			//a little direction for logo: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
+			//adjust logo a little to not cover up employee mouth
+			margin-top: 6rem;
+
+			.ebook {
+				grid-column: 9 / span 3;
+				grid-row: auto / span 4;
+			}
+
+
+			.banner__cta {
+				grid-column: 1 / span 3;
+				grid-row: auto;
+				margin-top: 2.5rem //adds up to grid-row-gap to achieve design spec
+			}
+
+			.banner__scroll {
+				grid-column: 1 / span 6;
+			}
+
+		}
+
+		@media all and (max-width: 1650px) {
+			.ebook {
+				grid-column: 9 / -1;
+			}
+		}
+
+
+		@media all and (max-width: $breakpoint_desktop) {
+			.ebook {
+				grid-column: 1 / -1;
+
+				display: none;
+			}
+		}
+
+	}
+
+
+	//should you need ebook cover in banner on smaller screens, uncomment this
+	// @media all and (max-width: $breakpoint_desktop) {
+		
+	// 	//reset banner grid
+	// 	.banner__grid {
+	// 		display: block;
+	// 		min-height: 0;
+	// 	}
+	// 	.banner__content {
+	// 		min-height: 0;
+	// 		padding: 10rem 0 4rem;
+	// 	}
+	// 	.banner__subgrid {
+	// 		//min-height: 960px;
+	// 		padding-top: 0;
+	// 		.banner__cta {
+	// 			margin: 0;
+	// 		}			
+	// 	}
+
+	// 	.banner__scroll {
+	// 		position: static;
+	// 	}
+	// }
+
+}
+
+
+.main-content {
+	&.content--ebook {
+		.section-features {
+			.features__list {
+				h3 {
+					margin: 0;
+				}
+			}
+		}
+
+		.section-author {
+
+
+			.ebook__cta {
+				margin-top: 3.75rem;
+				width: 100%;
+				max-width: 375px; //do not exceed ebook's model width
+			}
+
+			@media all and (min-width: $breakpoint_mobile + 1px) {
+				.section__grid {
+					.grid__item {
+						&.item--body {
+							grid-column: 1 / span 6;
+						}
+						&.item--ebook {
+
+							grid-column: 9 / -1;
+
+							@media all and (min-width: $viewport_width + 1px) {
+								grid-column: 9 / span 3;
+							}
+							@media all and (max-width: $breakpoint_desktop) {
+								grid-column: 8 / -1;
+							}							
+						}
+
+					}
+				}
+			}
+
+			@media all and (max-width: $breakpoint_mobile) {
+				padding-bottom: 0;
+
+				.section__grid {
+					grid-row-gap: $vertical-whitespace-laptop;
+					grid-template-columns: 1fr;
+				}
+
+				.ebook__cta {
+					margin-top: 3rem;
+				}
+			}			
+		    @media all and (max-width: $breakopoint_tablet-small) {
+
+		        .section__grid {
+		        	grid-row-gap: $vertical-whitespace-phone;
+		        }
+
+		    }
+
+
+
+
+
+
+		}
+	}
+
+}
+
+

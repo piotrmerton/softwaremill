@@ -19,6 +19,9 @@
 .text-list {
 	li {
 		@extend %generic-p;
+		&:not(:last-child) {
+			margin-bottom: .25rem;
+		}
 	}
 }
 
