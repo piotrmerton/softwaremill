@@ -1,0 +1,185 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+	<section class="content__section section-career section--no-padding-top section--padding-offset">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>Open positions</h2>
+				<h3>@recruiters: we do not work with recruiters at the moment, so please do not contact us regarding this vacancy and do not approach any potential candidate using our job offer. Thank you!</h3>
+			</div>
+
+			<div class="section__body">
+
+				{# 	
+
+				some dynamic markup based on item count is needed to achieve "two column accordion" where expanding item would not offset entire row - thus we need to wrap items in additional containers ahead of time;
+				
+				this is not ideal, but:
+
+				- if we were to use standard grid or flexbox: opened item will expand across entire row making whitespace in other column as well;
+
+				- if we were to use legacy float: the row would not expand, but the items below would get moved around to empty space
+				and probably end up in another column which would introduce an UX-chaos for user (scenario: user is interested in positions X and Y
+				that are placed in left columns, clicks on position X to expand its contents and unexpectedly position Y is in right column now)
+
+				#}
+
+				{% set perColumn = job_positions|length / 2 %}
+				{% set firstColumn = perColumn|round(0, 'ceil') %}				
+
+				<ul id="career-tabs" class="career__tabs grid--two-columns">
+
+					{% for job in job_positions %}
+
+						{% if (loop.index == 1) or (loop.index == firstColumn + 1) %}
+							<div>
+						{% endif %}
+
+							{% include 'listing/item-job.twig' %}
+
+						{% if (loop.index == firstColumn) or (loop.index == loop.last) %}
+							</div>
+						{% endif %}
+
+					{% endfor %}
+
+				</ul>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="content__section section-cv section--black text--white">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>Can’t find a position that suits you?</h2>
+				<h3>It doesn’t mean that you don’t match. We are always looking for awesome motivated people to join the team! Having a good attitude and being keen to learn is crucial, the rest is a matter of time. Convinced?</h3>
+			</div>
+
+			<div class="section__grid grid--content">
+
+				<div class="grid__item item--expectations">
+					<h3>We expect</h3>
+					<ul class="text-list">
+						<li>2-3 years of commercial experience</li>
+						<li>Good knowledge of English</li>
+						<li>Willingness to work from home</li>
+						<li>Independence and good communication skills</li>
+						<li>Native or at least good Polish language</li>
+						<li>Sense of humour</li>
+					</ul>
+				</div>
+
+				<div class="grid__item item--nicetohave">
+					<h3>Nice to have</h3>
+					<ul class="text-list">
+						<li>Community involvement, meetups e.g. JUG</li>
+						<li>Speaking at conferences, organizing workshops</li>
+						<li>Writing a technical blog or similar</li>
+					</ul>
+				</div>
+
+				<div class="grid__item item--cta">
+					<a class="section__cta button button--white" href="#">Send your CV</a>
+					<p>Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time.</p>
+				</div>
+
+			</div>
+
+
+
+		</div><!-- /viewport -->
+	</section>
+
+
+	<section class="content__section section-perks">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>We offer</h2>
+			</div>
+			<ul class="perks__list grid--four-columns">
+				<li>
+					<h3>Remote</h3>
+					<p>We all work from our homes, co-working offices or sometimes even from Bieszczady Mountains.</p>
+				</li>
+				<li>
+					<h3>Flat structure</h3>
+					<p>Everyone has the same right to speak their opinions or change the way the company works, no matter if you are a boss or a developer who joined us a month ago. If you convince the majority to your idea, we make it happen even if a boss voted for “no”.</p>
+				</li>
+				<li>
+					<h3>Transparency</h3>
+					<p>You will know how much each of us earns or how much we spend on various things.</p>
+				</li>
+				<li>
+					<h3>Time for improvement</h3>
+					<p>Paid days-off when you attend conferences. We also appreciate when you want to share your knowledge with others.</p>
+				</li>
+				<li>
+					<h3>Your needs are covered</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two large external LCD displays setup is not too much. If you need any stuff to work, you will get it.</p>
+				</li>																
+			</ul>
+		</div><!-- /viewport -->
+	</section>
+
+
+	<section class="content__section section-hiring-path section--black text--white">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>Hiring path</h2>
+			</div>
+
+			<ul class="hiring-path__steps grid--four-columns">
+				<li>
+					<h3>1. Send us your resume</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>
+				<li>
+					<h3>2. Fill a form</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>
+				<li>
+					<h3>3. Pre-Screening Call</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>								
+				<li>
+					<h3>4. Small test task</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>
+				<li>
+					<h3>5. Code review</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>
+				<li>
+					<h3>6. Technical call</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>
+				<li>
+					<h3>7. Face to face meeting</h3>
+					<p>Company launched and led by active developers, so we understand that an SSD disc is not a whim and two.</p>
+				</li>				
+		</div><!-- /viewport -->
+	</section>
+
+
+
+
+{% endblock %}
+
+
+
+

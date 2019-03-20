@@ -42,6 +42,12 @@ h5 {
 	}	
 }
 
+%generic-h4 {
+	font-size: .875em;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+}
+
 %header-whitespace {
 	margin-bottom: $vertical-whitespace-desktop;
 	@media all and (max-width: $breakpoint_laptop) {
@@ -61,6 +67,22 @@ h5 {
 		margin-bottom: 2.5rem; 
 	}	
 }
+
+%header-whitespace-small {
+
+	// reference: Softwaremill_WebsiteMobile_Home_05 section "Main Services"; Softwaremill_Website_CompanyRemote_05 first section
+
+	margin-bottom: 1.875rem; 
+
+	@media all and (max-width: $breakpoint_laptop) {
+		margin-bottom: 1.375rem; 
+	}
+	@media all and (max-width: $breakpoint_tablet-small) {
+		
+		margin-bottom: 1.25rem;
+	}
+}
+
 %paragraph-whitespace {
 	&:not(:last-child) {
 		margin-bottom: 2rem;
@@ -93,7 +115,15 @@ h3 {
 
 	&:not(.header--no-margin) {
 		@extend %header-whitespace-medium;
-	}	
+		&.header--whitespace-small {
+			@extend %header-whitespace-small;
+		}
+	}
+}
+
+h4 {
+	@extend %generic-h4;
+	margin-bottom: 1.375em;
 }
 
 p {

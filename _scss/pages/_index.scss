@@ -10,14 +10,6 @@
 		.svg__ico {
 			fill: #fff;
 		}
-
-
-		@media all and (min-width: $breakpoint_laptop + 1px) {
-			
-			//a little direction for logo: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
-			//adjust logo a little to not cover up employee mouth
-			margin-top: 6rem;
-		}
 	}
 
 }

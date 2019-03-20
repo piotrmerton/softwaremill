@@ -6,19 +6,7 @@
 	.banner__subgrid {
 
 
-		@media all and (min-width: $breakpoint_fullhd) {
-			.ebook {
-				
-			}
-		}
-
-
-		
 		@media all and (min-width: $breakpoint_desktop + 1px) {
-
-			//a little direction for logo: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
-			//adjust logo a little to not cover up employee mouth
-			margin-top: 6rem;
 
 			.ebook {
 				grid-column: 9 / span 3;
@@ -94,7 +82,7 @@
 			}
 		}
 
-		.section-author {
+		.section-ebook {
 
 
 			.ebook__cta {
@@ -137,7 +125,7 @@
 					margin-top: 3rem;
 				}
 			}			
-		    @media all and (max-width: $breakopoint_tablet-small) {
+		    @media all and (max-width: $breakpoint_tablet-small) {
 
 		        .section__grid {
 		        	grid-row-gap: $vertical-whitespace-phone;

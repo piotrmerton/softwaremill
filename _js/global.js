@@ -23,9 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
     UI.events.initSlider();
 
 
+    /*
+     *	for now we keep all JS logic in one bundle, but should you need Code Splitting in future, you can move code below to chunks regarding specific subpages:
+     */
 
+    //1. index
+    UI.partners.initSlider();
+
+    //2. join-us
+    UI.tabs.bind();
 
 } );
+
 
 window.addEventListener('resize', () => { 
 	UI.recalc() 

@@ -86,10 +86,12 @@
 				.item--has-submenu {
 					&:not(.menu--open) {
 						> a {
+							&:before,
 							&:after {
 								border-top-color: $black;
 							}
 							&:hover {
+								&:before,
 								&:after {
 									border-top-color: $purple;
 								}

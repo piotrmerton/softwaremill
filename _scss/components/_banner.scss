@@ -90,6 +90,7 @@
 			width: 3.5rem;
 			height: auto;
 			transform: rotate(90deg);
+			margin: 0;
 		}
 
 	}
@@ -107,6 +108,11 @@
 		}
 
 		@media all and (min-width: $breakpoint_desktop + 1px) {
+
+
+			//a little manual direction: banner content is horizontally centered, so we can't have fixed horizontal margins, but we can
+			//adjust it a little to as in design spec
+			margin-top: 6rem;
 
 			.banner__title,
 			.banner__desc {
@@ -152,7 +158,7 @@
 			//for this particular dimensions additional padding helps prevents banner content overlapping with absolute header
 			//header height at this point is 7.5rem, but on height less than 667px fixed banner kicks in
 			@media all and (max-height: 768px) and (min-height: 667px) {
-				padding-top: 4rem;
+				padding-top: 6rem;
 			}
 			
 			.banner__cta {
@@ -163,7 +169,7 @@
 			}
 		}
 
-		@media all and (max-width: $breakopoint_tablet-small) {
+		@media all and (max-width: $breakpoint_tablet-small) {
 			grid-row-gap: 2.5rem;
 		}
 	}

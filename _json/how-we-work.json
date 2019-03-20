@@ -13,8 +13,8 @@
 			"text" : "Contact us now"
 		},
 		"cover" : {
-			"desktop" : "assets/img/banner/how-we-work/desktop.jpg",
-			"tablet" : "assets/img/banner/how-we-work/tablet.jpg",
+			"desktop" : "assets/img/banner/alternate/desktop.jpg",
+			"tablet" : "assets/img/banner/alternate/tablet.jpg",
 			"mobile" : "",
 			"alt" : "Text/caption for SEO"
 		}

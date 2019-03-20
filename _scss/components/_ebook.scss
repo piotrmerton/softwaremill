@@ -35,7 +35,7 @@ figure.ebook {
 			height: 100%;
 			position: absolute;
 			top: 0;
-			right: 8px;
+			right: 10px;
 			background: $black;
 		}
 	}
@@ -75,7 +75,7 @@ figure.ebook {
 	}	
 	.ebook__author {	
 		display: block;
-		margin-bottom: .5rem;
+		margin-bottom: 1rem;
 	}
 	.ebook__title {
 		@extend %generic-h3;

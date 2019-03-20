@@ -7,6 +7,8 @@ import { header } from './partials/header';
 import { nav } from './partials/nav';
 import { scrollTo } from './partials/scrollTo';
 import { events } from './partials/events';
+import { partners } from './partials/partners';
+import { tabs } from './partials/tabs';
 
 export let UI = {
 
@@ -52,5 +54,9 @@ export let UI = {
 	nav,
 	scrollTo,
 	events,
+	partners,
+	tabs
 	
 }
+
+

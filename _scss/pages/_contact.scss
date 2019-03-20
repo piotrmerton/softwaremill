@@ -2,16 +2,6 @@
 //modifier of generic .banner, see components/banner.scss
 .banner--contact {
 
-
-	@media all and (min-width: $breakpoint_laptop + 1px) {
-		.banner__title {
-			//a little direction: banner content is horizontally center, so we can't have fixed horizontal margins, but we can
-			//adjust logo a little to not cover up employee mouth
-			margin-top: 6rem;			
-		}
-
-	}
-
 	.banner__body {
 		h3,
 		.contact-data {

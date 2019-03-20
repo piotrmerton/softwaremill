@@ -1,0 +1,41 @@
+<li data-item="{{ loop.index }}" class="list__item item--job item--tab">
+
+	<section class="item__header">
+		<a href="#" class="do-toggle-tab">
+			<h3 class="job__title">{{ job.title }}</h3>	
+			<figure class="ui-ico">
+				{{ source(root_assetsDir~'svg/ui/plus.svg' ) }}
+			</figure>
+		</a>							
+	</section>
+
+	<section class="item__body">
+		<div class="body__block block--expectations">
+			<h4>What we expect</h4>
+			<ol class="text-list">										
+				{% for expectation in job.expectations %}
+					<li>{{ expectation }}</li>
+				{% endfor %}									
+			</ol>
+		</div>
+
+		<div class="body__block block--nicetohaves">
+			<h4>Nice to have:</h4>
+			<ol class="text-list">
+				{% for nicetohave in job.nicetohaves %}
+					<li>{{ nicetohave }}</li>
+				{% endfor %}
+			</ol>
+		</div>
+
+		<div class="body__block block--desc">
+			<p>{{ job.desc }}</p>
+		</div>
+	</section>
+
+	<section class="item__cta">
+		<a class="cta__toggle do-toggle-tab button button--compact button--center" href="#">Read more</a>
+		<a class="cta__apply button button--compact button--center" href="#">Apply for this position</a>
+	</section>
+	
+</li>
