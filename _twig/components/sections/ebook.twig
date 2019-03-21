@@ -1,0 +1,27 @@
+{% if ebook is defined %}
+
+	<section class="content__section section-ebook{% if section_black == true %} section--black{% endif %}">
+		<div class="viewport">
+			<div class="section__grid grid--content">
+				<div class="grid__item item--body{% if section_black == true %} text--white{% endif %}">
+
+					{{ section_ebook_content }}
+
+				</div>
+				<div class="grid__item item--ebook">
+					{% include '../ebook.twig' with ebook %}
+					<a class="ebook__cta button{% if section_black == true %} button--white{% endif %}" href="{{ ebook.url }}">Download</a>
+				</div>
+			</div>
+
+			{% if page.slug != 'ebook' %}
+				<a class="section__cta button button--transparent{% if section_black == true %} button--white{% endif %}" href="ebook.html">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Find out more</span>
+				</a>
+			{% endif %}
+		</div>
+	</section>	
+{% endif %}

@@ -23,6 +23,11 @@
 			margin-bottom: .25rem;
 		}
 	}
+
+	&.list--header {
+		@extend %generic-h3;
+		@extend %header-whitespace-medium;
+	}
 }
 
 

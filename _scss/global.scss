@@ -41,12 +41,18 @@
 @import 'components/form';
 @import 'components/ebook';
 
-@import 'components/blocks/contact';
-@import 'components/blocks/socialmedia';
+@import 'partials/blocks/author';
+@import 'partials/blocks/contact';
+@import 'partials/blocks/socialmedia';
 
+@import 'partials/listing/article';
+@import 'partials/listing/tag';
+
+@import 'components/sections/ebook';
 @import 'components/sections/events';
 @import 'components/sections/services';
 @import 'components/sections/portfolio';
+
 
 //specific subpages
 @import 'pages/index';

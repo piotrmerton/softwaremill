@@ -93,6 +93,11 @@ h5 {
 	font-size: 0.938em; //15px in xD source file
 	line-height: 1.6; //24:15;
 	letter-spacing: .01em;	
+
+	@media all and (max-width: $breakpoint_laptop) {
+		font-size: .875rem;
+		line-height: 1.5;
+	}
 }
 
 

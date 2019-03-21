@@ -1,3 +1,6 @@
+//banner content vertical margin are dynamic, which is aftermath of content being vertically centered - we can't set fixed values as in desing spec
+//due to banner's height being dependent from screen height. We also can't use percentages for vertical paddings/margins because in CSS 
+//percentages for both margin and padding properties are calculated based on on width, not height (source: https://www.w3.org/TR/css-box-3/#margins)
 
 .banner {
 	
@@ -8,17 +11,17 @@
 	p {
 		font-size: 1.75em;	
 		margin: 0;	
-		@media all and (max-width: $breakpoint_fullhd - 1px) {
+		@media 
+			all and (max-width: $breakpoint_fullhd - 1px),
+			all and (max-height: 900px) {
 			font-size: 1.25rem;
 			line-height: 1.6;
 		}
 	}
 
 	//outer grid (for banner__content and events component)
-	.banner__grid {
-		//overflow: hidden;
+	.banner__grid {}
 
-	}
 	.banner__content {
 		min-height: 768px;
 		display: flex;
@@ -35,9 +38,7 @@
 				align-self: stretch;
 				@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
 					min-height: 100vh;
-					min-height: calc(var(--vh, 1vh) * 100); //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/					
-					display: flex;
-					align-items: center;					
+					min-height: calc(var(--vh, 1vh) * 100); //https://css-tricks.com/the-trick-to-viewport-units-on-mobile/									
 				}
 			}		
 			@media all and (min-width: $breakpoint_tablet-portrait) {
@@ -48,8 +49,8 @@
 					align-items: center;	
 					
 					//magic number is the height of section-events, see components/sections/events.scss
-					grid-template-rows: calc(100vh - 3.75rem) max-content; 
-					grid-template-rows: calc(var(--vh, 1vh) * 100 - 3.75rem) max-content; 
+					grid-template-rows: minmax( calc(100vh - 3.75rem), max-content) max-content;
+					grid-template-rows: minmax( calc(var(--vh, 1vh) * 100 - 3.75rem), max-content) max-content;
 				}					
 			}	
 				
@@ -60,20 +61,33 @@
 	.banner__scroll {
 		//by default, position on banner__subgrid
 		grid-column: 1 / -1;
+		margin-top: 1.5rem; //add up to grid-row-gap
 
 		//absolute positionining only if there is enough screen height (but still it isn't fully bulletproof for extra long banner__desc)
+
 		@media all and (min-width: $breakpoint_laptop + 1px) {
-			@media all and (min-height: 900px) {
-				position: absolute;
-				bottom: 5.625rem;
-			}			
-		}
-		@media all and (max-width: $breakpoint_laptop) {
 			@media all and (min-height: 768px) {
 				position: absolute;
-				bottom: 4.375rem;
+				bottom: 10%;
+				@media all and (min-height: 900px) {
+					bottom: 5.625rem;
+				}
 			}			
 		}
+
+		@media 
+			all and (max-width: $breakpoint_laptop) 
+				and (min-width: $breakpoint_desktop + 1px)
+				and (min-height: 768px),
+
+			//exception to filter out older ipads where we don't want any absolution positioning on limited screen space (1024x768)
+			//especially if there is long banner__desc
+			all and (max-width: $breakpoint_desktop)
+				and (min-height: 769px) {
+					position: absolute;
+					bottom: 4.375rem;
+		}
+
 
 		@media all and (min-width: $breakpoint_tablet + 1px) {
 			&:hover {
@@ -112,7 +126,12 @@
 
 			//a little manual direction: banner content is horizontally centered, so we can't have fixed horizontal margins, but we can
 			//adjust it a little to as in design spec
-			margin-top: 6rem;
+			@media all and (min-height: 900px) {
+				padding-top: 6rem;
+			}
+			@media all and (max-height: 899px) {
+				padding-top: 4rem;
+			}
 
 			.banner__title,
 			.banner__desc {
@@ -137,6 +156,11 @@
 
 		@media all and (max-width: $breakpoint_desktop) {
 
+			@media all and (max-height: 768px) {
+				//if there is not enough vertical space, ensure the contents don't overlap with header
+				padding-top: 7.5rem;
+			}
+
 			> * {
 				grid-column: 1 / -1;
 				grid-row: auto;
@@ -153,12 +177,17 @@
 			}
 		}
 
+
 		@media all and (max-width: $breakpoint_mobile) {
+
+
+			//for edge case scenario (i.e. long desc) ensure there is at least some fixed padding for banner contents
+			padding-bottom: 4rem;
 
 			//for this particular dimensions additional padding helps prevents banner content overlapping with absolute header
 			//header height at this point is 7.5rem, but on height less than 667px fixed banner kicks in
-			@media all and (max-height: 768px) and (min-height: 667px) {
-				padding-top: 6rem;
+			@media all and (max-height: 768px) and (min-height: 667px)  {
+				padding-top: 7.5rem;
 			}
 			
 			.banner__cta {
@@ -168,7 +197,9 @@
 				}
 			}
 		}
-
+		@media all and (max-width: $breakpoint_tablet-portrait) {
+			padding-top: 7.5rem; //height agnostic
+		}
 		@media all and (max-width: $breakpoint_tablet-small) {
 			grid-row-gap: 2.5rem;
 		}

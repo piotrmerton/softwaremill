@@ -134,11 +134,10 @@
 		}
 
 		&.header--fixed {
-			.viewport {
-				background: #fff;
-			}
-			.header__branding {
-				min-height: 4rem;
+			&:not(.menu--open) {
+				.header__branding {
+					min-height: 4rem;
+				}				
 			}
 		}
 

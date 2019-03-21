@@ -49,21 +49,18 @@
 }
 
 
-.main-content {
-	&.content--contact {
-
-		.section-contact {
-			@media all and (max-width: $breakpoint_mobile) {
-				padding-bottom: 0;
-			}			
-		}
-
-		.address-block {
-			p {
-				@extend %generic-h3;
-				margin: 0;
-			}
-		}
-
+.content--contact {
+	.section-contact {
+		@media all and (max-width: $breakpoint_mobile) {
+			padding-bottom: 0;
+		}			
 	}
+
+	.address-block {
+		p {
+			@extend %generic-h3;
+			margin: 0;
+		}
+	}
+
 }

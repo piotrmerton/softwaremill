@@ -1,0 +1,130 @@
+
+{% extends "layout/base.twig" %}
+
+{% block assetsHead %}
+	{{ parent() }}
+	<script type="text/javascript" src="https://static1.clutch.co/sites/all/modules/custom/clutch_widget/js/widget.js"></script>
+{% endblock %}
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' with { show_events : false } %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-blockchain-services section--no-padding-top section--padding-offset section--black text--white">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>Core blockchain software development services we offer</h2>
+			</div>
+			<ul class="services__list grid--four-columns">
+				<li>
+					<h3 data-mh="service-name">Blockchain Wallets</h3>
+					<p>Our engineers build analytical models that help companies “learn” from data. While creating new applications we always focus on scalability and efficiency of our solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="service-name">Smart Contracts</h3>
+					<p>We offer MVP and proof of concept that will result in finding the development customisable, scalable and secure blockchain solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="service-name">Apps</h3>
+					<p>We build tailored IoT-powered business applications and provide professional assistance across the full-cycle of custom software development.</p>
+				</li>
+				<li>
+					<h3 data-mh="service-name">ICO</h3>
+					<p>With the right enterprise software technology works for your business. We take care of the entire programming life cycle helping you achieve industry-specific goals.</p>
+				</li>												
+			</ul>
+		</div><!-- /viewport -->
+	</section>
+
+
+	<div class="content__section section-perks">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>We offer</h2>
+			</div>
+			<ul class="perks__list grid--four-columns">
+				<li>
+					<h3 data-mh="perk-name">1. Blockchain Ideation</h3>
+					<p>Our engineers build analytical models that help companies “learn” from data. While creating new applications we always focus on scalability and efficiency of our solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="perk-name">2. Proof of concept</h3>
+					<p>We offer MVP and proof of concept that will result in finding the development customisable, scalable and secure blockchain solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="perk-name">3. Technical & Visual Design</h3>
+					<p>Our engineers build analytical models that help companies “learn” from data. While creating new applications we always focus on scalability and efficiency of our solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="perk-name">4. Development</h3>
+					<p>Our engineers build analytical models that help companies “learn” from data. While creating new applications we always focus on scalability and efficiency of our solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="perk-name">5. Deployment</h3>
+					<p>We build tailored IoT-powered business applications and provide professional assistance across tvhe full-cycle of custom software development.</p>
+				</li>																
+			</ul>
+		</div>
+	</div>
+
+
+	<section class="content__section section-articles section--black text--white">
+		<div class="viewport">
+
+			<div class="section__header">
+				<h2>Blockchain Experts</h2>
+			</div>
+
+			{% if articles %}
+				<ul class="articles__list grid--two-columns columns--tablet">
+					{% for article in articles %}
+						{% include 'listing/item-article.twig' %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+			<a class="section__cta button button--transparent" href="blog.html">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>					
+				<span class="button__label">More our articles about the blockchain</span>
+			</a>			
+
+		</div><!-- /viewport -->
+	</section>
+
+
+	{% include 'components/sections/portfolio.twig' %}
+
+
+	{% set section_ebook_content %}
+
+		<div class="section__header">
+			<h2>E-Book: Blockchain Adoption Kit</h2>
+		</div>
+
+		<ul class="text-list list--header">
+			<li>In this ebook you will learn:</li>
+			<li>The experts perspective on the future of blockchain</li>
+			<li>What questions to ask before blockchain adoption </li>
+			<li>How to find the right tech partner to put your idea into life</li>
+		</ul>
+
+		<p>Blockchain is the first native digital medium for peer-to peer value exchange and can revolutionize the process for operating in various business areas, if the right problem is addressed with the right technology. Finding a real use-cases and being an early adopter can prove pivotal in retaining and growing both market share and profitability.</p>		
+
+	{% endset %}
+
+	{% include 'components/sections/ebook.twig' with { section_ebook_content, 'section_black' : true } %}
+
+
+{% endblock %}
+
+
+
+

@@ -45,6 +45,12 @@
     @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
         grid-row-gap: $vertical-whitespace-phone;
     }
+
+    &.columns--tablet {
+        @media all and (min-width: $breakpoint_tablet-portrait) {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
 }
 
 

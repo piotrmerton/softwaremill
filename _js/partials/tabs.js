@@ -3,6 +3,7 @@ export let tabs = {
 	selector : '#career-tabs',
 	buttonSelector : '.do-toggle-tab',
 	activeClass : 'tab--active',
+	animate : true,
 
 	bind : function() {
 
@@ -56,9 +57,12 @@ export let tabs = {
 		//because we are using transition animation for toggling, we need to explicitly set height of the content for animation to be precise
 
 		//get the height of the element's inner content, regardless of its actual size, including content not visible on the screen due to overflow
-		let contentHeight = tabContent.scrollHeight;
+		
+		if( this.animate ) {
+			let contentHeight = tabContent.scrollHeight;
+			tabContent.style.maxHeight = contentHeight+"px";			
+		}
 
-		tabContent.style.maxHeight = contentHeight+"px";
 
 	},
 
@@ -68,7 +72,7 @@ export let tabs = {
 
 		let tabContent = tab.querySelector('.item__body');
 
-		tabContent.removeAttribute('style');
+		if( this.animate ) tabContent.removeAttribute('style');
 
 	}
 

@@ -44,7 +44,7 @@
 			{% include '../components/banner/default.twig' %}
 		{% endblock %}
 
-		<section id="content" role="main" class="main-content content--{{ page.slug }}">
+		<section id="content" role="main" class="main-content content--{{ page.slug }}{% if page.content_type is defined %} content--{{ page.content_type }}{% endif %}">
 			{% block content %}
 				<p>Block content placeholder</p>
 			{% endblock %}

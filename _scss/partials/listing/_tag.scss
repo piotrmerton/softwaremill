@@ -1,0 +1,32 @@
+//item tag related to listings
+
+.tags__list {
+	display: flex;
+	flex-wrap: wrap;
+
+	.list__item {
+		margin: 0 .625rem .625rem 0;
+		a {
+			@extend %generic-p;
+			line-height: normal;
+			display: block;
+			padding: .25rem .5rem;
+			border: 2px solid $black;
+
+		}
+	}
+}
+
+.text--white {
+	.item--tag {
+		a {
+			border-color: #fff;
+			
+			@media all and (min-width: $breakpoint_tablet-portrait + 1px) {
+				&:hover {
+					border-color: $purple;
+				}
+			}			
+		}
+	}
+}

@@ -6,6 +6,7 @@ const twigTemplates = [
 	'index',
 	'how-we-work',
 	'services',
+	'service-template',
 	'ebook',
 	'join-us',
 	'contact'
@@ -89,7 +90,6 @@ module.exports = merge(baseConfig, {
 								//check if corresponding local data json file exists...								
 								let localDataFile = path.join(__dirname, '_json/'+filename+'.json');
 								
-
 								if( fs.existsSync( localDataFile )) {
 									//if so, expose it as a template data
 									localData = context.fs.readJsonSync(localDataFile, { throws: false });

@@ -2,9 +2,11 @@
 .banner--ebook {
 
 
+	.ebook {
+		max-width: 345px;
+	}
 
 	.banner__subgrid {
-
 
 		@media all and (min-width: $breakpoint_desktop + 1px) {
 
@@ -22,6 +24,7 @@
 
 			.banner__scroll {
 				grid-column: 1 / span 6;
+				margin: 0;
 			}
 
 		}
@@ -72,75 +75,15 @@
 }
 
 
-.main-content {
-	&.content--ebook {
-		.section-features {
-			.features__list {
-				h3 {
-					margin: 0;
-				}
+.content--ebook {
+	.section-features {
+		.features__list {
+			h3 {
+				margin: 0;
 			}
-		}
-
-		.section-ebook {
-
-
-			.ebook__cta {
-				margin-top: 3.75rem;
-				width: 100%;
-				max-width: 375px; //do not exceed ebook's model width
-			}
-
-			@media all and (min-width: $breakpoint_mobile + 1px) {
-				.section__grid {
-					.grid__item {
-						&.item--body {
-							grid-column: 1 / span 6;
-						}
-						&.item--ebook {
-
-							grid-column: 9 / -1;
-
-							@media all and (min-width: $viewport_width + 1px) {
-								grid-column: 9 / span 3;
-							}
-							@media all and (max-width: $breakpoint_desktop) {
-								grid-column: 8 / -1;
-							}							
-						}
-
-					}
-				}
-			}
-
-			@media all and (max-width: $breakpoint_mobile) {
-				padding-bottom: 0;
-
-				.section__grid {
-					grid-row-gap: $vertical-whitespace-laptop;
-					grid-template-columns: 1fr;
-				}
-
-				.ebook__cta {
-					margin-top: 3rem;
-				}
-			}			
-		    @media all and (max-width: $breakpoint_tablet-small) {
-
-		        .section__grid {
-		        	grid-row-gap: $vertical-whitespace-phone;
-		        }
-
-		    }
-
-
-
-
-
-
 		}
 	}
-
 }
+
 
 

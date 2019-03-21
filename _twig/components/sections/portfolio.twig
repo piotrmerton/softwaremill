@@ -1,48 +1,58 @@
-<section class="content__section section-portfolio">
-	<div class="viewport">
-		<div class="section__grid grid--two-columns">
-			<div class="grid__item item--portfolio">
-				<div class="section__header">
-					<h2>Our portfolio speaks for itself.</h2>
+{% if portfolio is defined %}
+	<section class="content__section section-portfolio">
+		<div class="viewport">
+			<div class="section__grid grid--two-columns">
+				<div class="grid__item item--portfolio">
+					<div class="section__header">
+						<h2>Our portfolio speaks for itself.</h2>
+					</div>
+
+					{% block portfolio_featured %}
+						{% if portfolio %}
+							<ul class="portfolio__grid grid--two-columns">
+								{% for casestudy in portfolio %}
+									<li class="grid__item item--casestudy">
+										<h3 data-mh="casestudy-name" class="item__name">{{ casestudy.name }}</h3>
+										<p class="item__desc">{{ casestudy.desc }}</p>
+										<a class="button button--compact" href="{{ casestudy.url }}">Read case study</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					{% endblock %}
+
+					<a class="section__cta button button--transparent" href="#">
+						<figure class="button__ico ui-ico">
+							{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+						</figure>
+						<span class="button__label">See our portfolio</span>
+					</a>
+
 				</div>
+				<div class="grid__item item--testimonials">
+					<div class="section__header">
+						<h2>Client’s testimonials</h2>
+					</div>
+					<div class="testimonials__widget">
 
-				{% block portfolio_featured %}
-					{% if portfolio %}
-						<ul class="portfolio__grid grid--two-columns">
-							{% for casestudy in portfolio %}
-								<li class="grid__item item--casestudy">
-									<h3 data-mh="casestudy-name" class="item__name">{{ casestudy.name }}</h3>
-									<p class="item__desc">{{ casestudy.desc }}</p>
-									<a class="button button--compact" href="{{ casestudy.url }}">Read case study</a>
-								</li>
-							{% endfor %}
-						</ul>
-					{% endif %}
-				{% endblock %}
+						{#
+							clutch widget, see https://clutch.co/widgets-example
+							!remember to put <script> into <HEAD> by using assetsHead block (see layout/base.twig)
+							since we can't use horizontal reuse for this considering how subpages are structured
 
-				<a class="section__cta button button--transparent" href="#">
-					<figure class="button__ico ui-ico">
-						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
-					</figure>
-					<span class="button__label">See our portfolio</span>
-				</a>
 
+							if we define assetsHead here, the parent() function will refer to base.twig content block
+							instead of assetsHead block due to portfolio.twig being included in content block
+
+
+							(tldr: we can extend only base.twig blocks via {{ use }}, so this sections should be hardcoded into base to be horizontally reusable)
+						 #}
+
+						<div class="clutch-widget" data-url="https://clutch.co" data-widget-type="3" data-height="350" data-clutchcompany-id="33683"></div>
+
+					</div>
+				</div>			
 			</div>
-			<div class="grid__item item--testimonials">
-				<div class="section__header">
-					<h2>Client’s testimonials</h2>
-				</div>
-				<div class="testimonials__widget">
-
-					{#
-						clutch widget, see https://clutch.co/widgets-example
-						and remember to put <script> into <HEAD> by using assetsHead block (see layout/base.twig)
-					 #}
-
-					<div class="clutch-widget" data-url="https://clutch.co" data-widget-type="3" data-height="350" data-clutchcompany-id="33683"></div>
-
-				</div>
-			</div>			
 		</div>
-	</div>
-</section>
+	</section>
+{% endif %}

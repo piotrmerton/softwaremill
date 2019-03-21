@@ -1,5 +1,5 @@
 import ScrollOut from "scroll-out";
-
+import { UI } from '../ui';
 
 
 export let header = {
@@ -57,7 +57,7 @@ export let header = {
 				// }, 200);			
 
 			},	  
-			offset : 200,
+			offset : UI.windowWidth < 1180 ? 1 : 200,
 		});
 
 

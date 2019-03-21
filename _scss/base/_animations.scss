@@ -30,7 +30,7 @@
 }
 
 
-@media all and (min-width: $breakpoint_mobile + 1px) {
+@media all and (min-width: $breakpoint_desktop + 1px) {
   .animated {
     -webkit-animation-duration: .5s;
     animation-duration: .5s;

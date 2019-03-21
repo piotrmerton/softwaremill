@@ -1,63 +1,89 @@
-.main-content {
-	&.content--join-us {
-
-		// .section-hiring-path {
-		// 	.hiring-path__steps {
-
-		// 		//here is some inconsistency on design spec: every other header has size of 1.75, but here for some reason is 1.875 which might be
-		// 		//a mistake but let's keep this for now;
-		// 		h3 {
-		// 			@media all and (min-width: $breakpoint_laptop + 1px) {
-		// 				font-size: 1.875em;
-		// 			}
-		// 		}
-		// 	}
-		// }
-
-		.section-cv {
-
-			.section__cta {
-				margin-top: 0;
-				@extend %header-whitespace-medium;
+.banner--join-us {
+	@media all and (max-width: $breakpoint_mobile) {
+		@media all and (max-height: 768px) {
+			//extra long desc...
+			.banner__subgrid {
+				padding-top: 10rem;
 			}
+		}
+	}
+}
 
-			.section__grid {
-				@media all and (min-width: $breakpoint_desktop + 1px) {
-					.grid__item {
-						grid-column: auto / span 3;
+.content--join-us {
+	// .section-hiring-path {
+	// 	.hiring-path__steps {
 
-						&.item--cta {
-							grid-column: auto / span 6;
-							p {
-								max-width: 620px;
-							}
+	// 		//here is some inconsistency on design spec: every other header has size of 1.75, but here for some reason is 1.875 which might be
+	// 		//a mistake but let's keep this for now;
+	// 		h3 {
+	// 			@media all and (min-width: $breakpoint_laptop + 1px) {
+	// 				font-size: 1.875em;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
+	.section-cv {
+
+		.section__cta {
+			margin-top: 0;
+			@extend %header-whitespace-medium;
+		}
+
+		.section__grid {
+			@media all and (min-width: $breakpoint_desktop + 1px) {
+				.grid__item {
+					grid-column: auto / span 3;
+
+					&.item--cta {
+						grid-column: auto / span 6;
+						p {
+							max-width: 620px;
 						}
-					}					
-				}
-				@media all and (max-width: $breakpoint_desktop) {
-					grid-template-columns: 1fr 1fr;
-					grid-row-gap: $vertical-whitespace-laptop;
-					.grid__item {
-						&.item--cta {
-							grid-column: 1 / -1;
+					}
+				}					
+			}
+			@media all and (max-width: $breakpoint_desktop) {
+				grid-template-columns: 1fr 1fr;
+				grid-row-gap: $vertical-whitespace-laptop;
+				.grid__item {
+					&.item--cta {
+						grid-column: 1 / -1;
+
+						.button {
+							width: 100%;
+							max-width: 100%;
 						}
 					}
 				}
-				@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-					grid-template-columns: 1fr;
-					grid-row-gap: $vertical-whitespace-phone;
-				}
-
 			}
-		}
+			@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+				grid-template-columns: 1fr;
+				grid-row-gap: $vertical-whitespace-phone;
+			}
 
+		}
 	}
+
 }
+
 
 
 .career__tabs {
 
 	grid-row-gap: 0;
+
+	@media all and (max-width: $breakpoint_mobile) {
+		> div {
+			&:nth-child(2) {
+				.list__item {
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
 
 	.item--tab {
 
@@ -115,6 +141,36 @@
 			}
 		}
 
+		//modifiers 
+
+		&:not(.tab--active) {
+			.cta__apply {
+				display: none;
+			}
+		}
+
+		&.tab--active {
+
+			.item__header {
+				.ui-ico {
+					transform: rotate(45deg);
+				}
+			}
+			.item__body {
+
+				//we are setting max-height via js (see partials/tabs.js) for animation to be more precise than setting something like 100vh,
+				//see: https://css-tricks.com/using-css-transitions-auto-dimensions/
+				
+			}
+			.cta__toggle {
+				display: none;
+			}
+			.cta__apply {
+				display: flex;
+			}
+		}
+
+
 		@media all and (min-width: $breakpoint_mobile + 1px) {
 			&:not(:last-child) {
 				margin-bottom: 6.25em;
@@ -146,37 +202,7 @@
 				padding-left: 1.25rem;
 				padding-right: 1.25rem;
 			}			
-		}
-
-
-		//modifiers 
-
-		&:not(.tab--active) {
-			.cta__apply {
-				display: none;
-			}
-		}
-
-		&.tab--active {
-
-			.item__header {
-				.ui-ico {
-					transform: rotate(45deg);
-				}
-			}
-			.item__body {
-
-				//we are setting max-height via js (see partials/tabs.js) for animation to be more precise than setting something like 100vh,
-				//see: https://css-tricks.com/using-css-transitions-auto-dimensions/
-				
-			}
-			.cta__toggle {
-				display: none;
-			}
-			.cta__apply {
-				display: flex;
-			}
-		}
+		}		
 
 	}
 }

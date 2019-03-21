@@ -1,0 +1,22 @@
+<li class="list__item item--article">
+
+	
+	<a href="{{ article.url }}">
+
+
+		{% include '../components/blocks/author.twig' with {author : article.author, article : article} %}
+
+
+		<h3 class="article__title">{{ article.title }}</h3>
+	</a>
+
+	{% if article.tags %}
+	<ul class="article__tags tags__list">
+		{% for tag in article.tags %}
+			<li class="list__item item--tag"><a href="#">{{ tag }}</a></li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+
+
+</li>

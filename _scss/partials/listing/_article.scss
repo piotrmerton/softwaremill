@@ -1,0 +1,38 @@
+//item article related to listings, see _twig/listings/item-article.twig
+
+.item--article {
+
+	.block-author {
+		@extend %header-whitespace-medium;
+	}
+
+	h3 {
+		max-width: 32rem;
+	}
+
+	
+	@media all and (min-width: $breakpoint_tablet + 1px) {
+
+
+		// h3 {
+		// 	transition: color .2s ease-in-out;
+		// }
+		img {
+			transition: transform .2s ease-in-out;
+		}
+
+		> a {
+
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+
+				h3 {
+					color: $purple;
+				}
+			}
+		}
+	}
+
+}

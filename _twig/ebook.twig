@@ -44,25 +44,17 @@
 	</section>
 
 
-	<section class="content__section section-ebook">
-		<div class="viewport">
-			<div class="section__grid grid--content">
-				<div class="grid__item item--body">
-					<div class="section__header">
-						<h2>From the author</h2>
-					</div>
-					<h3>Incorporating data audit into the design of a system can radically change its architecture. For example, it might turn out that event sourcing is the way to go! Or that it would be beneficial to capture additional meta-data for machine learning models. Don’t throw data away!</h3>
+{% set section_ebook_content %}
+	<div class="section__header">
+		<h2>From the author</h2>
+	</div>
+	<h3>Incorporating data audit into the design of a system can radically change its architecture. For example, it might turn out that event sourcing is the way to go! Or that it would be beneficial to capture additional meta-data for machine learning models. Don’t throw data away!</h3>
 
-					<h3>Adam Warski</h3>
-					<p>CTO and co-founder</p>
-				</div>
-				<div class="grid__item item--ebook">
-					{% include 'components/ebook.twig' with ebook %}
-					<a class="ebook__cta button" href="#">Download</a>
-				</div>
+	<h3>Adam Warski</h3>
+	<p>CTO and co-founder</p>
+{% endset %}
 
-		</div>
-	</section>
+{% include 'components/sections/ebook.twig' with { section_ebook_content } %}
 
 	
 

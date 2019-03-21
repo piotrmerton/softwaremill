@@ -1,0 +1,68 @@
+{
+	
+	"page" : {
+		"slug" : "blockchain",
+		"title" : "Blockchain - Single Service template",
+		"content_type" : "single-service"
+	},
+
+	"banner" : {
+		"title" : "Blockchain",
+		"desc" : "Generate revenue and implement new business models with high-end custom blockchain products.",
+		"cta" : {
+			"href" : "contact.html",
+			"text" : "Contact us now!"
+		},
+		"cover" : {
+			"desktop" : "assets/img/banner/default/desktop.jpg",
+			"tablet" : "assets/img/banner/default/tablet.jpg",
+			"mobile" : "assets/img/banner/default/mobile.jpg",
+			"alt" : "Text/caption for SEO"
+		}
+
+	},
+	"ebook" : {
+		"author" : "Maria Wąchal",
+		"title" : "Blockchain Adoption Kit",
+		"year" : "2018",
+		"url" : "#"
+	},
+
+	"articles" : [
+
+		{
+			"title" : "Onboarding in a remote company",
+			"excerpt" : "",
+			"url" : "#",
+			"author" : {
+				"name" : "Tomasz Dziurko",
+				"image" : "assets/img/employees/tomasz-dziurko.jpg"
+			},
+			"tags" : [
+				"Cryptocurrency",
+				"Wallet"
+			],
+			"date" : "11 jan",
+			"timeToRead" : "8 minutes"
+		},
+		{
+			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+			"excerpt" : "",
+			"url" : "#",
+			"author" : {
+				"name" : "Ola Pluchta",
+				"image" : "assets/img/employees/ola-pluchta.jpg"
+			},
+			"tags" : [
+				"Cryptocurrency",
+				"Wallet"
+			],
+			"date" : "11 jan",
+			"timeToRead" : "8 minutes"
+		}		
+
+	]
+
+
+
+}

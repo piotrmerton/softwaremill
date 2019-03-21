@@ -15,7 +15,7 @@
 		"cover" : {
 			"desktop" : "assets/img/banner/alternate/desktop.jpg",
 			"tablet" : "assets/img/banner/alternate/tablet.jpg",
-			"mobile" : "",
+			"mobile" : "assets/img/banner/alternate/mobile.jpg",
 			"alt" : "Text/caption for SEO"
 		}
 
