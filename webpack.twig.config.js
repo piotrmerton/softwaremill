@@ -7,6 +7,7 @@ const twigTemplates = [
 	'how-we-work',
 	'services',
 	'service-template',
+	'company-scala',
 	'ebook',
 	'join-us',
 	'contact'

@@ -48,9 +48,12 @@
 					display: grid;
 					align-items: center;	
 					
-					//magic number is the height of section-events, see components/sections/events.scss
-					grid-template-rows: minmax( calc(100vh - 3.75rem), max-content) max-content;
-					grid-template-rows: minmax( calc(var(--vh, 1vh) * 100 - 3.75rem), max-content) max-content;
+					&.grid--vertical {
+						//magic number is the height of section-events, see components/sections/events.scss
+						grid-template-rows: minmax( calc(100vh - 3.75rem), max-content) max-content;
+						grid-template-rows: minmax( calc(var(--vh, 1vh) * 100 - 3.75rem), max-content) max-content;						
+					}
+
 				}					
 			}	
 				

@@ -2,6 +2,10 @@
 
 .item--article {
 
+	> a {
+		display: inline-block;
+	}
+
 	.block-author {
 		@extend %header-whitespace-medium;
 	}
@@ -24,6 +28,7 @@
 		> a {
 
 			&:hover {
+				color: inherit;
 				img {
 					transform: scale(1.1);
 				}

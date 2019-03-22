@@ -1,7 +1,7 @@
 <section id="banner" class="banner banner--{{ page.slug }}">
 	
 	
-	<div class="banner__grid">
+	<div class="banner__grid{% if show_events != false %} grid--vertical{% endif %}">
 		<section class="banner__content{% if text_black is not defined %} text--white{% endif %}">
 			<div class="viewport">
 

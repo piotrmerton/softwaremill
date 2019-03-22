@@ -1,0 +1,140 @@
+//item job related to career listings on join-us page, see _twig/listings/item-job.twig
+
+.jobs__list {
+
+	grid-row-gap: 0;
+
+	@media all and (max-width: $breakpoint_mobile) {
+		> div {
+			&:nth-child(2) {
+				.list__item {
+					&:last-child {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.item--job {
+
+	border: 2px solid $black;
+
+	h3 {
+		font-size: 1.063em;
+		margin: 0;
+	}
+
+	ol {
+		padding-left: 1rem;
+	}
+
+	.item__header {
+		a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 2.5rem;
+			min-height: 4rem;
+
+			@media all and (min-width: $breakpoint_tablet + 1px) {
+				&:hover {
+					.svg__ico {
+						stroke: $purple;
+					}
+				}
+			}
+		}
+		border-bottom: 2px solid $black;
+	}
+
+	.ui-ico {
+		width: 2.5rem;
+		height: 2.5rem;
+		transition: transform .2s ease-in-out;
+		margin: 0;
+	}
+
+	.item__body {
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height .4s ease-in-out;
+	}
+	.body__block {
+		padding: 2rem 2.5rem;
+		border-bottom: 2px solid $black;
+	
+	}		
+	.item__cta {
+		.button {
+			width: 100%;
+			min-height: 4rem;
+		}
+	}
+
+	//modifiers (dynamic classes via JS see partials/tabs.js)
+
+	&:not(.tab--active) {
+		.cta__apply {
+			display: none;
+		}
+	}
+
+	&.tab--active {
+
+		.item__header {
+			.ui-ico {
+				transform: rotate(45deg);
+			}
+		}
+		.item__body {
+
+			//we are setting max-height via js (see partials/tabs.js) for animation to be more precise than setting something like 100vh,
+			//see: https://css-tricks.com/using-css-transitions-auto-dimensions/
+			
+		}
+		.cta__toggle {
+			display: none;
+		}
+		.cta__apply {
+			display: flex;
+		}
+	}
+
+
+	@media all and (min-width: $breakpoint_mobile + 1px) {
+		&:not(:last-child) {
+			margin-bottom: 6.25em;
+		}
+	}
+
+	@media all and (max-width: $breakpoint_mobile) {
+		margin-bottom:  4rem;
+
+		.item__header a,
+		.body__block,
+		.item__cta {
+			padding-left: 1.75rem;
+			padding-right: 1.75rem;
+		}
+		.body__block {
+			padding-top: 1.5rem;
+			padding-bottom: 1.5rem;
+		}
+	}
+
+	@media all and (max-width: $breakpoint_phone) {
+		.ui-ico {
+			width: 2rem;
+			height: 2rem;
+		}
+		.item__header a,
+		.body__block {
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+		}			
+	}		
+
+}

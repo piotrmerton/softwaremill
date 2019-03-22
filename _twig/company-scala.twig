@@ -1,0 +1,135 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-scala-services section--no-padding-top section--padding-offset">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>Scala & Akka software development services we offer</h2>
+			</div>
+			<ul class="services__list grid--four-columns">
+				<li>
+					<h3 data-mh="service-name">Project Development</h3>
+					<p>Our engineers build analytical models that help companies “learn” from data. While creating new applications we always focus on scalability and efficiency of our solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="service-name">Event Sourcing</h3>
+					<p>We offer MVP and proof of concept that will result in finding the development customisable, scalable and secure blockchain solutions.</p>
+				</li>
+				<li>
+					<h3 data-mh="service-name">Project Design</h3>
+					<p>We build tailored IoT-powered business applications and provide professional assistance across the full-cycle of custom software development.</p>
+				</li>
+				<li>
+					<h3 data-mh="service-name">Consulting & Mentoring</h3>
+					<p>With the right enterprise software technology works for your business. We take care of the entire programming life cycle helping you achieve industry-specific goals.</p>
+				</li>												
+			</ul>
+		</div><!-- /viewport -->
+	</section>
+
+	<section class="content__section section-how-we-work section--media">
+		<div class="section__body text--white">
+			<div class="viewport">
+				<div class="section__grid grid--two-columns">
+					<div class="grid__item">
+						<div class="section__header">
+							<h2>Our self-organized teams of developers are responsible end-to-end for the projects. Transparency is our priority.</h2>						
+						</div>
+						<a class="button button--transparent button--white button--white-arrow" href="#">
+							<figure class="button__ico ui-ico">
+								{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+							</figure>
+							<span class="button__label">See more about How we work!</span>
+						</a>
+					</div>
+				</div>
+			</div><!-- /viewport -->
+		</div>
+		<figure class="section__cover cover cover--overlay">
+			<picture>
+				<source media="(max-width: 480px)"
+				srcset="assets/img/banner/alternate/mobile.jpg">	
+				
+				<source media="(max-width: 768px)"
+				srcset="assets/img/banner/alternate/tablet.jpg">
+				
+				<source media="(min-width: 960px)"
+				srcset="assets/img/banner/alternate/desktop.jpg">
+
+				<!-- fallback -->
+				<img src="assets/img/banner/alternate/desktop.jpg" />
+			</picture>	
+		</figure>
+	</section>
+
+	<section class="content__section section-articles">
+		<div class="viewport">
+
+			<div class="section__header">
+				<h2>Scala & Akka Experts</h2>
+			</div>
+
+			{% if articles %}
+				<ul class="articles__list grid--two-columns columns--tablet">
+					{% for article in articles %}
+						{% include 'listing/item-article.twig' %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+			<a class="section__cta button button--transparent" href="blog.html">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>					
+				<span class="button__label">More our articles about the Scala</span>
+			</a>			
+
+		</div><!-- /viewport -->
+	</section>	
+
+
+	<section class="content__section section-links section--black text--white">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>See links below to find more about us</h2>
+			</div>
+			<nav class="links__nav grid--four-columns">
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Open source</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Scala conference</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Scala newsletter</span>
+				</a>								
+			</nav>
+		</div>
+	</section>
+
+{% endblock %}
+
+
+
+

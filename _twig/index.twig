@@ -20,7 +20,6 @@
 {% include 'components/sections/services.twig' with {'cssClass' : 'section--no-padding-top section--padding-offset'} %}
 
 <section class="content__section section-how-we-work section--media">
-	
 		<div class="section__body text--white">
 			<div class="viewport">
 				<div class="section__grid grid--two-columns">
@@ -40,23 +39,19 @@
 		</div>
 		<figure class="section__cover cover cover--overlay">
 			<picture>
-		
-				{# 
 				<source media="(max-width: 480px)"
-				srcset="{{ banner.cover.mobile }}">	
-				#}
+				srcset="assets/img/banner/alternate/mobile.jpg">	
 				
 				<source media="(max-width: 768px)"
-				srcset="assets/img/home/cover-how-we-work_tablet.jpg">
+				srcset="assets/img/banner/alternate/tablet.jpg">
 				
 				<source media="(min-width: 960px)"
-				srcset="assets/img/home/cover-how-we-work.jpg">
+				srcset="assets/img/banner/alternate/desktop.jpg">
 
 				<!-- fallback -->
-				<img src="assets/img/home/cover-how-we-work.jpg" />
+				<img src="assets/img/banner/alternate/desktop.jpg" />
 			</picture>	
 		</figure>
-	
 </section>
 
 <section class="content__section section-team section--black text--white">

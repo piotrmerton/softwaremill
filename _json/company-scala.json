@@ -1,14 +1,13 @@
 {
 	
 	"page" : {
-		"slug" : "blockchain",
-		"title" : "Blockchain - Single Service template",
-		"content_type" : "single-service"
+		"slug" : "scala-akka",
+		"title" : "Scala & Akka"
 	},
 
 	"banner" : {
-		"title" : "Blockchain",
-		"desc" : "Generate revenue and implement new business models with high-end custom blockchain products.",
+		"title" : "Scala & Akka",
+		"desc" : "We use the best technologies out there to solve our client’s problems. Scala and Akka, rooted in JVM ecosystem, give us tools to write clean, scalable and fault-proof applications.",
 		"cta" : {
 			"href" : "contact.html",
 			"text" : "Contact us now!"
@@ -20,12 +19,6 @@
 			"alt" : "Text/caption for SEO"
 		}
 
-	},
-	"ebook" : {
-		"author" : "Maria Wąchal",
-		"title" : "Blockchain Adoption Kit",
-		"year" : "2018",
-		"url" : "#"
 	},
 
 	"articles" : [
@@ -61,8 +54,6 @@
 			"timeToRead" : "8 minutes"
 		}		
 
-	]
-
-
+	]	
 
 }
