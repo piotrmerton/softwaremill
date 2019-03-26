@@ -71,6 +71,15 @@
 		.button {
 			width: 100%;
 			min-height: 4rem;
+
+			//mimic style of native <button> (see components/form.scss)
+			@media all and (min-width: $breakpoint_tablet + 1px) {
+				&:hover {
+					color: #fff;
+					background: $purple;
+				}
+			}
+
 		}
 	}
 

@@ -24,7 +24,7 @@
 
 	@media all and (min-width: $breakpoint_tablet + 1px) {
 
-		transition: background .4s ease;
+		transition: all .4s ease;
 
 		&:hover {
 			background: $purple;

@@ -22,7 +22,7 @@ a {
 	text-decoration: none;
 
 	@media all and (min-width: $breakpoint_tablet + 1px) {
-		//transition: color .2s;
+		transition: color .2s;
 		&:hover {
 			color: $purple;
 		}

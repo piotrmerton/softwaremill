@@ -17,7 +17,12 @@ form {
 
 		display: flex;
 		align-items: center;
-		min-height: 3.5rem;
+		min-height: 4rem;
+
+		@media all and (max-width: $breakpoint_laptop) {
+			min-height: 3.5rem;
+		}
+		
 
 		color: $black;
 		border: 2px solid $black;
@@ -61,28 +66,38 @@ form {
 //inputs placeholders, see https://css-tricks.com/almanac/selectors/p/placeholder/
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: $black;
+    transition: color .2s;
 }
-:hover::-webkit-input-placeholder {
-	color: $purple;
-}
+
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
     color: $black;
+    transition: color .2s;
 }
-:hover:-ms-input-placeholder {
-	color: $purple;
-}
+
 
 ::-moz-placeholder { /* Firefox 19+ */
  	color: $black;
+ 	transition: color .2s;
 }
-:hover::-moz-placeholder {
-	color: $purple;
-}
+
 
 ::placeholder {
     color: $black;
+    transition: color .2s;
 }
-:hover::placeholder {
-	color: $purple;
+
+@media all and (min-width: $breakpoint_tablet + 1px) {
+	:hover::-webkit-input-placeholder {
+		color: $purple;
+	}
+	:hover:-ms-input-placeholder {
+		color: $purple;
+	}
+	:hover::-moz-placeholder {
+		color: $purple;
+	}	
+	:hover::placeholder {
+		color: $purple;
+	}	
 }

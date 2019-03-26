@@ -15,7 +15,7 @@
 	border-left: $size solid transparent;
 	border-right: $size solid transparent;
 	border-top: $size solid $color;	
-	transition: transform .2s ease-in-out;	
+	transition: all .2s ease-in-out;	
 	//margin-left: $size;	
 	position: relative;
 }
