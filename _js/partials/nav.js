@@ -78,7 +78,8 @@ export let nav = {
 
 				if(submenuTitle !== null) {
 					submenuTitle.addEventListener('click', (event) => {						
-						self.toggleSubmenu(li);					
+						self.toggleSubmenu(li);		
+						event.preventDefault();			
 					});
 				}				
 
