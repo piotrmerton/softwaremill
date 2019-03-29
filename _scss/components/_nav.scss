@@ -102,6 +102,7 @@
 					> a {
 						padding: 0 1.25rem;
 						border: 2px solid #fff;
+						transition: all .2s;
 						&:hover {
 							color: #fff;
 							background: $purple;

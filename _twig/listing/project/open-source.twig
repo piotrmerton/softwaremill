@@ -1,0 +1,55 @@
+{% extends "client.twig" %}
+
+
+{% block project_meta %}
+	<h4 class="block__title">Project name</h4>
+	<h2 class="project__name">{{ project.name }}</h2>
+	<p class="project__desc">{{ project.desc }}</p>
+{% endblock %}
+
+
+{% block project_desc %}
+
+	<ul class="desc__grid grid--two-columns columns--tablet">
+		
+		<li class="grid__item item--contributors">
+			<h4 class="block__title">Contributors</h4>
+			
+			<p class="contributors">
+			{% for contributor in project.contributors %}
+				{{ contributor }}{% if loop.last == false %}, {% endif %}
+			{% endfor %}
+			</p>
+
+		</li>
+	
+		<li class="grid__item item--technologies">
+			<h4 class="block__title">Technologies</h4>
+			<ul class="tags__list">
+				{% for techonology in project.technologies %}
+					<li class="list__item item--tag">
+						<span>{{ techonology }}</span>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>	
+
+	</ul>
+
+{% endblock %}
+
+
+{% block project_tags %}{% endblock %}
+
+{% block project_cta %}
+
+	{% if project.url %}
+		<a target="_blank" href="{{ project.url }}" class="project__cta button button--transparent">
+			<figure class="button__ico ui-ico">
+				{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+			</figure>
+			<span class="button__label">{{ project.url|replace( { 'http:' : '', 'https:' : '', '//' : ''} ) }}</span>
+		</a>
+	{% endif %}
+
+{% endblock %}

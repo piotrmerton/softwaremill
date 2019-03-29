@@ -8,6 +8,10 @@ const twigTemplates = [
 	'services',
 	'service-template',
 	'company-scala',
+	'company-team',
+	'portfolio-clients',
+	'portfolio-products',
+	'portfolio-open-source',
 	'ebook',
 	'join-us',
 	'contact'

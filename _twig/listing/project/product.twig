@@ -1,0 +1,21 @@
+{% extends "client.twig" %}
+
+
+{% block project_desc %}
+
+	<h4 class="block__title">Project info</h4>
+
+	<h3>{{ project.desc.slogan }}</h3>
+
+	{# 	
+	
+	in data file we are storing only plain text thus the for loop,
+	but if you don't have any problems with storing HTML in data model (db, json, yaml) feel free replace it with simple {{ content }} variable 
+
+	#}
+	
+	{% for paragraph in project.desc.content %}
+		<p>{{ paragraph }}</p>
+	{% endfor %}
+
+{% endblock %}

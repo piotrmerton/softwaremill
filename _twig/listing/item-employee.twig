@@ -1,0 +1,24 @@
+<li class="list__item item--employee">
+	<figure data-mh="employee-image" class="employee__image">
+		<img src="{{ employee.image }}" alt="{{ employee.name }}"/>
+	</figure>
+
+	<h3 class="employee__name">{{ employee.name }}</h3>
+	<p class="employee__role">{{ employee.role }}</p>
+
+	{% if employee.contact %}
+		<div class="employee__socialmedia block-socialmedia">
+			<ul class="socialmedia__list">
+				{% for key, contact in employee.contact %}
+					<li>
+						<a target="_blank" href="{{ contact }}">
+							<figure class="socialmedia__ico ui-ico ico--{{ key }}">
+								{{ source(root_assetsDir~'svg/socialmedia/'~key~'.svg' ) }}
+							</figure>
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</figure>
+	{% endif %}
+</li>

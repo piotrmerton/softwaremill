@@ -6,20 +6,27 @@
 
 	.list__item {
 		margin: 0 .625rem .625rem 0;
-		a {
+		a,
+		span {
+		// span wrapper needed for scenario where tag is not an link (i.e.: project listings)
+		// we need this to differentiate between "linked" and "non-linked" tag and to apply appropriate border hover
+		// only if element is clickable
 			@extend %generic-p;
 			line-height: normal;
 			display: block;
 			padding: .25rem .5rem;
 			border: 2px solid $black;
+		}
 
-			@media all and (min-width: $breakpoint_tablet-portrait + 1px) {
+		@media all and (min-width: $breakpoint_tablet + 1px) {
+			a {
+				transition: all .2s;
 				&:hover {
 					border-color: $purple;
-				}
-			}			
+				}				
+			}
 
-		}
+		}		
 	}
 }
 
@@ -28,7 +35,7 @@
 		a {
 			border-color: #fff;
 			
-			@media all and (min-width: $breakpoint_tablet-portrait + 1px) {
+			@media all and (min-width: $breakpoint_tablet + 1px) {
 				&:hover {
 					border-color: $purple;
 				}

@@ -1,0 +1,25 @@
+.content--team {
+
+	.section-features {
+
+		h3 {
+			color: $lightblue;
+			@extend %header-whitespace-small;
+		}
+
+	}
+
+	.section-reassurance {
+		h3 {
+			@extend %header-whitespace-small;
+		}
+	}
+
+
+	.section-employees {
+		@media all and (max-width: $breakpoint_mobile) {
+			padding-bottom: 0;
+		}			
+	}	
+
+}

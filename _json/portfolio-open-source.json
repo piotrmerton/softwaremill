@@ -1,0 +1,46 @@
+{
+	
+	"page" : {
+		"slug" : "portfolio-open-source",
+		"title" : "Portfolio Open Source",
+		"content_type" : "portfolio"
+	},
+
+	"banner" : {
+		"title" : "Open source",
+		"desc" : "Our portfolio for our clients speaks for itself",
+		"cta" : {
+			"href" : "contact.html",
+			"text" : "Contact us now!"
+		},
+		"cover" : {
+			"desktop" : "assets/img/banner/home/desktop.jpg",
+			"tablet" : "assets/img/banner/home/tablet.jpg",
+			"mobile" : "assets/img/banner/home/mobile.jpg",
+			"alt" : "Text/caption for SEO"
+		}
+
+	},
+
+	"projects" : [
+
+		{
+			"name" : "Hibernate Envers",
+			"type" : "open-source",
+			"desc" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. ",
+			"contributors" : ["Tomasz Dziurko", "Adam Warski"],
+			"technologies" : ["Cryptocurrency", "Wallet"],
+			"url" : "//hibernate.org/orm/envers/"			
+		},
+		{
+			"name" : "Reactive Kafka",
+			"type" : "open-source",
+			"desc" : "Akka Streams (reactive!) connector for Apache Kafka.",
+			"contributors" : ["Tomasz Dziurko", "Adam Warski"],
+			"technologies" : ["Cryptocurrency", "Wallet"],
+			"url" : "https://github.com/akka/reactive-kafka"			
+		}
+
+	]	
+
+}

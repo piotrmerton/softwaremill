@@ -1,0 +1,91 @@
+<li class="list__item item--project{% if project.type %} project--{{project.type}}{% endif %}">
+
+
+
+	<section class="project__grid grid--two-columns">
+
+		<div class="project__block block--meta">
+			{% block project_meta %}
+
+				<h4 class="block__title">Project name</h4>
+
+				{% block project_name %}
+					<h2 class="project__name">{{ project.name }}</h2>
+				{% endblock %}
+
+				{% block project_preview %}
+					{% if project.preview %}
+						<figure class="project__preview">
+							<img src="{{ project.preview }}" alt="{{ project.name }}" />
+						</figure>
+					{% endif %}
+				{% endblock %}
+
+			{% endblock %}
+		</div>
+
+		<div class="project__block block--desc">
+			{% block project_desc %}
+
+				<ul class="desc__grid grid--two-columns columns--tablet">
+					{% for desc in project.desc %}
+						<li class="grid__item">
+							<h4 class="block__title">{{ desc.block_name }}</h4>
+							<p class="block__desc">{{ desc.block_content }}</p>
+						</li>
+					{% endfor %}
+				</ul>
+
+			{% endblock %}
+		</div>
+
+	</section>
+
+
+	{% block project_tags %}
+
+		{% if project.type != "open-source" %}
+
+			<section class="project__tags grid--four-columns">
+
+				{% if project.type == "client" and project.client %}
+					<div class="grid__item item--client">
+						<h4>Client</h4>
+						<p class="client__name">{{ project.client }}</p>
+					</div>	
+				{% endif %}
+
+				{% for tag_group in project.tags %}
+
+					<div class="grid__item item--tag-group">
+						<h4 class="group__name">{{ tag_group.group_name }}</h4>
+						<ul class="tags__list">
+							{% for tag in tag_group.tags %}
+								<li class="list__item item--tag">
+									<span>{{ tag }}</span>
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+				{% endfor %}
+
+			</section>
+
+		{% endif %}
+
+	{% endblock %}
+
+	{% block project_cta %}
+		{% if project.url %}
+			<a target="_blank" href="{{ project.url }}" class="project__cta button button--transparent">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>
+				<span class="button__label">See live</span>
+			</a>
+		{% endif %}
+	{% endblock %}
+
+
+</li>

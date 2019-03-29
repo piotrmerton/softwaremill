@@ -1,0 +1,33 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-projects section--no-padding">
+		<div class="viewport">
+
+			<ul class="projects__list list--open-source">
+
+				{% for project in projects %}
+
+					{% include 'listing/project/open-source.twig' %}
+
+				{% endfor %}
+
+
+			</ul><!-- /projects__list -->
+
+		</div><!-- /viewport -->
+	</section>
+
+{% endblock %}

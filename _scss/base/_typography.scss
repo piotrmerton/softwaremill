@@ -128,7 +128,9 @@ h3 {
 
 h4 {
 	@extend %generic-h4;
-	margin-bottom: 1.375em;
+	&:not(.header--no-margin) {
+		@extend %header-whitespace-small;
+	}
 }
 
 p {

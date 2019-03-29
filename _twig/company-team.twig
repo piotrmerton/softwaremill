@@ -1,0 +1,97 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-features section--no-padding-top section--padding-offset">
+		<div class="viewport">
+
+			<ul class="features__list grid--four-columns">
+
+				<li>
+					<h3>28</h3>
+					<p>Team members</p>
+				</li>
+
+				<li>
+					<h3>9</h3>
+					<p>Community (co)-leaders</p>
+				</li>
+
+				<li>
+					<h3>484</h3>
+					<p>Combined years in software development</p>
+				</li>
+
+				<li>
+					<h3>20</h3>
+					<p>Conference (co-) organizers</p>
+				</li>
+
+				<li>
+					<h3>30</h3>
+					<p>Open source contributors</p>
+				</li>
+
+				<li>
+					<h3>18</h3>
+					<p>Active bloggers</p>
+				</li>
+
+				<li>
+					<h3>27</h3>
+					<p>Parents</p>
+				</li>
+
+			</ul>
+
+		</div><!-- /viewport -->
+	</section>
+
+	<section class="content__section section-reassurance section--no-padding">
+		<div class="viewport">
+			<div class="section__grid grid--two-columns">
+				<div class="section__header header--no-margin">
+					<h2>Your information stays in-house</h2>
+				</div>
+				<div class="section__body">
+					<h3>The team with which you choose to work is fully dedicated to your project. We mainly work from Poland, and we do not outsource any of the tasks we are hired to complete. We may travel - for example to meet in-person - and bring the work along with us, but your project doesn’t travel on its own.</h3>
+					<h3 class="header--no-margin">Information is at the core of our business and we make sure that it’s kept private and secure.</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="content__section section-employees">
+		<div class="viewport">
+			<ul class="employees__list grid--four-columns">
+				{% for employee in employees %}
+					{% include 'listing/item-employee.twig' %}
+				{% endfor %}	
+
+				<li class="list__item item--cta">
+					<div data-mh="employee-image">
+						<h3>Hi there</h3>
+						<p>Excited to be a part of the team?</p>
+					</div>
+					<a class="button" href="join-us.html">Join us</a>
+				</li>			
+			</ul>
+		</div>
+	</section>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,84 @@
+{
+	
+	"page" : {
+		"slug" : "portfolio-projects",
+		"title" : "Portfolio Products",
+		"content_type" : "portfolio"
+	},
+
+	"banner" : {
+		"title" : "Our products",
+		"desc" : "Our portfolio for our clients speaks for itself",
+		"cta" : {
+			"href" : "contact.html",
+			"text" : "Contact us now!"
+		},
+		"cover" : {
+			"desktop" : "assets/img/banner/home/desktop.jpg",
+			"tablet" : "assets/img/banner/home/tablet.jpg",
+			"mobile" : "assets/img/banner/home/mobile.jpg",
+			"alt" : "Text/caption for SEO"
+		}
+
+	},
+	"projects" : [
+
+		{
+			"name" : "Crypto Harvester",
+			"type" : "product",
+			"preview" : "assets/img/projects/products/crypto-harvester.png",
+			"desc" : {
+				"slogan" : "Keep hands on all your crypto transactions",
+				"content" : [
+					"By tracking endless number of ETH/BTC addresses. Get notified when bitcoin, ethereum or ERC-20 tokens are transferred from/to your address."
+				]
+			},
+			"tags" : [
+				{
+					"group_name" : "Industry",
+					"tags" : ["Cryptocurrency"]
+				},
+				{
+					"group_name" : "Category",
+					"tags" : ["Cryptocurrency", "Wallet"]
+				},
+				{
+					"group_name" : "Technologies",
+					"tags" : ["Cryptocurrency", "Wallet"]
+				}								
+			],
+			"url" : "#"			
+
+		},
+		{
+			"name" : "TuPrawnik",
+			"type" : "product",
+			"preview" : "assets/img/projects/products/tuprawnik.png",
+			"desc" : {
+				"slogan" : "Use the best lawyers at the lowest prices",
+				"content" : [
+					"Choose from experienced lawyers at the top law firms. Using our service you can either purchase common law services at a fixed-price or ask for bids from lawyers for more complicated cases.",
+					"When building the service, we are cooperating with a young, energetic team of lawyers. They handle the legal stuff, while we take care of IT."
+				]
+			},
+			"tags" : [
+				{
+					"group_name" : "Industry",
+					"tags" : ["Cryptocurrency"]
+				},
+				{
+					"group_name" : "Category",
+					"tags" : ["Cryptocurrency", "Wallet"]
+				},
+				{
+					"group_name" : "Technologies",
+					"tags" : ["Cryptocurrency", "Wallet"]
+				}								
+			],
+			"url" : "#"			
+
+		}					
+
+	]	
+
+}
