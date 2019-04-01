@@ -2,7 +2,8 @@
 	
 	"page" : {
 		"slug" : "scala-akka",
-		"title" : "Scala & Akka"
+		"title" : "Scala & Akka",
+		"content_type" : "company"
 	},
 
 	"banner" : {

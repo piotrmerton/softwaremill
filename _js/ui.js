@@ -9,6 +9,7 @@ import { scrollTo } from './partials/scrollTo';
 import { events } from './partials/events';
 import { partners } from './partials/partners';
 import { tabs } from './partials/tabs';
+import { gallery } from './partials/gallery';
 
 export let UI = {
 
@@ -68,7 +69,8 @@ export let UI = {
 	scrollTo,
 	events,
 	partners,
-	tabs
+	tabs,
+	gallery
 	
 }
 

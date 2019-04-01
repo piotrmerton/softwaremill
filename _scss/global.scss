@@ -40,6 +40,7 @@
 @import 'components/cover';
 @import 'components/form';
 @import 'components/ebook';
+@import 'components/gallery';
 
 @import 'partials/blocks/author';
 @import 'partials/blocks/contact';
@@ -50,12 +51,12 @@
 @import 'partials/listing/job';
 @import 'partials/listing/project';
 @import 'partials/listing/employee';
+@import 'partials/listing/video';
 
 @import 'components/sections/ebook';
 @import 'components/sections/events';
 @import 'components/sections/services';
 @import 'components/sections/portfolio';
-
 
 //specific subpages
 @import 'pages/index';
@@ -64,6 +65,7 @@
 @import 'pages/ebook';
 @import 'pages/join-us';
 @import 'pages/team';
+@import 'pages/community';
 @import 'pages/contact';
 
 //plugins

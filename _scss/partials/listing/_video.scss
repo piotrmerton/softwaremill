@@ -1,0 +1,53 @@
+.videos__list {
+
+
+	//override default grid--four-columns 
+
+	@media all and (min-width: $breakpoint_mobile + 1px) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+}
+
+
+.item--video {
+
+	.video__cover {
+		overflow: hidden;
+
+		@extend %header-whitespace-medium;
+
+		//as of 03-2019 there is no subgrid spec so we rely on percentages for now based on xD spec
+		//this could be skipped in favor max-width 100% but we are not sure what the dimensions of source image will be on live site
+		max-width: 236/376 * 100%; 
+
+		@media all and (max-width: $breakpoint_laptop) {
+			max-width: 10.625rem; 
+		}
+
+		@media all and (max-width: $breakpoint_desktop) {
+			max-width: 100%;
+		}
+	}
+
+
+	//scale on hover deprecated due to video duration getting out of view
+	
+	// @media all and (min-width: $breakpoint_tablet + 1px) {
+
+	// 	img {
+	// 		transition: transform .2s ease-in-out;
+	// 	}
+
+	// 	> a {
+
+	// 		&:hover {
+	// 			img {
+	// 				transform: scale(1.1);
+	// 			}
+
+	// 		}
+	// 	}
+	// }	
+
+}

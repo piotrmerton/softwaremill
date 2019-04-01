@@ -67,12 +67,21 @@
 
 .item--employee {
 
-	@media all and (min-width: $breakpoint_desktop + 1px) {
-		figure {
-			//as of 03-2019 there is no subgrid spec so we rely on percentages for now based on xD spec
-			max-width: 236/376 * 100%; 
-		}		
+	.employee__image {
+		//as of 03-2019 there is no subgrid spec so we rely on percentages for now based on xD spec
+		//this could be skipped in favor max-width 100% but we are not sure what the dimensions of source image will be on live site		
+		max-width: 236/376 * 100%; 
+
+		@media all and (max-width: $breakpoint_laptop) {
+			max-width: 10.625rem; 
+		}
+
+		@media all and (max-width: $breakpoint_desktop) {
+			max-width: 100%;
+		}
 	}
+
+
 
 
 

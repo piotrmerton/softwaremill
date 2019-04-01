@@ -83,8 +83,8 @@
 		}		
 	}	
 
-	//specific "full screen" section for galleries, video, or hero image
-	&.section--media {
+	//specific "full screen" section for hero image (i.e. "how we work on index")
+	&.section--fullscreen {
 		min-height: 480px;
 		display: grid;
 		align-items: center;

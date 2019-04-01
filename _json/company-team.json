@@ -2,7 +2,8 @@
 	
 	"page" : {
 		"slug" : "team",
-		"title" : "Team"
+		"title" : "Team",
+		"content_type" : "company"
 	},
 
 	"banner" : {

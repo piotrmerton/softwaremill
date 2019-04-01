@@ -1,0 +1,44 @@
+{% if gallery %}
+	<div class="gallery">
+		<ul class="gallery__list gallery__slider">
+
+			{% for image in gallery %}
+
+				<li class="gallery__item item--">
+
+					<div class="item__grid">
+						<figure>
+							<img src="{{ image.image }}" />
+						</figure>
+
+						<figcaption class="text--white">
+							<div class="viewport">
+								<p>{{ image.caption }}</p>
+							</div>
+						</figcaption>
+					</div>
+
+				</li>
+
+			{% endfor %}
+		</ul>
+		<div class="gallery__nav">
+			<div class="viewport">
+				<nav>
+					<a class="nav__item item--prev">
+						<label>Previous image</label>
+						<figure class="ui-ico">
+							{{ source(root_assetsDir~'svg/ui/controls.svg' ) }}
+						</figure>
+					</a>
+					<a class="nav__item item--next">
+						<label>Next image</label>
+						<figure class="ui-ico">
+							{{ source(root_assetsDir~'svg/ui/controls.svg' ) }}
+						</figure>
+					</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+{% endif %}

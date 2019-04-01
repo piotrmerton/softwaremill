@@ -1,0 +1,161 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-articles section--no-padding section--padding-offset">
+		<div class="viewport">
+			<div class="section__header grid--two-columns">
+				<h2>We are speakers who are eager to share</h2>
+				<h3>They say speech is silver, silence is golden, but we believe that sharing our experience at conferences’ stage is priceless!</h3>
+			</div>
+			{% if articles %}
+				<ul class="articles__list grid--two-columns columns--tablet">
+					{% for article in articles %}
+						{% include 'listing/item-article.twig' %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+			<a class="section__cta button button--transparent" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>					
+				<span class="button__label">See more presentations on our Slideshare</span>
+			</a>			
+
+		</div><!-- /viewport -->
+	</section>
+
+	<section class="content__section section-videos">
+		<div class="viewport">
+			{% if videos %}
+			<ul class="videos__list grid--four-columns">
+
+				{% for video in videos %}
+					{% include 'listing/item-video.twig' %}
+				{% endfor %}
+			</ul>
+			{% endif %}
+
+			<a class="section__cta button button--transparent" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>					
+				<span class="button__label">See more on our Youtube</span>
+			</a>
+		</div>
+	</section>
+
+	<section class="content__section section-scalar section--black text--white">
+		<div class="viewport">
+			<div class="section__header header--no-margin grid--two-columns">
+				<h2>We organize Scalar</h2>
+				<h3>The conference organised in Poland for passionate Scala developers fro all over the world.</h3>
+			</div>
+			<a class="section__cta button button--transparent button--white" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>
+				<span class="button__label">Read more on Scalar website</span>
+			</a>			
+		</div>
+	</section>
+
+	<section class="content__section section-gallery section--no-padding">
+		{% include 'components/gallery.twig' %}
+	</section>
+
+	<section class="content__section section-newsletter section--black text--white">
+		<div class="viewport">
+			<div class="section__grid grid--two-columns">
+				<div class="section__header header--no-margin">
+					<h2>We run Scala Times newsletter</h2>
+				</div>
+				<div class="section__body">
+					<h3>A free, once-weekly Scala news flash. Easy to unsubscribe. Goes out every Thursday.</h3>
+
+					<form class="form--newsletter form--reverse-colors">
+						<fieldset>
+							<div>
+								<input type="email" name="email" placeholder="Mail" required />
+								<button type="submit">Subscribe</button>
+							</div>
+						</fieldset>
+					</form>
+
+				</div>
+			</div>
+			<a class="section__cta button button--transparent button--white" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>
+				<span class="button__label">Read more on Scala Times</span>
+			</a>			
+		</div>
+	</section>
+
+	<section class="content__section section-conferences">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>We sponsor and co-organize</h2>
+			</div>
+			<ul class="conferences__list grid--four-columns">
+				<li class="grid__item">
+					<h3 class="item-name">Scala Days</h3>
+					<p>The Scala Days conference started in 2010, with about 150 people.</p>
+				</li>
+				<li class="grid__item">
+					<h3 class="item-name">Confitura</h3>
+					<p>The Scala Days conference started in 2010, with about 150 people.</p>
+				</li>
+				<li class="grid__item">
+					<h3 class="item-name">Wroclaw Java User Group</h3>
+					<p>The Scala Days conference started in 2010, with about 150 people.</p>
+				</li>
+				<li class="grid__item">
+					<h3 class="item-name">Geecon</h3>
+					<p>The Scala Days conference started in 2010, with about 150 people.</p>
+				</li>
+				<li class="grid__item">
+					<h3 class="item-name">BlockYard</h3>
+					<p>The Scala Days conference started in 2010, with about 150 people.</p>
+				</li>
+				<li class="grid__item">
+					<h3 class="item-name">Wolf Summit</h3>
+					<p>The Scala Days conference started in 2010, with about 150 people.</p>
+				</li>																				
+			</ul>
+		</div>
+	</section>
+
+	<section class="content__section section-open-source section--black text--white">
+		<div class="viewport">
+			<div class="section__header header--no-margin grid--two-columns">
+				<h2>We are very into open-source</h2>
+				<h3>One of the ways we try to provide value to the Community is by developing open source projects.</h3>
+			</div>
+			<a class="section__cta button button--transparent button--white" href="#">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>
+				<span class="button__label">See opens-source projects and contributions</span>
+			</a>			
+		</div>
+	</section>
+
+{% endblock %}
+
+
+
+

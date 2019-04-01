@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     UI.events.initSlider();
 
+    UI.gallery.initSlider();
+
 
     /*
      *	for now we keep all JS logic in one bundle, but should you need Code Splitting in future, you can move code below to chunks regarding specific subpages:
