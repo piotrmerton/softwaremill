@@ -41,6 +41,7 @@
 @import 'components/form';
 @import 'components/ebook';
 @import 'components/gallery';
+@import 'components/video';
 
 @import 'partials/blocks/author';
 @import 'partials/blocks/contact';
@@ -57,6 +58,7 @@
 @import 'components/sections/events';
 @import 'components/sections/services';
 @import 'components/sections/portfolio';
+@import 'components/sections/links';
 
 //specific subpages
 @import 'pages/index';
@@ -65,6 +67,7 @@
 @import 'pages/ebook';
 @import 'pages/join-us';
 @import 'pages/team';
+@import 'pages/remote';
 @import 'pages/community';
 @import 'pages/contact';
 

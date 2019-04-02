@@ -10,6 +10,7 @@ const twigTemplates = [
 	'company-scala',
 	'company-team',
 	'company-community',
+	'company-remote',
 	'portfolio-clients',
 	'portfolio-products',
 	'portfolio-open-source',

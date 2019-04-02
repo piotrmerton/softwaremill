@@ -10,6 +10,7 @@ import { events } from './partials/events';
 import { partners } from './partials/partners';
 import { tabs } from './partials/tabs';
 import { gallery } from './partials/gallery';
+import { video } from './partials/video';
 
 export let UI = {
 
@@ -70,7 +71,8 @@ export let UI = {
 	events,
 	partners,
 	tabs,
-	gallery
+	gallery,
+	video
 	
 }
 

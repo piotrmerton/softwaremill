@@ -1,0 +1,157 @@
+// video component, markup: _twig/components/video.twig
+
+.video {
+
+	position: relative;
+	background: black;
+
+	//keep 16:9 aspect ratio
+	&:after {
+		display: block;
+		content: '';
+		padding-top: 1080px / 1920px * 100%;
+	}
+
+	.video__grid {
+
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+
+		display: grid;
+
+		.video__player,
+		.video__poster {
+			grid-row: 1;
+			grid-column: 1;
+
+			transition: opacity .5s;
+			position: relative;
+		}
+
+
+	}
+
+
+	.video__player {
+		opacity: 0;
+		
+	}
+
+	.video__poster {
+
+		display: grid;
+
+
+		> * {
+			grid-row: 1;
+			grid-column: 1;			
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;				
+		}		
+
+	}
+
+	figcaption {
+
+		align-self: end;
+		padding-bottom: $vertical-whitespace-desktop;
+
+		@media all and (max-width: $breakpoint_laptop) {
+			padding-bottom: $vertical-whitespace-laptop;
+		}
+
+		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+			display: none;
+		}
+
+		.viewport {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		p {
+			@extend %generic-h3;
+			max-width: 32rem;
+			text-align: right;
+			margin: 0;
+		}
+
+	}
+
+	.video__nav {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.video__button {
+		.ui-ico {
+			width: 3rem;
+			height: 6rem;
+			margin: 0;
+
+			@media all and (max-width: $breakpoint_mobile) {
+				width: 2.5rem;
+				height: 5rem;
+			}
+		}
+
+		@media all and (min-width: $breakpoint_tablet + 1px) {
+			&:hover {
+				.svg__ico {
+					stroke: $purple;
+				}
+			}
+		}
+	}
+
+
+	//states updated via ui/partials/video.js
+
+	&[data-state='started'] {
+		.video__poster {
+			opacity: 0;
+		}		
+	}
+
+	&[data-state='playing'] {
+
+		.video__player {
+			opacity: 1;
+			z-index: 2;
+		}
+		.video__poster {
+			opacity: 0;
+		}
+		.video__nav {
+			display: none;
+		}
+
+	}
+
+	&[data-state='paused'] {
+
+		.video__player {
+			opacity: 0;
+		}
+		
+	}
+
+	&[data-state='ended'] {
+		
+		.video__player {
+			opacity: 0;
+		}
+
+	}
+
+}

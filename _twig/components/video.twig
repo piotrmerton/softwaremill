@@ -1,0 +1,27 @@
+{% if video %}
+	<div class="video" data-video-id="{{ video.id }}">
+
+		<div class="video__grid">
+			<div class="video__player"></div>
+
+			<div class="video__poster">
+				<figure>
+					<img src="{{ video.poster }}" />
+				</figure>
+				<figcaption class="video__caption text--white">
+					<div class="viewport">
+						<p>{{ video.title }}</p>
+					</div>
+				</figcaption>
+				<nav class="video__nav">
+					<a href="#" class="video__button do-play-video">
+						<figure class="button__ico ui-ico">
+							{{ source(root_assetsDir~'svg/ui/play.svg' ) }}
+						</figure>
+					</a>
+				</nav>
+			</div>
+
+		</div>
+	</div>
+{% endif %}

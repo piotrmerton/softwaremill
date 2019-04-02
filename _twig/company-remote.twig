@@ -1,0 +1,137 @@
+
+{% extends "layout/base.twig" %}
+
+
+
+
+{% block banner %}
+
+	{% include 'components/banner/default.twig' %}
+
+{% endblock %}
+
+
+{% block content %}
+
+	<section class="content__section section-remote section--no-padding-top section--padding-offset">
+		<div class="viewport">
+
+			<div class="section__header grid--two-columns">
+				<h2>We’ve been a distributed company since day one. As a result, we have an efficient remote ecosystem in place. It’s tested on a daily basis and much appreciated by our clients, who value the job we do and the relationship we have.</h2>
+				<h3>Being fully remote lets us hire the best talent, wherever they are, because we are not limited to a local labour market. Everyone of us can make decisions because of full transparency. We can jointly shape company’s future, grow as individuals and as a whole team.</h3>
+			</div>
+
+			<ul class="features__list grid--three-columns">
+				<li>
+					<figure class="feature__ico ui-ico">
+						{{ source(root_assetsDir~'svg/remote.svg' ) }}
+					</figure>
+					<h3 class="header--whitespace-small">Remote</h3>
+					<p>You work from home or any other place you like. We have no office.</p>
+				</li>
+				<li>
+					<figure class="feature__ico ui-ico">
+						{{ source(root_assetsDir~'svg/remote-structure.svg' ) }}
+					</figure>
+					<h3 class="header--whitespace-small">Flat structure</h3>
+					<p>You have no boss, we hire no managers. We jointly shape company’s future.</p>
+				</li>
+				<li>
+					<figure class="feature__ico ui-ico">
+						{{ source(root_assetsDir~'svg/remote-transparency.svg' ) }}
+					</figure>
+					<h3 class="header--whitespace-small">Transparency</h3>
+					<p>There are no secrets. Every process is transparent, including company finances.</p>
+				</li>
+			</ul>
+
+		</div><!-- /viewport -->
+	</section>
+
+
+	<section class="content__section section-gallery section--no-padding">
+		{% include 'components/gallery.twig' %}
+	</section>
+
+
+	<section class="content__section section-articles">
+		<div class="viewport">
+
+			<div class="section__header">
+				<h2>Blogs</h2>
+			</div>
+
+			{% if articles %}
+				<ul class="articles__list grid--two-columns columns--tablet">
+					{% for article in articles %}
+						{% include 'listing/item-article.twig' %}
+					{% endfor %}
+				</ul>
+			{% endif %}
+
+			<a class="section__cta button button--transparent" href="blog.html">
+				<figure class="button__ico ui-ico">
+					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+				</figure>					
+				<span class="button__label">Read more posts in Blog section</span>
+			</a>			
+
+		</div><!-- /viewport -->
+	</section>	
+
+
+	<section class="content__section section-video section--no-padding">
+		{% include 'components/video.twig' %}
+	</section>
+
+	<section class="content__section section-links section--black text--white">
+		<div class="viewport">
+			<div class="section__header">
+				<h2>See links below to find more about us</h2>
+			</div>
+			<nav class="links__nav grid--four-columns">
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Team</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Blogs</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Presentations</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Scalar</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Open-source</span>
+				</a>
+				<a class="button button--transparent button--white" href="#">
+					<figure class="button__ico ui-ico">
+						{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+					</figure>					
+					<span class="button__label">Scala newsletter</span>
+				</a>																
+			</nav>
+		</div>
+	</section>	
+
+{% endblock %}
+
+
+
+
