@@ -41,7 +41,7 @@
 					<p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
 
 
-					{# should you need syntax highlighting, use prismajs #}
+					{# should you need syntax highlighting, use something like prismajs #}
 					<pre>
 						<code>.executeWithOptions(_.localContextPropagation)</code>
 					</pre>
@@ -56,7 +56,7 @@
 				</article>
 
 				<aside class="post__meta">
-					{% include 'components/blocks/author.twig' with { author : author, article : post } %}
+					{% include 'blocks/author.twig' with { author : author, article : post } %}
 				</aside>
 			</div>
 

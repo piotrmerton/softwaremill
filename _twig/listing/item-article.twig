@@ -2,7 +2,7 @@
 
 	<a href="{{ article.url }}">
 
-		{% include '../components/blocks/author.twig' with {author : article.author, article : article} %}
+		{% include '../blocks/author.twig' with {author : article.author, article : article} %}
 
 		<h3 class="article__title">{{ article.title }}</h3>
 	</a>
