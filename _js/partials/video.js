@@ -14,7 +14,7 @@ export let video = {
 	init : function() {
 
 		let tag = document.createElement('script');
-		tag.src = "https://www.youtube.com/iframe_api";
+		tag.src = "//www.youtube.com/iframe_api";
       	
       	let firstScriptTag = document.getElementsByTagName('script')[0];
 

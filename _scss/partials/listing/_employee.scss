@@ -81,22 +81,12 @@
 		}
 	}
 
-
-
-
-
-
 	.socialmedia__list {
 		justify-content: flex-start;
 		li {
 			&:not(:last-child) {
 				margin-right: 2rem;
 			}
-		}
-	}
-	.socialmedia__ico {
-		.svg__ico {
-			fill: $black;
 		}
 	}
 

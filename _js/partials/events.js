@@ -50,7 +50,7 @@ export let events = {
 	resizeContainer : function(selector, containerSelector, callback) {
 		//for horizontal slider to be aligned to the right edge, we need to apply fixed width to its container, otherwise
 		//the container in flex box model has automated width of all it's slide items
-		//this is ugly, and it would be best to settle for standard alignment of set axis to vertical
+		//this is ugly, and it would be best to settle for standard alignment or set axis to vertical
 
 		//we don't need to iterate through all list's items and check for widest, since all elements inherit block width of parent
 		let list = document.querySelector(selector);

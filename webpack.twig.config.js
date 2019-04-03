@@ -16,7 +16,8 @@ const twigTemplates = [
 	'portfolio-open-source',
 	'ebook',
 	'join-us',
-	'contact'
+	'contact',
+	'blog-post'
 ];
 
 /*

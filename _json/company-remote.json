@@ -9,7 +9,10 @@
 	"banner" : {
 		"title" : "Remote",
 		"desc" : "The best remote workplace for developers",
-		"cta" : "",
+		"cta" : {
+			"href" : "contact.html",
+			"text" : "Contact us now!"
+		},
 		"cover" : {
 			"desktop" : "assets/img/banner/default/desktop.jpg",
 			"tablet" : "assets/img/banner/default/tablet.jpg",

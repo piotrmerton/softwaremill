@@ -117,6 +117,7 @@
 	//inner grid (for header, desc, cta)
 	.banner__subgrid {
 
+		display: grid;
 		align-items: start;
 		grid-row-gap: 3.75rem;
 
@@ -184,7 +185,7 @@
 		@media all and (max-width: $breakpoint_mobile) {
 
 
-			//for edge case scenario (i.e. long desc) ensure there is at least some fixed padding for banner contents
+			//for edge case scenario (i.e. long desc) ensure there is at least some fixed padding for banner content
 			padding-bottom: 4rem;
 
 			//for this particular dimensions additional padding helps prevents banner content overlapping with absolute header
@@ -201,7 +202,7 @@
 			}
 		}
 		@media all and (max-width: $breakpoint_tablet-portrait) {
-			padding-top: 7.5rem; //height agnostic
+			padding-top: 7.5rem; //screen height agnostic
 		}
 		@media all and (max-width: $breakpoint_tablet-small) {
 			grid-row-gap: 2.5rem;

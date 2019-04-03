@@ -12,13 +12,13 @@
 				{% for key, contact in employee.contact %}
 					<li>
 						<a target="_blank" href="{{ contact }}">
-							<figure class="socialmedia__ico ui-ico ico--{{ key }}">
+							<figure class="socialmedia__ico ui-ico ico--black ico--{{ key }}">
 								{{ source(root_assetsDir~'svg/socialmedia/'~key~'.svg' ) }}
 							</figure>
 						</a>
 					</li>
 				{% endfor %}
 			</ul>
-		</figure>
+		</div>
 	{% endif %}
 </li>

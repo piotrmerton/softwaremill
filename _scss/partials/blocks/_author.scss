@@ -1,10 +1,5 @@
 .block-author {
 
-		display: grid;
-		grid-auto-flow: column;
-		grid-template-columns: max-content;
-		grid-column-gap: 2.5rem;
-
 		figure {
 			overflow: hidden;
 			max-width: 7.5rem;
@@ -14,16 +9,37 @@
 			margin: 0;
 		}
 
-		@media all and (max-width: $breakpoint_laptop) {
-			grid-column-gap: 1.875rem;
-			figure {
-				max-width: 5.315rem
+
+		.author__meta {
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-columns: max-content;
+			grid-column-gap: 2.5rem;
+
+			@media all and (max-width: $breakpoint_laptop) {
+				grid-column-gap: 1.875rem;
+				figure {
+					max-width: 5.315rem
+				}
+			}
+			@media all and (max-width: $breakpoint_mobile) {
+				figure {
+					max-width: 4.5rem;
+				}
+			}			
+		}
+
+	.block-socialmedia {
+		margin-top: 2.5rem;
+	}
+	.socialmedia__list {
+		justify-content: flex-start;
+		li {
+			&:not(:last-child) {
+				margin-right: 4rem;
 			}
 		}
-		@media all and (max-width: $breakpoint_mobile) {
-			figure {
-				max-width: 4.5rem;
-			}
-		}
+	}
+
 
 }

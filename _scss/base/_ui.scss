@@ -89,6 +89,11 @@
 		height: 100%;
 	}
 
+	&.ico--black {
+		.svg__ico {
+			fill: $black;
+		}
+	}
 	&.ico--stroke-black {
 		.svg__ico {
 			stroke: $black;

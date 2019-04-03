@@ -44,6 +44,11 @@
 		}
 	}
 
+	.events__calendar {
+		max-height: 1.25rem; 
+		overflow: hidden;
+	}
+
 	.events__list {		
 		flex-grow: 0;
 		.list__item {					
