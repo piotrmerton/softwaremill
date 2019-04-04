@@ -1,0 +1,168 @@
+//single post (_twig/pages/blog-post.twig)
+//for blog post content elements like <pre>, <figure>, <blockquotes> see text--rich modifier in utilities/_reusables.scs
+.banner--blog-post {
+
+	.banner__content {
+
+		padding-top: 15rem;
+		
+		@media all and (max-width: $breakpoint_laptop) and (min-width: $breakpoint_mobile + 1px) {
+			padding-top: 10rem;
+		}
+		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+			padding-top: 7.5rem;
+		}
+		
+	}
+	
+
+	.banner__subgrid {
+		// @media all and (min-height: 768px) {
+		// 	padding: 0;
+		// }		
+
+		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+			//padding: 0;
+
+			.banner__title {
+				font-size: 1.25rem;
+			}			
+			.banner__scroll {
+				display: block;
+			}		
+		}
+	}
+
+	//overrides for the default partials/blocks/author.scss
+	.block-author {
+
+		p {
+			@extend %generic-h3;
+		}
+
+
+		@media all and (min-height: 768px) {
+
+			.author__meta {
+				margin-bottom: 3.75rem;
+
+				figure {
+					max-width: 14.75rem;
+				}
+				@media all and (max-width: $breakpoint_laptop) {
+					figure {
+						max-width: 10rem; //not on spec
+					}
+					margin-bottom: 2.75rem;
+				}
+				@media all and (max-width: $breakpoint_mobile) {
+					margin-bottom: 4.375rem;
+					figure {
+						max-width: 14.25rem;
+					}
+				}
+				@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+					margin-bottom: 2.5rem;
+				}
+			}
+
+		}
+		@media all and (max-width: $breakpoint_laptop) {
+			figure {
+				max-width: 6.5rem;
+			}
+		}
+		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+			.author__meta {
+				grid-auto-flow: row;
+			}
+			.author__image {
+				margin-bottom: 2.5rem;
+			}
+
+			figure {
+				max-width: 9rem;
+			}
+			p {
+				font-size: 0.938em; 
+			}
+
+		}
+
+
+	}
+
+}
+
+.content--blog-post {
+	.section-post {
+		@media all and (max-width: $breakpoint_mobile) {
+			padding-bottom: 0;
+		}
+	}
+}
+
+.post__grid {
+	
+
+	.post__content {
+		order: 2;
+		grid-column: auto / span 9;
+
+		max-width: 50rem;
+	}
+	.post__meta {
+		order: 1;
+		grid-column: auto / span 3;
+	}
+
+
+	@media 
+		all and (min-width: $breakpoint_laptop + 1px) and (max-width: 1440px), 
+		all and (max-width: $breakpoint_hd) {
+		.post__meta {
+			grid-column: auto / span 2;
+
+			.author__meta {
+				grid-auto-flow: row;
+			}
+			.author__desc {
+				margin-top: 2rem;
+			}
+
+		}
+	}
+
+	@media all and (max-width: $breakpoint_mobile) {
+		.post__content {
+			grid-column: auto / span 6;
+		}
+	}
+
+	@media all and (min-width: $breakpoint_tablet-portrait) {
+		.post__meta {
+			.block-author {
+				position: sticky;
+
+				//take into account fixed header height (TO DO: use css custom properties?)
+				top: 5rem;
+				@media all and (min-width: $breakpoint_desktop) {
+					top: 7rem;
+				}
+			}
+		}
+	}
+
+	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+		.post__meta {
+			display: none;
+		}
+		.post__content {
+			grid-column: 1 / -1;
+		}
+	}
+
+
+}
+
+

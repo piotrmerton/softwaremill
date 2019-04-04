@@ -1,4 +1,14 @@
-<li class="list__item item--article">
+{% if filters %}
+
+	{% if article.author.name in filters.authors %}
+
+		{% set matchedAuthor = true %}
+
+	{% endif %}
+
+{% endif %}
+
+<li class="list__item item--article{% if matchedAuthor %} article--matched-author{% endif %}">
 
 	<a href="{{ article.url }}">
 
@@ -10,7 +20,24 @@
 	{% if article.tags %}
 		<ul class="article__tags tags__list">
 			{% for tag in article.tags %}
-				<li class="list__item item--tag"><a href="#">{{ tag }}</a></li>
+
+				{% if filters %}
+
+					{% if tag in filters.keywords %}
+
+						{% set selected = true %}
+
+					{% endif %}
+
+				{% endif %}
+
+				<li class="list__item item--tag{% if selected %} tag--selected{% endif %}">
+
+					{# should you don't want tag to be clickable, REPLACE <a> with <span> #}
+
+					<a href="#">{{ tag }}</a>
+
+				</li>
 			{% endfor %}
 		</ul>
 	{% endif %}

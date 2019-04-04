@@ -47,4 +47,13 @@
 		}
 	}
 
+
+	&.article--matched-author {
+		.block-author {
+			p {
+				color: $lightblue;
+			}
+		}
+	}
+
 }

@@ -21,12 +21,19 @@
 		max-width: 32rem;
 	}
 
-	//override default grid--two-columns
-	.project__grid {
-		grid-row-gap: 2.75rem;
+	//override default grid--two-columns for both outer and inner grid (project__grid and desc__grid)
+	.grid--two-columns {
+		grid-row-gap: 3.75rem;
+		
+		@media all and (max-width: $breakpoint_laptop) {
+			grid-row-gap: 2.75rem;
+		}
 		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
 			grid-row-gap: 2.5rem;
-		}
+		}		
+	}
+
+	.project__grid {
 
 		@media all and (max-width: $breakpoint_desktop) {
 			grid-template-columns: 1fr;

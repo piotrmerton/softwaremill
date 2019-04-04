@@ -20,6 +20,7 @@
 
 	@media all and (max-width: $breakpoint_laptop) {
 		font-size: 1.25em;
+		min-height: 3.5rem;
 	}
 
 	@media all and (min-width: $breakpoint_tablet + 1px) {

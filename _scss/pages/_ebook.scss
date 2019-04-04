@@ -2,6 +2,20 @@
 .banner--ebook {
 
 
+	.banner__content {
+
+		
+
+		@media all and (min-width: $breakpoint_mobile) {
+			padding: 15rem 0 6.25rem;
+
+			@media all and (max-width: $breakpoint_laptop) {
+				padding: 10rem 0 4.375rem;
+			}			
+		}
+		
+	}
+
 	.ebook {
 		max-width: 345px;
 	}

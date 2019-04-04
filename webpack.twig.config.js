@@ -17,6 +17,7 @@ const twigTemplates = [
 	'ebook',
 	'join-us',
 	'contact',
+	'blog',
 	'blog-post'
 ];
 

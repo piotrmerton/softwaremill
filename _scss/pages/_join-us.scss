@@ -1,11 +1,8 @@
 .banner--join-us {
-	@media all and (max-width: $breakpoint_mobile) {
-		@media all and (max-height: 768px) {
-			//extra long desc...
-			.banner__subgrid {
-				padding-top: 10rem;
-			}
-		}
+
+	//adapt for extra long desc (not ideal solution, bo it provides better flexibility for dynamic and long desc at the expense of design spec whitespaces)
+	.banner__content {
+		@extend %banner-whitespace-dynamic;
 	}
 }
 

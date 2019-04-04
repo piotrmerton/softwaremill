@@ -106,27 +106,3 @@
 		@extend %header-whitespace-medium;
 	}
 }
-
-
-
-
-//inline svgs via html-webpack-inline-svg-plugin
-.ico {
-	.svg-ico {
-		fill: #000;
-		transition: all .2s ease-in-out;
-	}
-	&.ico--white {
-		.svg-ico {
-			fill: #fff;
-		}
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			&:hover {
-				.svg-ico {
-					fill: #000;
-				}
-			}
-		}
-	}
-}
-

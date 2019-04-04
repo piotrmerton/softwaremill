@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     UI.partners.initSlider();
 
     //2. join-us
-    UI.tabs.bind();
+    UI.tabs.bind('#career-tabs');
+
+    //3. blog
+    UI.tabs.bind('#blog-tabs', true);
 
 } );
 

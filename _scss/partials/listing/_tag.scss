@@ -5,9 +5,11 @@
 	flex-wrap: wrap;
 
 	.list__item {
+
 		margin: 0 .625rem .625rem 0;
-		a,
-		span {
+
+		> a,
+		> span {
 		// span wrapper needed for scenario where tag is not an link (i.e.: project listings)
 		// we need this to differentiate between "linked" and "non-linked" tag and to apply appropriate border hover
 		// only if element is clickable
@@ -22,6 +24,7 @@
 			a {
 				transition: all .2s;
 				&:hover {
+					color: $purple;
 					border-color: $purple;
 				}				
 			}
@@ -41,5 +44,16 @@
 				}
 			}			
 		}
+	}
+}
+
+.item--tag {
+	&.tag--selected {
+		> a,
+		> span {
+			border-color: $lightblue;
+			color: $lightblue;
+		}
+
 	}
 }

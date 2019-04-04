@@ -1,22 +1,23 @@
 export let tabs = {
 
 	selector : '#career-tabs',
+	tabSelector : '.item--tab',
 	buttonSelector : '.do-toggle-tab',
 	activeClass : 'tab--active',
 	animate : true,
 
-	bind : function() {
+	bind : function(selector = this.selector, dynamicContent = false) {
 
-		if( document.querySelector(this.selector) === null ) return;
+		if( document.querySelector(selector) === null ) return;
 
 		let self = this;
-		let tabs = document.querySelector(self.selector);
+		let tabContainer = document.querySelector(selector);
+		
+		let buttons = tabContainer.querySelectorAll(self.buttonSelector);
 
-		let buttons = tabs.querySelectorAll(self.buttonSelector);
+		buttons.forEach( (button) => {
 
-		for(let i = 0; i < buttons.length; i++) {
-
-			buttons[i].addEventListener('click', function(event) {
+			button.addEventListener('click', function(event) {
 
 				let target = event.target;
 				let tab = target.closest('.item--tab');
@@ -27,9 +28,69 @@ export let tabs = {
 
 			});
 
+		});
+
+		if(dynamicContent) {
+			self.hideUI(selector);
+
+			//bind to resize event as well because on different devices we are showing different amount of defaulty visible keywords
+			window.addEventListener('resize', () => { 
+
+				//TO DO: resets tabs on resize as well?
+
+				self.hideUI(selector);
+			});
+
 		}
+		
 
 
+	},
+
+	/*
+	 *	for dynamic content (i.e. blog keywords/authors) hide tab__ui if it's unnecessary 
+	 *	(there's no need to "toggle" anything if there is only couple of keywords - we are testing this by comparing heights of visible and full containers)
+	 *
+	 */
+	hideUI : function(selector = this.selector) {
+
+		let self = this;
+
+		let tabContainer = document.querySelector(selector);
+		let tabs = tabContainer.querySelectorAll(self.tabSelector);
+		
+
+		tabs.forEach( (tab) => {
+
+			let tabContent = tab.querySelector('.item__body');
+			let tabUi = tab.querySelector('.tab__ui');
+			
+
+			if( tabContent === null ) return;
+
+			let contentVisibleHeight = tabContent.offsetHeight;
+			let contentFullHeight = tabContent.scrollHeight;
+
+			let style = getComputedStyle(tabContent.querySelector('.list__item'));
+
+			//since we can't use grid model for keywords we need to take into acount forced margin of each tag item and 
+			//make sure that the difference of heights is bigger than margin itself
+			if( 
+				(contentVisibleHeight >= contentFullHeight || contentFullHeight - contentVisibleHeight <= parseInt(style.marginBottom)) 
+				&& !tab.classList.contains(self.activeClass) ) {
+
+				tabUi.style.display = "none";
+
+			} else {
+				tabUi.removeAttribute('style');
+			}
+
+			//update tab height as well, but only if tab is active
+			if( tab.classList.contains(self.activeClass ))
+			tabContent.style.maxHeight = contentFullHeight+"px";
+			
+
+		});		
 	},
 
 	toggleTab : function(tab) {
