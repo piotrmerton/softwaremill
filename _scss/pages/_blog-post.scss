@@ -1,8 +1,11 @@
 //single post (_twig/pages/blog-post.twig)
 //for blog post content elements like <pre>, <figure>, <blockquotes> see text--rich modifier in utilities/_reusables.scs
+
 .banner--blog-post {
 
 	.banner__content {
+
+		//overrides for default banner-whitespace-fixed, see components/_banner.scss
 
 		padding-top: 15rem;
 		
@@ -17,12 +20,14 @@
 	
 
 	.banner__subgrid {
-		// @media all and (min-height: 768px) {
-		// 	padding: 0;
-		// }		
+		
+		@media all and (max-width: $breakpoint_laptop) {
+			grid-row-gap: 4.375rem;
+		}
 
 		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			//padding: 0;
+			
+			grid-row-gap: 2.5rem;
 
 			.banner__title {
 				font-size: 1.25rem;

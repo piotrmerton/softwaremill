@@ -4,7 +4,7 @@
 
 	.banner__content {
 
-		
+		//overrides for default banner-whitespace-fixed, see components/_banner.scss
 
 		@media all and (min-width: $breakpoint_mobile) {
 			padding: 15rem 0 6.25rem;

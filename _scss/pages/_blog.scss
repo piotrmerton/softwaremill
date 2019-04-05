@@ -1,18 +1,19 @@
 
 
-//blog archive
+//blog archive (articles list)
 .banner--blog {
 
 
 	.banner__content {
 		
-		padding: 15rem 0 6.25rem;
+		//overrides for default banner-whitespace-fixed, see components/_banner.scss
+		padding-top: 15rem;
 
 		@media all and (max-width: $breakpoint_laptop) {
-			padding: 10rem 0 4.375rem;
+			padding-top: 10rem;
 		}
 		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			padding: 7.5rem 0 4rem;
+			padding-top: 7.5rem;
 		}
 
 	}
@@ -236,6 +237,11 @@
 		@media all and (max-width: $breakpoint_mobile) {
 			padding-bottom: 0;
 		}		
+		.section__cta {
+			.ui-ico {
+				transform: rotate(90deg);
+			}
+		}
 	}
 }
 
@@ -255,30 +261,34 @@
 		.list__item {
 			margin: 0 2rem 1.5rem 0;
 
+			@media all and (max-width: $breakpoint_mobile) {
+				margin-bottom: .75rem;
+			}
+
 			a {
 				@extend %generic-h3;
 				position: relative;
 				display: flex;
 
 				//extra space for ui-ico
-				padding-right: 1rem;
+				padding-right: 1.75rem;
 
 				//non-svg ui-ico because maybe later we will need to render active filters via JS and svg will be a pain in the *** without UI library
 				.ui-ico {
-					width: auto;
-					height: auto;
+					width: .75rem;
+					height: .75rem;
 					margin: 0;
 					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
 					right: 0;
-					//transform: rotate(45deg);
 
 					&:after,
 					&:before {
 						content: '';
 						display: block;
 						width: 2px;
-						height: .75rem;
-						top: 1rem;
+						height: 100%;
 						position: absolute;
 						background: $lightblue;
 					}	
