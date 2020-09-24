@@ -103,6 +103,9 @@
 			.item__body {
 				//max-height: 8.25rem;
 
+				@media all and (max-width: $breakpoint_laptop - 1px) and (min-width: $breakpoint_mobile + 1px) {
+					max-height: 9.5rem;
+				}
 				@media all and (max-width: $breakpoint_mobile) {
 					max-height: 7.25rem;
 				}

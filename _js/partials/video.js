@@ -50,7 +50,6 @@ export let video = {
 					self.play(player, videoId);
 				}
 
-				
 
 				event.preventDefault();
 
