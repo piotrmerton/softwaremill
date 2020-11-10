@@ -1,97 +1,97 @@
 //generic building block
 
 .content__section {
-	position: relative;
-	
-	&:not(.section--no-padding) {
+    position: relative;
+    
+    &:not(.section--no-padding) {
 
-		padding: $vertical-whitespace-desktop 0;
+        padding: $vertical-whitespace-desktop 0;
 
-		@media all and (max-width: $breakpoint_laptop) {
-			padding: $vertical-whitespace-laptop 0;
-		}
+        @media all and (max-width: $breakpoint_laptop) {
+            padding: $vertical-whitespace-laptop 0;
+        }
 
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			padding: $vertical-whitespace-phone 0;
-		}
-	}	
-
-
-	//elements
-
-	.section__body {
-		position: relative;
-		z-index: 2; //above section__cover
-	}
-	.section__cover {
-		
-	}
-	.section__header {
-		h2,
-		h3 {
-			margin: 0;
-		}
-		&:not(.header--no-margin) {
-			margin-bottom: $vertical-whitespace-desktop;
-			@media all and (max-width: $breakpoint_laptop) {
-				margin-bottom: $vertical-whitespace-laptop;
-			}
-			@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-				margin-bottom: $vertical-whitespace-phone;
-			}
-		}
-	}
-
-	.section__cta {
-		&:not(.cta--no-margin) {
-			margin-top: $vertical-whitespace-desktop;
-			@media all and (max-width: $breakpoint_laptop) {
-				margin-top: $vertical-whitespace-laptop;
-			}
-			@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-				margin-top: $vertical-whitespace-phone;
-			}
-		}
-		
-		 
-	}
-
-	//modifiers enabling some simple composition...
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            padding: $vertical-whitespace-phone 0;
+        }
+    }	
 
 
-	//...regarding background color:
-	&.section--black {
-		background: $black;
-	}
+    //elements
 
-	//...regarding padding:
-	&.section--no-padding-top {
-		padding-top: 0;
-	}
-	&.section--no-padding-bottom {
-		padding-bottom: 0;
-	}
+    .section__body {
+        position: relative;
+        z-index: 2; //above section__cover
+    }
+    .section__cover {
+        
+    }
+    .section__header {
+        h2,
+        h3 {
+            margin: 0;
+        }
+        &:not(.header--no-margin) {
+            margin-bottom: $vertical-whitespace-desktop;
+            @media all and (max-width: $breakpoint_laptop) {
+                margin-bottom: $vertical-whitespace-laptop;
+            }
+            @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+                margin-bottom: $vertical-whitespace-phone;
+            }
+        }
+    }
 
-	//override padding top due to embedded section-trends in banner
-	&.section--padding-offset {
-		padding-top: 3.75rem;
-		@media all and (max-width: $breakpoint_laptop) {
-			padding-top: 2.75rem
-		}
-		@media all and (max-width: $breakpoint_mobile) {
-			padding-top: 2.5rem;
-		}		
-	}	
+    .section__cta {
+        &:not(.cta--no-margin) {
+            margin-top: $vertical-whitespace-desktop;
+            @media all and (max-width: $breakpoint_laptop) {
+                margin-top: $vertical-whitespace-laptop;
+            }
+            @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+                margin-top: $vertical-whitespace-phone;
+            }
+        }
+        
+         
+    }
 
-	//specific "full screen" section for hero image (i.e. "how we work on index")
-	&.section--fullscreen {
-		min-height: 480px;
-		display: grid;
-		align-items: center;
+    //modifiers enabling some simple composition...
 
-		@media all and (min-height: $breakpoint_phone) {
-			min-height: 100vh;
-		}
-	}
+
+    //...regarding background color:
+    &.section--black {
+        background: $black;
+    }
+
+    //...regarding padding:
+    &.section--no-padding-top {
+        padding-top: 0;
+    }
+    &.section--no-padding-bottom {
+        padding-bottom: 0;
+    }
+
+    //override padding top due to embedded section-trends in banner
+    &.section--padding-offset {
+        padding-top: 3.75rem;
+        @media all and (max-width: $breakpoint_laptop) {
+            padding-top: 2.75rem
+        }
+        @media all and (max-width: $breakpoint_mobile) {
+            padding-top: 2.5rem;
+        }		
+    }	
+
+    //specific "full screen" section for hero image (i.e. "how we work on index")
+    &.section--fullscreen {
+        min-height: 480px;
+        display: grid;
+        align-items: center;
+
+        @media all and (min-height: $breakpoint_phone) {
+            min-height: 100vh;
+        }
+    }
 
 }

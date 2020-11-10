@@ -1,103 +1,98 @@
 //modifier of generic .banner, see components/banner.scss
 .banner--ebook {
 
+    .banner__content {
 
-	.banner__content {
+        //overrides for default banner-whitespace-fixed, see components/_banner.scss
 
-		//overrides for default banner-whitespace-fixed, see components/_banner.scss
+        @media all and (min-width: $breakpoint_mobile) {
+            padding: 15rem 0 6.25rem;
 
-		@media all and (min-width: $breakpoint_mobile) {
-			padding: 15rem 0 6.25rem;
+            @media all and (max-width: $breakpoint_laptop) {
+                padding: 10rem 0 4.375rem;
+            }			
+        }
+        
+    }
 
-			@media all and (max-width: $breakpoint_laptop) {
-				padding: 10rem 0 4.375rem;
-			}			
-		}
-		
-	}
+    .ebook {
+        max-width: 345px;
+    }
 
-	.ebook {
-		max-width: 345px;
-	}
+    .banner__subgrid {
 
-	.banner__subgrid {
+        @media all and (min-width: $breakpoint_desktop + 1px) {
 
-		@media all and (min-width: $breakpoint_desktop + 1px) {
-
-			.ebook {
-				grid-column: 9 / span 3;
-				grid-row: auto / span 4;
-			}
-
-
-			.banner__cta {
-				grid-column: 1 / span 3;
-				grid-row: auto;
-				margin-top: 2.5rem //adds up to grid-row-gap to achieve design spec
-			}
-
-			.banner__scroll {
-				grid-column: 1 / span 6;
-				margin: 0;
-			}
-
-		}
-
-		@media all and (max-width: 1650px) {
-			.ebook {
-				grid-column: 9 / -1;
-			}
-		}
+            .ebook {
+                grid-column: 9 / span 3;
+                grid-row: auto / span 4;
+            }
 
 
-		@media all and (max-width: $breakpoint_desktop) {
-			.ebook {
-				grid-column: 1 / -1;
+            .banner__cta {
+                grid-column: 1 / span 3;
+                grid-row: auto;
+                margin-top: 2.5rem //adds up to grid-row-gap to achieve design spec
+            }
 
-				display: none;
-			}
-		}
+            .banner__scroll {
+                grid-column: 1 / span 6;
+                margin: 0;
+            }
 
-	}
+        }
+
+        @media all and (max-width: 1650px) {
+            .ebook {
+                grid-column: 9 / -1;
+            }
+        }
 
 
-	//should you need ebook cover in banner on smaller screens, uncomment this
-	// @media all and (max-width: $breakpoint_desktop) {
-		
-	// 	//reset banner grid
-	// 	.banner__grid {
-	// 		display: block;
-	// 		min-height: 0;
-	// 	}
-	// 	.banner__content {
-	// 		min-height: 0;
-	// 		padding: 10rem 0 4rem;
-	// 	}
-	// 	.banner__subgrid {
-	// 		//min-height: 960px;
-	// 		padding-top: 0;
-	// 		.banner__cta {
-	// 			margin: 0;
-	// 		}			
-	// 	}
+        @media all and (max-width: $breakpoint_desktop) {
+            .ebook {
+                grid-column: 1 / -1;
 
-	// 	.banner__scroll {
-	// 		position: static;
-	// 	}
-	// }
+                display: none;
+            }
+        }
+
+    }
+
+
+    //should you need ebook cover in banner on smaller screens, uncomment this
+    // @media all and (max-width: $breakpoint_desktop) {
+        
+    // 	//reset banner grid
+    // 	.banner__grid {
+    // 		display: block;
+    // 		min-height: 0;
+    // 	}
+    // 	.banner__content {
+    // 		min-height: 0;
+    // 		padding: 10rem 0 4rem;
+    // 	}
+    // 	.banner__subgrid {
+    // 		//min-height: 960px;
+    // 		padding-top: 0;
+    // 		.banner__cta {
+    // 			margin: 0;
+    // 		}			
+    // 	}
+
+    // 	.banner__scroll {
+    // 		position: static;
+    // 	}
+    // }
 
 }
-
 
 .content--ebook {
-	.section-features {
-		.features__list {
-			h3 {
-				margin: 0;
-			}
-		}
-	}
+    .section-features {
+        .features__list {
+            h3 {
+                margin: 0;
+            }
+        }
+    }
 }
-
-
-

@@ -34,30 +34,30 @@
 
 <body>
 
-	{% block header %}
-		{% include '../layout/header.twig' %}
-	{% endblock %}
+    {% block header %}
+        {% include '../layout/header.twig' %}
+    {% endblock %}
 
-	<div class="page-container">
+    <div class="page-container">
 
-		{% block banner %}
-			{% include '../components/banner/default.twig' %}
-		{% endblock %}
+        {% block banner %}
+            {% include '../components/banner/default.twig' %}
+        {% endblock %}
 
-		<section id="content" role="main" class="main-content content--{{ page.slug }}{% if page.content_type is defined %} content--{{ page.content_type }}{% endif %}">
-			{% block content %}
-				<p>Block content placeholder</p>
-			{% endblock %}
-		</section>
+        <section id="content" role="main" class="main-content content--{{ page.slug }}{% if page.content_type is defined %} content--{{ page.content_type }}{% endif %}">
+            {% block content %}
+                <p>Block content placeholder</p>
+            {% endblock %}
+        </section>
 
-		{% block footer %}
-			{% include '../layout/footer.twig' %}
-		{% endblock %}
+        {% block footer %}
+            {% include '../layout/footer.twig' %}
+        {% endblock %}
 
-	</div>
+    </div>
 
 {% block assetsJS %}
-	<script src="assets/js/global.js"></script>
+    <script src="assets/js/global.js"></script>
 {% endblock %}	
 
 </body>

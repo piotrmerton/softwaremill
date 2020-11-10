@@ -2,11 +2,11 @@
 
 
 {% block banner_title %}
-	<h1 class="banner__title">{{ page.title }}</h1>
+    <h1 class="banner__title">{{ page.title }}</h1>
 {% endblock %}
 
 {% block banner_desc %}
-	<div class="banner__desc">
-		{% include '../../blocks/author.twig' with {cssClass : 'author--big', author : author, article : post, show_contact : true} %}
-	</div>
+    <div class="banner__desc">
+        {% include '../../blocks/author.twig' with {cssClass : 'author--big', author : author, article : post, show_contact : true} %}
+    </div>
 {% endblock %}

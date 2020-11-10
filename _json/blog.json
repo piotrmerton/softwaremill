@@ -1,495 +1,495 @@
 {
-	
-	"page" : {
-		"slug" : "blog",
-		"title" : "Blog"
-	},
+    
+    "page" : {
+        "slug" : "blog",
+        "title" : "Blog"
+    },
 
-	"banner" : {
-		"title" : "Blog",
-		"desc" : "Nice title about that we love to write and share and few words about how to use this page."
+    "banner" : {
+        "title" : "Blog",
+        "desc" : "Nice title about that we love to write and share and few words about how to use this page."
 
-	},
+    },
 
-	"activeFilters" : {
+    "activeFilters" : {
 
-		"keywords" : ["Cryptocurrency", "Scala", "Conferences"],
-		"authors" : ["Jan Zborowski"]
-		
+        "keywords" : ["Cryptocurrency", "Scala", "Conferences"],
+        "authors" : ["Jan Zborowski"]
+        
 
-	},
+    },
 
-	"keywords" : [
+    "keywords" : [
 
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Java",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},	
-		{
-			"tag" : "Java",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Java",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},	
-		{
-			"tag" : "Java",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},	
-		{
-			"tag" : "Java",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Scala",
-			"count" : "95",
-			"url" : "#"
-		},
-		{
-			"tag" : "Akka",
-			"count" : "37",
-			"url" : "#"
-		},
-		{
-			"tag" : "Programming",
-			"count" : "35",
-			"url" : "#"
-		},
-		{
-			"tag" : "Conferences",
-			"count" : "56",
-			"url" : "#"
-		}
-											
-	],
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Java",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },	
+        {
+            "tag" : "Java",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Java",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },	
+        {
+            "tag" : "Java",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },	
+        {
+            "tag" : "Java",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Scala",
+            "count" : "95",
+            "url" : "#"
+        },
+        {
+            "tag" : "Akka",
+            "count" : "37",
+            "url" : "#"
+        },
+        {
+            "tag" : "Programming",
+            "count" : "35",
+            "url" : "#"
+        },
+        {
+            "tag" : "Conferences",
+            "count" : "56",
+            "url" : "#"
+        }
+                                            
+    ],
 
-	"authors" : [
+    "authors" : [
 
-		{
-			"name" : "Adam Warski",
-			"role" : "CTO and co-founder",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"name" : "Jan Zborowski",
-			"role" : "Business Development & co-founder",
-			"count" : "36",
-			"url" : "#"
-		},		
-		{
-			"name" : "Aleksandra Puchta-Górska",
-			"role" : "Marketing & Growth Manager",
-			"count" : "44",
-			"url" : "#"
-		},
-		{
-			"name" : "Maria Wąchal",
-			"role" : "Marketing & Growth Manager",
-			"count" : "44",
-			"url" : "#"
-		},
-		{
-			"name" : "Jarosław Kijanowski",
-			"role" : "Integration Architect",
-			"count" : "12",
-			"url" : "#"
-		},
-		{
-			"name" : "Tomasz Dziurko",
-			"role" : "Senior Software Engineer",
-			"count" : "13",
-			"url" : "#"
-		},
-		{
-			"name" : "Michał Chmielarz",
-			"role" : "Software Wizard",
-			"count" : "13",
-			"url" : "#"
-		},
-		{
-			"name" : "Michał Matłoka",
-			"role" : "Senior Software Engineer",
-			"count" : "11",
-			"url" : "#"
-		},
-		{
-			"name" : "Michał Koziarkiewicz",
-			"role" : "Senior Software Engineer",
-			"count" : "10",
-			"url" : "#"
-		},
-		{
-			"name" : "Adam Warski",
-			"role" : "CTO and co-founder",
-			"count" : "29",
-			"url" : "#"
-		},
-		{
-			"name" : "Jan Zborowski",
-			"role" : "Business Development & co-founder",
-			"count" : "36",
-			"url" : "#"
-		},		
-		{
-			"name" : "Aleksandra Puchta-Górska",
-			"role" : "Marketing & Growth Manager",
-			"count" : "44",
-			"url" : "#"
-		},
-		{
-			"name" : "Michał Chmielarz",
-			"role" : "Software Wizard",
-			"count" : "13",
-			"url" : "#"
-		},
-		{
-			"name" : "Michał Matłoka",
-			"role" : "Senior Software Engineer",
-			"count" : "11",
-			"url" : "#"
-		}
-	],
+        {
+            "name" : "Adam Warski",
+            "role" : "CTO and co-founder",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "name" : "Jan Zborowski",
+            "role" : "Business Development & co-founder",
+            "count" : "36",
+            "url" : "#"
+        },		
+        {
+            "name" : "Aleksandra Puchta-Górska",
+            "role" : "Marketing & Growth Manager",
+            "count" : "44",
+            "url" : "#"
+        },
+        {
+            "name" : "Maria Wąchal",
+            "role" : "Marketing & Growth Manager",
+            "count" : "44",
+            "url" : "#"
+        },
+        {
+            "name" : "Jarosław Kijanowski",
+            "role" : "Integration Architect",
+            "count" : "12",
+            "url" : "#"
+        },
+        {
+            "name" : "Tomasz Dziurko",
+            "role" : "Senior Software Engineer",
+            "count" : "13",
+            "url" : "#"
+        },
+        {
+            "name" : "Michał Chmielarz",
+            "role" : "Software Wizard",
+            "count" : "13",
+            "url" : "#"
+        },
+        {
+            "name" : "Michał Matłoka",
+            "role" : "Senior Software Engineer",
+            "count" : "11",
+            "url" : "#"
+        },
+        {
+            "name" : "Michał Koziarkiewicz",
+            "role" : "Senior Software Engineer",
+            "count" : "10",
+            "url" : "#"
+        },
+        {
+            "name" : "Adam Warski",
+            "role" : "CTO and co-founder",
+            "count" : "29",
+            "url" : "#"
+        },
+        {
+            "name" : "Jan Zborowski",
+            "role" : "Business Development & co-founder",
+            "count" : "36",
+            "url" : "#"
+        },		
+        {
+            "name" : "Aleksandra Puchta-Górska",
+            "role" : "Marketing & Growth Manager",
+            "count" : "44",
+            "url" : "#"
+        },
+        {
+            "name" : "Michał Chmielarz",
+            "role" : "Software Wizard",
+            "count" : "13",
+            "url" : "#"
+        },
+        {
+            "name" : "Michał Matłoka",
+            "role" : "Senior Software Engineer",
+            "count" : "11",
+            "url" : "#"
+        }
+    ],
 
-	"articles" : [
+    "articles" : [
 
-		{
-			"title" : "Onboarding in a remote company",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Adam Warski",
-				"image" : "assets/img/employees/tomasz-dziurko.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Aleksandra Puchta-Górska",
-				"image" : "assets/img/employees/ola-pluchta.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "Onboarding in a remote company",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Tomasz Dziurko",
-				"image" : "assets/img/employees/tomasz-dziurko.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Jan Zborowski",
-				"image" : "assets/img/employees/ola-pluchta.jpg"
-			},
-			"tags" : [
-				"Conferences",
-				"Scala"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "Onboarding in a remote company",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Tomasz Dziurko",
-				"image" : "assets/img/employees/tomasz-dziurko.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Aleksandra Puchta-Górska",
-				"image" : "assets/img/employees/ola-pluchta.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "Onboarding in a remote company",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Tomasz Dziurko",
-				"image" : "assets/img/employees/tomasz-dziurko.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Aleksandra Puchta-Górska",
-				"image" : "assets/img/employees/ola-pluchta.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		}
+        {
+            "title" : "Onboarding in a remote company",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Adam Warski",
+                "image" : "assets/img/employees/tomasz-dziurko.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Aleksandra Puchta-Górska",
+                "image" : "assets/img/employees/ola-pluchta.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "Onboarding in a remote company",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Tomasz Dziurko",
+                "image" : "assets/img/employees/tomasz-dziurko.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Jan Zborowski",
+                "image" : "assets/img/employees/ola-pluchta.jpg"
+            },
+            "tags" : [
+                "Conferences",
+                "Scala"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "Onboarding in a remote company",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Tomasz Dziurko",
+                "image" : "assets/img/employees/tomasz-dziurko.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Aleksandra Puchta-Górska",
+                "image" : "assets/img/employees/ola-pluchta.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "Onboarding in a remote company",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Tomasz Dziurko",
+                "image" : "assets/img/employees/tomasz-dziurko.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Aleksandra Puchta-Górska",
+                "image" : "assets/img/employees/ola-pluchta.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        }
 
-	]
+    ]
 
 }

@@ -1,31 +1,31 @@
 {% if events is defined %}
-	<section class="section-events">
-		<div class="viewport">
-			<div class="section__layout">
+    <section class="section-events">
+        <div class="viewport">
+            <div class="section__layout">
 
-				<div class="section__header">
-					<h5>Meet us</h5>
-				</div>
+                <div class="section__header">
+                    <h5>Meet us</h5>
+                </div>
 
-				<nav class="events__nav">
-					{% for event in events %}
-						<a class="nav__item item--{{ loop.index }}">{{ loop.index }}</a>
-					{% endfor %}
-				</nav>				
+                <nav class="events__nav">
+                    {% for event in events %}
+                        <a class="nav__item item--{{ loop.index }}">{{ loop.index }}</a>
+                    {% endfor %}
+                </nav>				
 
-				<div class="events__calendar">
-					<ul class="events__list">
-					{% for event in events %}			
-						<li class="list__item item--event item--{{ loop.index }}">
-							<a href="{{ event.url }}">
-								<span class="event__name">{{ event.name }}</span>
-								<span class="event__date">{{ event.date }}</span>
-							</a>
-						</li>
-					{% endfor %}
-					</ul><!-- /events__list -->
-				</div>
-			</div>
-		</div><!-- /viewport -->
-	</section>
+                <div class="events__calendar">
+                    <ul class="events__list">
+                    {% for event in events %}			
+                        <li class="list__item item--event item--{{ loop.index }}">
+                            <a href="{{ event.url }}">
+                                <span class="event__name">{{ event.name }}</span>
+                                <span class="event__date">{{ event.date }}</span>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    </ul><!-- /events__list -->
+                </div>
+            </div>
+        </div><!-- /viewport -->
+    </section>
 {% endif %}

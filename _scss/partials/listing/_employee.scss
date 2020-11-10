@@ -2,64 +2,64 @@
 
 .employees__list {
 
-	//override for default grid--four-columns
+    //override for default grid--four-columns
 
-	@media all and (max-width: $breakpoint_desktop) {
-		grid-template-columns: repeat(3, 1fr);
-	}
-	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media all and (max-width: $breakpoint_phone) {
-		grid-template-columns: 1fr;
-	}
+    @media all and (max-width: $breakpoint_desktop) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media all and (max-width: $breakpoint_phone) {
+        grid-template-columns: 1fr;
+    }
 
-	.list__item {
-		
-		.employee__image,
-		h3,
-		p {
-			@extend %header-whitespace-small;
-		}	
+    .list__item {
+        
+        .employee__image,
+        h3,
+        p {
+            @extend %header-whitespace-small;
+        }	
 
-		&.item--cta {
+        &.item--cta {
 
-			vertical-align: top;
+            vertical-align: top;
 
-			p {
-				@media all and (min-width: $breakpoint_phone + 1px) {
-					margin: 0;
-				}
-			}
+            p {
+                @media all and (min-width: $breakpoint_phone + 1px) {
+                    margin: 0;
+                }
+            }
 
-			.button {
-				min-width: 0;
-				width: 100%;
-			}
+            .button {
+                min-width: 0;
+                width: 100%;
+            }
 
-			// > div {
-			// 	position: relative;
+            // > div {
+            // 	position: relative;
 
-			// 	@media all and (min-width: $breakpoint_laptop + 1px) {
-			// 		max-width: 236/376 * 100%; 
-			// 		p {
-			// 			white-space: nowrap;
-			// 		}					
-			// 	}				
-			// 	&:before {
-			// 		content: '';
-			// 		display: block;
-			// 		border: 1px solid red;
-			// 		padding-bottom: 236/376 * 100%;
-			// 	}
-			// 	.content {
-			// 		position: absolute;
-			// 		top: 0;
-			// 	}
-			// }
+            // 	@media all and (min-width: $breakpoint_laptop + 1px) {
+            // 		max-width: 236/376 * 100%; 
+            // 		p {
+            // 			white-space: nowrap;
+            // 		}					
+            // 	}				
+            // 	&:before {
+            // 		content: '';
+            // 		display: block;
+            // 		border: 1px solid red;
+            // 		padding-bottom: 236/376 * 100%;
+            // 	}
+            // 	.content {
+            // 		position: absolute;
+            // 		top: 0;
+            // 	}
+            // }
 
-		}	
-	}
+        }	
+    }
 
 
 
@@ -67,27 +67,27 @@
 
 .item--employee {
 
-	.employee__image {
-		//as of 03-2019 there is no subgrid spec so we rely on percentages for now based on xD spec
-		//this could be skipped in favor max-width 100% but we are not sure what the dimensions of source image will be on live site		
-		max-width: 236/376 * 100%; 
+    .employee__image {
+        //as of 03-2019 there is no subgrid spec so we rely on percentages for now based on xD spec
+        //this could be skipped in favor max-width 100% but we are not sure what the dimensions of source image will be on live site		
+        max-width: 236/376 * 100%; 
 
-		@media all and (max-width: $breakpoint_laptop) {
-			max-width: 10.625rem; 
-		}
+        @media all and (max-width: $breakpoint_laptop) {
+            max-width: 10.625rem; 
+        }
 
-		@media all and (max-width: $breakpoint_desktop) {
-			max-width: 100%;
-		}
-	}
+        @media all and (max-width: $breakpoint_desktop) {
+            max-width: 100%;
+        }
+    }
 
-	.socialmedia__list {
-		justify-content: flex-start;
-		li {
-			&:not(:last-child) {
-				margin-right: 2rem;
-			}
-		}
-	}
+    .socialmedia__list {
+        justify-content: flex-start;
+        li {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
 
 }

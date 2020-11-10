@@ -4,75 +4,75 @@
 {% block banner_desc %}
 
 
-	<p class="banner__desc">{{ banner.desc }}</p>
+    <p class="banner__desc">{{ banner.desc }}</p>
 
-	<section class="banner__body">
-		<div id="blog-tabs" class="blog-tabs body__grid grid--two-columns">
-			<div class="grid__item item--tab tab--keywords">
-				<h4 class="block__title">Keywords</h4>
-				<div class="item__body">
-					<ul class="tags__list">
-						{% for keyword in keywords %}
+    <section class="banner__body">
+        <div id="blog-tabs" class="blog-tabs body__grid grid--two-columns">
+            <div class="grid__item item--tab tab--keywords">
+                <h4 class="block__title">Keywords</h4>
+                <div class="item__body">
+                    <ul class="tags__list">
+                        {% for keyword in keywords %}
 
-							{% if filters %}
+                            {% if filters %}
 
-								{% if keyword.tag in filters.keywords %}
+                                {% if keyword.tag in filters.keywords %}
 
-									{% set selected = true %}
+                                    {% set selected = true %}
 
-								{% endif %}
+                                {% endif %}
 
-							{% endif %}
+                            {% endif %}
 
-							<li class="list__item item--tag{% if selected %} item--selected{% endif %}">
-								<a href="{{ keyword.url }}">
-									<span class="tag">{{ keyword.tag }}</span>
-									<span class="count">{{ keyword.count }}</span>
-								</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<a class="tab__ui do-toggle-tab" href="#">
-					<span class="label label--more">More keywords</span>
-					<span class="label label--less">Less keywords</span>
-				</a>
+                            <li class="list__item item--tag{% if selected %} item--selected{% endif %}">
+                                <a href="{{ keyword.url }}">
+                                    <span class="tag">{{ keyword.tag }}</span>
+                                    <span class="count">{{ keyword.count }}</span>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <a class="tab__ui do-toggle-tab" href="#">
+                    <span class="label label--more">More keywords</span>
+                    <span class="label label--less">Less keywords</span>
+                </a>
 
-			</div>
-			<div class="grid__item item--tab tab--authors">
-				<h4 class="block__title">Authors</h4>
-				<div class="item__body">
-					<ul class="authors__list grid--three-columns">
-						{% for author in authors %}
+            </div>
+            <div class="grid__item item--tab tab--authors">
+                <h4 class="block__title">Authors</h4>
+                <div class="item__body">
+                    <ul class="authors__list grid--three-columns">
+                        {% for author in authors %}
 
-							{% if filters %}
+                            {% if filters %}
 
-								{% if author.name in filters.authors %}
+                                {% if author.name in filters.authors %}
 
-									{% set selected = true %}
+                                    {% set selected = true %}
 
-								{% endif %}
+                                {% endif %}
 
-							{% endif %}
+                            {% endif %}
 
-							<li class="list__item item--author{% if selected %} item--selected{% endif %}">
-								<a href="{{ author.url }}">
-									<p class="author">
-										<span class="name">{{ author.name }}</span>
-										<span class="count">{{ author.count }}</span>
-									</p>
-									<p class="role">{{ author.role }}</p>
-								</a>
-							</li>
-						{% endfor %}
-					</ul>
-				</div>
-				<a class="tab__ui do-toggle-tab" href="#">
-					<span class="label label--more">More authors</span>
-					<span class="label label--less">Less authors</span>
-				</a>
-			</div>
-		</div>
-	</section>
+                            <li class="list__item item--author{% if selected %} item--selected{% endif %}">
+                                <a href="{{ author.url }}">
+                                    <p class="author">
+                                        <span class="name">{{ author.name }}</span>
+                                        <span class="count">{{ author.count }}</span>
+                                    </p>
+                                    <p class="role">{{ author.role }}</p>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <a class="tab__ui do-toggle-tab" href="#">
+                    <span class="label label--more">More authors</span>
+                    <span class="label label--less">Less authors</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
 {% endblock %}

@@ -1,24 +1,24 @@
 {
-	
-	"page" : {
-		"slug" : "blog-post",
-		"title" : "Correlation IDs in Scala using Monix",
-		"content_type" : "blog"
-	},
+    
+    "page" : {
+        "slug" : "blog-post",
+        "title" : "Correlation IDs in Scala using Monix",
+        "content_type" : "blog"
+    },
 
 
-	"author" : {
-		"name" : "Tomasz Dziurko",
-		"image" : "assets/img/employees/tomasz-dziurko.jpg",
-		"contact" : {
-			"twitter" : "//twitter.com/@twitterhandle",
-			"facebook" : "//facebook.com/@facebookhandle"
-		}		
-	},
+    "author" : {
+        "name" : "Tomasz Dziurko",
+        "image" : "assets/img/employees/tomasz-dziurko.jpg",
+        "contact" : {
+            "twitter" : "//twitter.com/@twitterhandle",
+            "facebook" : "//facebook.com/@facebookhandle"
+        }		
+    },
 
-	"post" : {
-		"date" : "Jan 11",
-		"timeToRead" : "8 minutes"
-	}
+    "post" : {
+        "date" : "Jan 11",
+        "timeToRead" : "8 minutes"
+    }
 
 }

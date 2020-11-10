@@ -1,100 +1,100 @@
 {
-	
-	"page" : {
-		"slug" : "community",
-		"title" : "Community",
-		"content_type" : "company"
-	},
+    
+    "page" : {
+        "slug" : "community",
+        "title" : "Community",
+        "content_type" : "company"
+    },
 
-	"banner" : {
-		"title" : "Community",
-		"desc" : "We love talking at, organizing, and attending all kinds of events for the Scala/Java/JavaScript community in Poland and elsewhere. We share our knowledge globally and we love it!",
-		"cta" : {
-			"href" : "contact.html",
-			"text" : "Contact us now!"
-		},
-		"cover" : {
-			"desktop" : "assets/img/banner/default/desktop.jpg",
-			"tablet" : "assets/img/banner/default/tablet.jpg",
-			"mobile" : "assets/img/banner/default/mobile.jpg",
-			"alt" : "Text/caption for SEO"
-		}
+    "banner" : {
+        "title" : "Community",
+        "desc" : "We love talking at, organizing, and attending all kinds of events for the Scala/Java/JavaScript community in Poland and elsewhere. We share our knowledge globally and we love it!",
+        "cta" : {
+            "href" : "contact.html",
+            "text" : "Contact us now!"
+        },
+        "cover" : {
+            "desktop" : "assets/img/banner/default/desktop.jpg",
+            "tablet" : "assets/img/banner/default/tablet.jpg",
+            "mobile" : "assets/img/banner/default/mobile.jpg",
+            "alt" : "Text/caption for SEO"
+        }
 
-	},
-
-
-	"articles" : [
-
-		{
-			"title" : "Onboarding in a remote company",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Tomasz Dziurko",
-				"image" : "assets/img/employees/tomasz-dziurko.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Ola Pluchta",
-				"image" : "assets/img/employees/ola-pluchta.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		}		
-
-	],	
+    },
 
 
-	"videos" : [
+    "articles" : [
 
-		{
-			"title" : "Softwaremill at Wolves Summit",
-			"cover" : "assets/img/video/community-video-1.png",
-			"url" : "#"
-		},
-		{
-			"title" : "Function-Passing Style Typed",
-			"cover" : "assets/img/video/community-video-2.png",
-			"url" : "#"
-		},
-		{
-			"title" : "Web without pain of Javascript",
-			"cover" : "assets/img/video/community-video-3.png",
-			"url" : "#"
-		},
-		{
-			"title" : "Rendezvous between functional & declarative programming",
-			"cover" : "assets/img/video/community-video-4.png",
-			"url" : "#"
-		}
+        {
+            "title" : "Onboarding in a remote company",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Tomasz Dziurko",
+                "image" : "assets/img/employees/tomasz-dziurko.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Ola Pluchta",
+                "image" : "assets/img/employees/ola-pluchta.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        }		
 
-	],
+    ],	
 
-	"gallery" : [
 
-		{
-			"image" : "assets/img/gallery/image-1.jpg",
-			"caption" : "Nice title of the image. Even quite long one should work well."
-		},
-		{
-			"image" : "assets/img/gallery/image-2.jpg",
-			"caption" : "Placeholder title of the second image."
-		}		
+    "videos" : [
 
-	]
+        {
+            "title" : "Softwaremill at Wolves Summit",
+            "cover" : "assets/img/video/community-video-1.png",
+            "url" : "#"
+        },
+        {
+            "title" : "Function-Passing Style Typed",
+            "cover" : "assets/img/video/community-video-2.png",
+            "url" : "#"
+        },
+        {
+            "title" : "Web without pain of Javascript",
+            "cover" : "assets/img/video/community-video-3.png",
+            "url" : "#"
+        },
+        {
+            "title" : "Rendezvous between functional & declarative programming",
+            "cover" : "assets/img/video/community-video-4.png",
+            "url" : "#"
+        }
+
+    ],
+
+    "gallery" : [
+
+        {
+            "image" : "assets/img/gallery/image-1.jpg",
+            "caption" : "Nice title of the image. Even quite long one should work well."
+        },
+        {
+            "image" : "assets/img/gallery/image-2.jpg",
+            "caption" : "Placeholder title of the second image."
+        }		
+
+    ]
 
 }

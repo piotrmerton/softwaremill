@@ -1,66 +1,64 @@
-
 //modifier of generic .banner, see components/banner.scss
 .banner--contact {
 
-	.banner__body {
-		h3,
-		.contact-data {
-			font-size: 1.875em;
-		}
-		.contact-data {
-			li {
-				line-height: 1.4;
-			}
-		}
+    .banner__body {
+        h3,
+        .contact-data {
+            font-size: 1.875em;
+        }
+        .contact-data {
+            li {
+                line-height: 1.4;
+            }
+        }
 
-		@media all and (max-width: $breakpoint_laptop) {
-			h3,
-			.contact-data {
-				font-size: 1.75em;
-			}
-		}
-		@media all and (max-width: $breakpoint_mobile) {
-			.body__grid {
-				grid-row-gap: 3.75rem;
-			}
-			h3 {
-				margin-bottom: 1rem;
-			}
-			h3,
-			.contact-data {
-				font-size: 1.5em;
-			}
-		}
-		@media all and (max-width: 480px) {
-			h3,
-			.contact-data {
-				font-size: 1.25em;
-			}			
-		}
+        @media all and (max-width: $breakpoint_laptop) {
+            h3,
+            .contact-data {
+                font-size: 1.75em;
+            }
+        }
+        @media all and (max-width: $breakpoint_mobile) {
+            .body__grid {
+                grid-row-gap: 3.75rem;
+            }
+            h3 {
+                margin-bottom: 1rem;
+            }
+            h3,
+            .contact-data {
+                font-size: 1.5em;
+            }
+        }
+        @media all and (max-width: 480px) {
+            h3,
+            .contact-data {
+                font-size: 1.25em;
+            }			
+        }
 
-		// @media all and (max-height: 720px) {
-		// 	.body__grid {
-		// 		grid-row-gap: 2rem;
-		// 	}
-		// }
+        // @media all and (max-height: 720px) {
+        // 	.body__grid {
+        // 		grid-row-gap: 2rem;
+        // 	}
+        // }
 
-	}
+    }
 
 }
 
 
 .content--contact {
-	.section-contact {
-		@media all and (max-width: $breakpoint_mobile) {
-			padding-bottom: 0;
-		}			
-	}
+    .section-contact {
+        @media all and (max-width: $breakpoint_mobile) {
+            padding-bottom: 0;
+        }			
+    }
 
-	.address-block {
-		p {
-			@extend %generic-h3;
-			margin: 0;
-		}
-	}
-
+    .address-block {
+        p {
+            @extend %generic-h3;
+            margin: 0;
+        }
+    }
 }

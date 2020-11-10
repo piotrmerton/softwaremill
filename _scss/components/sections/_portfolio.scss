@@ -1,41 +1,41 @@
 .section-portfolio {
 
-	.portfolio__grid {
-		
-		//override for default grid--two-columns
-		@media all and (min-width: $breakpoint_tablet-small + 1px) {
-			grid-template-columns: 1fr 1fr;
-		}
+    .portfolio__grid {
+        
+        //override for default grid--two-columns
+        @media all and (min-width: $breakpoint_tablet-small + 1px) {
+            grid-template-columns: 1fr 1fr;
+        }
 
-	}
+    }
 
-	.item--casestudy {
-		.item__desc {
-			margin-bottom: 1.875rem;
-		}
+    .item--casestudy {
+        .item__desc {
+            margin-bottom: 1.875rem;
+        }
 
-		@media all and (min-width: $breakpoint_laptop + 1px) {
-			.item__name {
-				//design spec: slight difference on desktop between generic h3 (see typography.scss)
-				//might be a overlook but keep this for now
-				font-size: 1.875em; //vs "generic h3" 1.75rem
-				line-height: 1.2;
-			}
-		}
-		@media all and (max-width: $breakpoint_laptop) {
-			.item__desc {
-				margin-bottom: 1.375rem;
-			}
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			.item__desc {
-				margin-bottom: 1.25rem;
-			}
-		}
-	}
+        @media all and (min-width: $breakpoint_laptop + 1px) {
+            .item__name {
+                //design spec: slight difference on desktop between generic h3 (see typography.scss)
+                //might be a overlook but keep this for now
+                font-size: 1.875em; //vs "generic h3" 1.75rem
+                line-height: 1.2;
+            }
+        }
+        @media all and (max-width: $breakpoint_laptop) {
+            .item__desc {
+                margin-bottom: 1.375rem;
+            }
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            .item__desc {
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
 
-	.testimonials__widget {
-		display: flex;
-		justify-content: center;
-	}
+    .testimonials__widget {
+        display: flex;
+        justify-content: center;
+    }
 }

@@ -1,108 +1,108 @@
 .text--center {
-	text-align: center;
+    text-align: center;
 }
 .text--white,
 .text--white * {
-	color: #fff;
+    color: #fff;
 
-	a {		
-		color: #fff;
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			&:hover {
-				color: $purple;
-			}
-		}
-	}	
+    a {		
+        color: #fff;
+        @media all and (min-width: $breakpoint_tablet + 1px) {
+            &:hover {
+                color: $purple;
+            }
+        }
+    }	
 }
 
 //rich text modifier for article content (like blog post)
 .text--rich {
-	p,
-	li {
-		font-size: 1.375em;
-		line-height: 1.5;
-		letter-spacing: 0.01em;
+    p,
+    li {
+        font-size: 1.375em;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
 
-		@media all and (max-width: $breakpoint_mobile) {
-			font-size: 1.25em;
-			line-height: 1.7;
-		}
-	}
+        @media all and (max-width: $breakpoint_mobile) {
+            font-size: 1.25em;
+            line-height: 1.7;
+        }
+    }
 
-	blockquote,
-	figure,
-	pre,
-	.gist { //.gist is dynamic class for github gists embeds, see https://help.github.com/en/articles/about-gists
-		margin: $vertical-whitespace-desktop 0;
+    blockquote,
+    figure,
+    pre,
+    .gist { //.gist is dynamic class for github gists embeds, see https://help.github.com/en/articles/about-gists
+        margin: $vertical-whitespace-desktop 0;
 
-		@media all and (max-width: $breakpoint_laptop) {
-			margin: $vertical-whitespace-laptop 0;
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			margin: $vertical-whitespace-phone 0;
-		}
-	}
+        @media all and (max-width: $breakpoint_laptop) {
+            margin: $vertical-whitespace-laptop 0;
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            margin: $vertical-whitespace-phone 0;
+        }
+    }
 
-	blockquote {
-		border-left: 2px solid $black;
-		padding-left: 3rem;
-		@media all and (max-width: $breakpoint_mobile) {
-			padding-left: 2rem; //not on spec
-		}
-	}
+    blockquote {
+        border-left: 2px solid $black;
+        padding-left: 3rem;
+        @media all and (max-width: $breakpoint_mobile) {
+            padding-left: 2rem; //not on spec
+        }
+    }
 
-	code {
-		color: $lightblue;
-		font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
-		font-size: 20px;
-	}
+    code {
+        color: $lightblue;
+        font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+        font-size: 20px;
+    }
 
-	pre {
-		background: $black;
-		white-space: normal;
-		padding: 1rem 2rem;
-		word-wrap: break-word; 
-		code {
-			color: #fff;
+    pre {
+        background: $black;
+        white-space: normal;
+        padding: 1rem 2rem;
+        word-wrap: break-word; 
+        code {
+            color: #fff;
 
-			@media all and (max-width: $breakpoint_mobile) {
-				font-size: 1em;
-			}
+            @media all and (max-width: $breakpoint_mobile) {
+                font-size: 1em;
+            }
 
-		}
-	}
+        }
+    }
 
-	figcaption {
-		color: #8c8c8c;
-		font-size: .875rem;
-		margin-top: 1rem;
-	}
+    figcaption {
+        color: #8c8c8c;
+        font-size: .875rem;
+        margin-top: 1rem;
+    }
 
-	ul,
-	ol {
-		padding-left: 2rem;
-		list-style-type: disc;
-	}
-	ol {
-		list-style-type: decimal;
-	}
+    ul,
+    ol {
+        padding-left: 2rem;
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: decimal;
+    }
 
-	a {
-		color: $lightblue;
-	}
+    a {
+        color: $lightblue;
+    }
 }
 
 //flat, paragraph-based list
 .text-list {
-	li {
-		@extend %generic-p;
-		&:not(:last-child) {
-			margin-bottom: .25rem;
-		}
-	}
+    li {
+        @extend %generic-p;
+        &:not(:last-child) {
+            margin-bottom: .25rem;
+        }
+    }
 
-	&.list--header {
-		@extend %generic-h3;
-		@extend %header-whitespace-medium;
-	}
+    &.list--header {
+        @extend %generic-h3;
+        @extend %header-whitespace-medium;
+    }
 }

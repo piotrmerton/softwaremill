@@ -1,45 +1,45 @@
 {% if filters %}
 
-	{% if article.author.name in filters.authors %}
+    {% if article.author.name in filters.authors %}
 
-		{% set matchedAuthor = true %}
+        {% set matchedAuthor = true %}
 
-	{% endif %}
+    {% endif %}
 
 {% endif %}
 
 <li class="list__item item--article{% if matchedAuthor %} article--matched-author{% endif %}">
 
-	<a href="{{ article.url }}">
+    <a href="{{ article.url }}">
 
-		{% include '../blocks/author.twig' with {author : article.author, article : article} %}
+        {% include '../blocks/author.twig' with {author : article.author, article : article} %}
 
-		<h3 class="article__title">{{ article.title }}</h3>
-	</a>
+        <h3 class="article__title">{{ article.title }}</h3>
+    </a>
 
-	{% if article.tags %}
-		<ul class="article__tags tags__list">
-			{% for tag in article.tags %}
+    {% if article.tags %}
+        <ul class="article__tags tags__list">
+            {% for tag in article.tags %}
 
-				{% if filters %}
+                {% if filters %}
 
-					{% if tag in filters.keywords %}
+                    {% if tag in filters.keywords %}
 
-						{% set selected = true %}
+                        {% set selected = true %}
 
-					{% endif %}
+                    {% endif %}
 
-				{% endif %}
+                {% endif %}
 
-				<li class="list__item item--tag{% if selected %} tag--selected{% endif %}">
+                <li class="list__item item--tag{% if selected %} tag--selected{% endif %}">
 
-					{# should you don't want tag to be clickable, REPLACE <a> with <span> #}
+                    {# should you don't want tag to be clickable, REPLACE <a> with <span> #}
 
-					<a href="#">{{ tag }}</a>
+                    <a href="#">{{ tag }}</a>
 
-				</li>
-			{% endfor %}
-		</ul>
-	{% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
 </li>

@@ -2,118 +2,118 @@
 
 form {
 
-	input,
-	select,
-	textarea,
-	button {
+    input,
+    select,
+    textarea,
+    button {
 
 
-		font-family: 'EuclidCircularB-Regular';
-		font-size: .875em;
-		letter-spacing: .005em;
-		text-transform: uppercase;
+        font-family: 'EuclidCircularB-Regular';
+        font-size: .875em;
+        letter-spacing: .005em;
+        text-transform: uppercase;
 
-		background: transparent;
+        background: transparent;
 
-		display: flex;
-		align-items: center;
-		min-height: 4rem;
+        display: flex;
+        align-items: center;
+        min-height: 4rem;
 
-		@media all and (max-width: $breakpoint_laptop) {
-			min-height: 3.5rem;
-		}
-		
+        @media all and (max-width: $breakpoint_laptop) {
+            min-height: 3.5rem;
+        }
+        
 
-		color: $black;
-		border: 2px solid $black;
-		
-		padding: 0 1.75rem;
-
-
-		width: 100%;
-
-		-webkit-appearance: none;
-		border-radius: 0;
-		vertical-align: bottom;
-
-	}
-	textarea {
-		padding-top: 1.25rem;
-		padding-bottom: 1.25rem;
-		min-height: 10rem;
-	}
-	input,
-	select,
-	textarea {
-		border-bottom: 0;
-	}
-	button {
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			transition: background .2s ease-in-out;
-			&:hover {
-				color: #fff;
-				background: $purple;
-			}
-		}
-	}
-
-	//invert colors i.e. on section--black (i.e.: newsletter on community page)
-	&.form--reverse-colors {
-		input,
-		select,
-		textarea,
-		button {
-			border-color: #fff;
-			color: #fff;
-		}
-
-		::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-		    color: #fff;
-		}
+        color: $black;
+        border: 2px solid $black;
+        
+        padding: 0 1.75rem;
 
 
-		:-ms-input-placeholder { /* Internet Explorer 10-11 */
-		    color: #fff;
-		}
+        width: 100%;
+
+        -webkit-appearance: none;
+        border-radius: 0;
+        vertical-align: bottom;
+
+    }
+    textarea {
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        min-height: 10rem;
+    }
+    input,
+    select,
+    textarea {
+        border-bottom: 0;
+    }
+    button {
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        @media all and (min-width: $breakpoint_tablet + 1px) {
+            transition: background .2s ease-in-out;
+            &:hover {
+                color: #fff;
+                background: $purple;
+            }
+        }
+    }
+
+    //invert colors i.e. on section--black (i.e.: newsletter on community page)
+    &.form--reverse-colors {
+        input,
+        select,
+        textarea,
+        button {
+            border-color: #fff;
+            color: #fff;
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #fff;
+        }
 
 
-		::-moz-placeholder { /* Firefox 19+ */
-		 	color: #fff;
-		}
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #fff;
+        }
 
 
-		::placeholder {
-		    color: #fff;
-		}
+        ::-moz-placeholder { /* Firefox 19+ */
+             color: #fff;
+        }
 
-	}
 
-	&.form--newsletter {
+        ::placeholder {
+            color: #fff;
+        }
 
-		@media 
-			all and (min-width: $breakpoint_desktop),
-			all and (min-width: $breakpoint_tablet-small) and (max-width: $breakpoint_mobile) {
-				//fieldset can't be flex or grid so we need additional wrapper..
-				fieldset {
-					> div {
-						display: flex;
-					}
-				}
-				input,
-				button {
-					width: 50%;
-				}
-				input {
-					border-right: 0;
-					border-bottom: 2px solid #fff;
-				}
-		}
+    }
 
-	}
+    &.form--newsletter {
+
+        @media 
+            all and (min-width: $breakpoint_desktop),
+            all and (min-width: $breakpoint_tablet-small) and (max-width: $breakpoint_mobile) {
+                //fieldset can't be flex or grid so we need additional wrapper..
+                fieldset {
+                    > div {
+                        display: flex;
+                    }
+                }
+                input,
+                button {
+                    width: 50%;
+                }
+                input {
+                    border-right: 0;
+                    border-bottom: 2px solid #fff;
+                }
+        }
+
+    }
 
 }
 
@@ -131,8 +131,8 @@ form {
 
 
 ::-moz-placeholder { /* Firefox 19+ */
- 	color: $black;
- 	transition: color .2s;
+     color: $black;
+     transition: color .2s;
 }
 
 
@@ -142,16 +142,16 @@ form {
 }
 
 @media all and (min-width: $breakpoint_tablet + 1px) {
-	:hover::-webkit-input-placeholder {
-		color: $purple;
-	}
-	:hover:-ms-input-placeholder {
-		color: $purple;
-	}
-	:hover::-moz-placeholder {
-		color: $purple;
-	}	
-	:hover::placeholder {
-		color: $purple;
-	}	
+    :hover::-webkit-input-placeholder {
+        color: $purple;
+    }
+    :hover:-ms-input-placeholder {
+        color: $purple;
+    }
+    :hover::-moz-placeholder {
+        color: $purple;
+    }	
+    :hover::placeholder {
+        color: $purple;
+    }	
 }

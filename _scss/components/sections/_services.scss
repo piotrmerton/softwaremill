@@ -1,40 +1,40 @@
 .section-services {	
-	.service__name,
-	.service__desc {
-		margin-bottom: 1.875rem;
-	}
+    .service__name,
+    .service__desc {
+        margin-bottom: 1.875rem;
+    }
 
-	@media all and (max-width: $breakpoint_laptop) {
-		.service__name,
-		.service__desc {
-			margin-bottom: 1.375rem;
-		}
-	}
-	@media all and (max-width: $breakpoint_mobile) {		
-	}
-	@media all and (max-width: $breakpoint-tablet-small) {
-		.service__name,
-		.service__desc {
-			margin-bottom: 1.25rem;
-		}
-		.service__ico {
-			display: none;
-		}
-	}
+    @media all and (max-width: $breakpoint_laptop) {
+        .service__name,
+        .service__desc {
+            margin-bottom: 1.375rem;
+        }
+    }
+    @media all and (max-width: $breakpoint_mobile) {		
+    }
+    @media all and (max-width: $breakpoint-tablet-small) {
+        .service__name,
+        .service__desc {
+            margin-bottom: 1.25rem;
+        }
+        .service__ico {
+            display: none;
+        }
+    }
 
-	.item--service {
-		a {
-			@media all and (min-width: $breakpoint_tablet + 1px) {
-				&:hover {
-					color: inherit;
-					.svg__ico {
-						stroke: $purple;
-					}
-					.button {
-						color: $purple;
-					}
-				}
-			}			
-		}
-	}
+    .item--service {
+        a {
+            @media all and (min-width: $breakpoint_tablet + 1px) {
+                &:hover {
+                    color: inherit;
+                    .svg__ico {
+                        stroke: $purple;
+                    }
+                    .button {
+                        color: $purple;
+                    }
+                }
+            }			
+        }
+    }
 }

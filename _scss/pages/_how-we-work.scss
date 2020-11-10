@@ -1,70 +1,68 @@
 .content--how-we-work {
 
-	.section-strengths {
-		.strengths__list {
-			h3 {
-				margin: 0;
-			}
-		}
-	}
-	.section-team {
-		.section__header {
-			margin-bottom: 3.75em;
-		}
-		h3 {
-			margin-bottom: 1.875rem; //reference: Softwaremill_Website_HowWeWork_05;
-		}
-		.list__item {
-			ul {
-				margin-bottom: 3.75rem;
-			}				
-		}
+    .section-strengths {
+        .strengths__list {
+            h3 {
+                margin: 0;
+            }
+        }
+    }
+    .section-team {
+        .section__header {
+            margin-bottom: 3.75em;
+        }
+        h3 {
+            margin-bottom: 1.875rem; //reference: Softwaremill_Website_HowWeWork_05;
+        }
+        .list__item {
+            ul {
+                margin-bottom: 3.75rem;
+            }				
+        }
 
 
-		@media all and (max-width: $breakpoint_laptop) {
-			h3 {
-				margin-bottom: 1.375rem; //reference: Softwaremill_WebsiteLaptop_Home_05 section "Main Services";
-			}
-			.list__item {
-				ul {
-					margin-bottom: 2.75rem;
-				}
-			}
-		}
-		@media all and (max-width: $breakpoint_tablet-small) {
-			h3 {
-				margin-bottom: 1.25rem; // reference: Softwaremill_WebsiteMobile_Home_05 section "Main Services";
-			}
-		}
+        @media all and (max-width: $breakpoint_laptop) {
+            h3 {
+                margin-bottom: 1.375rem; //reference: Softwaremill_WebsiteLaptop_Home_05 section "Main Services";
+            }
+            .list__item {
+                ul {
+                    margin-bottom: 2.75rem;
+                }
+            }
+        }
+        @media all and (max-width: $breakpoint_tablet-small) {
+            h3 {
+                margin-bottom: 1.25rem; // reference: Softwaremill_WebsiteMobile_Home_05 section "Main Services";
+            }
+        }
 
-		.section__grid {
-			.section__header,
-			.section__cta {
-				grid-column: 1 / span 6;
-			}
-			.section__body {
-				grid-column: 1 / -1;
-			}
+        .section__grid {
+            .section__header,
+            .section__cta {
+                grid-column: 1 / span 6;
+            }
+            .section__body {
+                grid-column: 1 / -1;
+            }
 
-			@media all and (max-width: $breakpoint_desktop) {
-				.section__header {
-					grid-column: 1 / -1;
-				}
-			}
-			@media all and (max-width: $breakpoint_mobile) {
-				.section__cta {
-					grid-column: 1 / -1;
-				}
-			}
-		}
+            @media all and (max-width: $breakpoint_desktop) {
+                .section__header {
+                    grid-column: 1 / -1;
+                }
+            }
+            @media all and (max-width: $breakpoint_mobile) {
+                .section__cta {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
 
-	}
+    }
 
-
-	.section-reasons {
-		@media all and (max-width: $breakpoint_mobile) {
-			padding-bottom: 0;
-		}
-	}
-
+    .section-reasons {
+        @media all and (max-width: $breakpoint_mobile) {
+            padding-bottom: 0;
+        }
+    }
 }

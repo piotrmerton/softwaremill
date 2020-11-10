@@ -1,73 +1,73 @@
 {
-	
-	"page" : {
-		"slug" : "join-us",
-		"title" : "Join Us"
-	},
+    
+    "page" : {
+        "slug" : "join-us",
+        "title" : "Join Us"
+    },
 
-	"banner" : {
-		"title" : "Join Us",
-		"desc" : "We are a small, flat, agile, but still growing software house full of passionate developers, working for clients in Australia, Africa, Europe, Asia and the USA. We are always looking for outstanding professionals to join our team! Maybe you think you would be a good fit? (By the way: we are not a freelance agency and we do not outsource projects).",
-		"cta" : {
-			"href" : "#",
-			"text" : "Join us now"
-		},
-		"cover" : {
-			"desktop" : "assets/img/banner/alternate/desktop.jpg",
-			"tablet" : "assets/img/banner/alternate/tablet.jpg",
-			"mobile" : "assets/img/banner/alternate/mobile.jpg",
-			"alt" : "Text/caption for SEO"
-		}
+    "banner" : {
+        "title" : "Join Us",
+        "desc" : "We are a small, flat, agile, but still growing software house full of passionate developers, working for clients in Australia, Africa, Europe, Asia and the USA. We are always looking for outstanding professionals to join our team! Maybe you think you would be a good fit? (By the way: we are not a freelance agency and we do not outsource projects).",
+        "cta" : {
+            "href" : "#",
+            "text" : "Join us now"
+        },
+        "cover" : {
+            "desktop" : "assets/img/banner/alternate/desktop.jpg",
+            "tablet" : "assets/img/banner/alternate/tablet.jpg",
+            "mobile" : "assets/img/banner/alternate/mobile.jpg",
+            "alt" : "Text/caption for SEO"
+        }
 
-	},
+    },
 
-	"job_positions" : [
+    "job_positions" : [
 
-		{
-			"title" : "Senior Software Developer",
-			"expectations" : [
-				"Very good Scala or Java skills and general programming knowledge",
-				"Good knowledge of English is a must (spoken, written, by phone, etc.), as we conduct projects for clients from all over the world (USA, Australia, Switzerland, etc.)",
-				"Polish language is *strictly* required, as internally we are a Polish speaking company"
-			],
-			"nicetohaves" : [
-				"Knowledge of a second JVM language",
-				"Experience in close cooperation with client",
-				"Interest in Big Data, Machine Learning and/or Blockchain"
-			],
-			"desc" : "Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time."
-		},
-		{
-			"title" : "Another Software Developer",
-			"expectations" : [
-				"Very good Scala or Java skills and general programming knowledge",
-				"Good knowledge of English is a must (spoken, written, by phone, etc.), as we conduct projects for clients from all over the world (USA, Australia, Switzerland, etc.)",
-				"Polish language is *strictly* required, as internally we are a Polish speaking company"
-			],
-			"nicetohaves" : [
-				"Knowledge of a second JVM language",
-				"Experience in close cooperation with client",
-				"Interest in Big Data, Machine Learning and/or Blockchain"
-			],
-			"desc" : "Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time."
-		},		
-		{
-			"title" : "Some other position",
-			"expectations" : [
-				"Very good Scala or Java skills and general programming knowledge",
-				"Good knowledge of English is a must (spoken, written, by phone, etc.), as we conduct projects for clients from all over the world (USA, Australia, Switzerland, etc.)",
-				"Polish language is *strictly* required, as internally we are a Polish speaking company"
-			],
-			"nicetohaves" : [
-				"Knowledge of a second JVM language",
-				"Experience in close cooperation with client",
-				"Interest in Big Data, Machine Learning and/or Blockchain"
-			],
-			"desc" : "Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time."
-		}		
+        {
+            "title" : "Senior Software Developer",
+            "expectations" : [
+                "Very good Scala or Java skills and general programming knowledge",
+                "Good knowledge of English is a must (spoken, written, by phone, etc.), as we conduct projects for clients from all over the world (USA, Australia, Switzerland, etc.)",
+                "Polish language is *strictly* required, as internally we are a Polish speaking company"
+            ],
+            "nicetohaves" : [
+                "Knowledge of a second JVM language",
+                "Experience in close cooperation with client",
+                "Interest in Big Data, Machine Learning and/or Blockchain"
+            ],
+            "desc" : "Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time."
+        },
+        {
+            "title" : "Another Software Developer",
+            "expectations" : [
+                "Very good Scala or Java skills and general programming knowledge",
+                "Good knowledge of English is a must (spoken, written, by phone, etc.), as we conduct projects for clients from all over the world (USA, Australia, Switzerland, etc.)",
+                "Polish language is *strictly* required, as internally we are a Polish speaking company"
+            ],
+            "nicetohaves" : [
+                "Knowledge of a second JVM language",
+                "Experience in close cooperation with client",
+                "Interest in Big Data, Machine Learning and/or Blockchain"
+            ],
+            "desc" : "Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time."
+        },		
+        {
+            "title" : "Some other position",
+            "expectations" : [
+                "Very good Scala or Java skills and general programming knowledge",
+                "Good knowledge of English is a must (spoken, written, by phone, etc.), as we conduct projects for clients from all over the world (USA, Australia, Switzerland, etc.)",
+                "Polish language is *strictly* required, as internally we are a Polish speaking company"
+            ],
+            "nicetohaves" : [
+                "Knowledge of a second JVM language",
+                "Experience in close cooperation with client",
+                "Interest in Big Data, Machine Learning and/or Blockchain"
+            ],
+            "desc" : "Not sure if you’re good enough? Try, you are only risking a bit of your time! We are looking for people on different levels, having a good attitude and being keen to learn is crucial, the rest is a matter of time."
+        }		
 
-	]
+    ]
 
-	
+    
 
 }

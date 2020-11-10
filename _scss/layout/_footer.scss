@@ -1,63 +1,63 @@
 .footer__nav {
-	a {
-		font-size: .875em;
-	}
-	ul {
-		display: flex;
-		li {
-			line-height: 1.5rem; //align with social media icons height
-		}
+    a {
+        font-size: .875em;
+    }
+    ul {
+        display: flex;
+        li {
+            line-height: 1.5rem; //align with social media icons height
+        }
 
-	@media all and (min-width: $breakpoint_laptop + 1px) {
-		// //horizontal grid gutter seems to small for spacing-between menu items, so lets readjust it...
-		li {
-			margin-right: 3rem;
-		}
+    @media all and (min-width: $breakpoint_laptop + 1px) {
+        // //horizontal grid gutter seems to small for spacing-between menu items, so lets readjust it...
+        li {
+            margin-right: 3rem;
+        }
 
-	}
-	@media all and (max-width: $breakpoint_laptop) {
-		display: flex;
-		justify-content: space-between;
+    }
+    @media all and (max-width: $breakpoint_laptop) {
+        display: flex;
+        justify-content: space-between;
 
-	}	
-	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-row-gap: 1.5rem;
-	}
+    }	
+    @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: 1.5rem;
+    }
 
-	}
+    }
 
 
 }
 
 footer {
-	.section-copyrights {
-		&.content__section {
-			padding: 0 0 1.875rem;
-			@media all and (max-width: $breakpoint_laptop) {
-				padding: 0 0 1.375rem;
-			}
-		}
+    .section-copyrights {
+        &.content__section {
+            padding: 0 0 1.875rem;
+            @media all and (max-width: $breakpoint_laptop) {
+                padding: 0 0 1.375rem;
+            }
+        }
 
-		.section__grid {
-			grid-row-gap: 1.5rem;
-		}
+        .section__grid {
+            grid-row-gap: 1.5rem;
+        }
 
-		p {
-			font-size: 0.813em;
-			line-height: 1.7;
-		}
-		padding: 0;
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			a {
-				display: block;
-			}
-		}
-	}
+        p {
+            font-size: 0.813em;
+            line-height: 1.7;
+        }
+        padding: 0;
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            a {
+                display: block;
+            }
+        }
+    }
 }
 
 .footer__credits {
-	font-family: 'roboto_ffibold', sans-serif;
-	font-size: .813em;
+    font-family: 'roboto_ffibold', sans-serif;
+    font-size: .813em;
 }

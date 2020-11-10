@@ -1,77 +1,77 @@
 <section id="banner" class="banner banner--{{ page.slug }}">
-	
-	
-	<div class="banner__grid{% if show_events != false %} grid--vertical{% endif %}">
-		<section class="banner__content{% if text_black is not defined %} text--white{% endif %}">
-			<div class="viewport">
+    
+    
+    <div class="banner__grid{% if show_events != false %} grid--vertical{% endif %}">
+        <section class="banner__content{% if text_black is not defined %} text--white{% endif %}">
+            <div class="viewport">
 
-			{% block banner_content %}
+            {% block banner_content %}
 
-				<div class="banner__subgrid grid--content">
-					{% block banner_header %}
-						
-						{% block banner_title %}
-							<h1 class="banner__title">{{ banner.title }}</h1>
-						{% endblock %}
+                <div class="banner__subgrid grid--content">
+                    {% block banner_header %}
+                        
+                        {% block banner_title %}
+                            <h1 class="banner__title">{{ banner.title }}</h1>
+                        {% endblock %}
 
-						{% block banner_desc %}
-							{% if banner.desc %}
-								<p class="banner__desc">{{ banner.desc }}</p>
-							{% endif %}
-						{% endblock %}
-						
-					{% endblock %}
-					
-					{% if banner.cta %}
-						<a class="banner__cta button button--white" href="{{ banner.cta.href }}">{{ banner.cta.text }}</a>
-					{% endif %}
-					
-					<a class="banner__scroll do-scroll-to" data-scroll-target="content" href="#">
-						<figure class="scroll__ico ui-ico ico--svg {% if text_black is defined %} ico--stroke-black{% endif %}">
-							{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
-						</figure>
-					</a>						
-					
-				</div><!-- /banner__subgrid -->
+                        {% block banner_desc %}
+                            {% if banner.desc %}
+                                <p class="banner__desc">{{ banner.desc }}</p>
+                            {% endif %}
+                        {% endblock %}
+                        
+                    {% endblock %}
+                    
+                    {% if banner.cta %}
+                        <a class="banner__cta button button--white" href="{{ banner.cta.href }}">{{ banner.cta.text }}</a>
+                    {% endif %}
+                    
+                    <a class="banner__scroll do-scroll-to" data-scroll-target="content" href="#">
+                        <figure class="scroll__ico ui-ico ico--svg {% if text_black is defined %} ico--stroke-black{% endif %}">
+                            {{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+                        </figure>
+                    </a>						
+                    
+                </div><!-- /banner__subgrid -->
 
-			{% endblock %}
+            {% endblock %}
 
-			</div>
-		</section><!-- /banner__content -->
+            </div>
+        </section><!-- /banner__content -->
 
-		{% if show_events != false %}
-			{% include '../sections/events.twig' %}
-		{% endif %}
+        {% if show_events != false %}
+            {% include '../sections/events.twig' %}
+        {% endif %}
 
-	</div><!-- /banner__grid -->
-	
+    </div><!-- /banner__grid -->
+    
 
-	{% block banner_cover %}
+    {% block banner_cover %}
 
-		{% if banner.cover %}
-			<figure class="banner__cover cover cover--overlay">
-				<picture>
-
-
-					{% if banner.cover.mobile %}
-						<source media="(max-width: 480px)"
-						srcset="{{ banner.cover.mobile }}">	
-					{% endif %}
-
-					{% if banner.cover.tablet %}
-						<source media="(max-width: 1024px)"
-						srcset="{{ banner.cover.tablet }}">
-					{% endif %}
-
-					<source media="(min-width: 960px)"
-					srcset="{{ banner.cover.desktop }}">
+        {% if banner.cover %}
+            <figure class="banner__cover cover cover--overlay">
+                <picture>
 
 
-					<!-- fallback -->
-					<img src="{{ banner.cover.desktop }}" alt="{{ banner.cover.alt }}" />
-				</picture>				
-			</figure>
-		{% endif %}
-	{% endblock %}
+                    {% if banner.cover.mobile %}
+                        <source media="(max-width: 480px)"
+                        srcset="{{ banner.cover.mobile }}">	
+                    {% endif %}
+
+                    {% if banner.cover.tablet %}
+                        <source media="(max-width: 1024px)"
+                        srcset="{{ banner.cover.tablet }}">
+                    {% endif %}
+
+                    <source media="(min-width: 960px)"
+                    srcset="{{ banner.cover.desktop }}">
+
+
+                    <!-- fallback -->
+                    <img src="{{ banner.cover.desktop }}" alt="{{ banner.cover.alt }}" />
+                </picture>				
+            </figure>
+        {% endif %}
+    {% endblock %}
 </section><!-- /banner -->
 

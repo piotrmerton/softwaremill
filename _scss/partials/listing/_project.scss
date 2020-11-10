@@ -2,104 +2,104 @@
 
 .item--project {
 
-	border-bottom: 2px solid $black;
+    border-bottom: 2px solid $black;
 
 
-	//vertical whitespace the same as content__section see _scss/layout/_content.scss
-	padding: $vertical-whitespace-desktop 0;
+    //vertical whitespace the same as content__section see _scss/layout/_content.scss
+    padding: $vertical-whitespace-desktop 0;
 
-	@media all and (max-width: $breakpoint_laptop) {
-		padding: $vertical-whitespace-laptop 0;
-	}
+    @media all and (max-width: $breakpoint_laptop) {
+        padding: $vertical-whitespace-laptop 0;
+    }
 
-	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-		padding: $vertical-whitespace-phone 0;
-	}	
-
-
-	img {
-		max-width: 32rem;
-	}
-
-	//override default grid--two-columns for both outer and inner grid (project__grid and desc__grid)
-	.grid--two-columns {
-		grid-row-gap: 3.75rem;
-		
-		@media all and (max-width: $breakpoint_laptop) {
-			grid-row-gap: 2.75rem;
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			grid-row-gap: 2.5rem;
-		}		
-	}
-
-	.project__grid {
-
-		@media all and (max-width: $breakpoint_desktop) {
-			grid-template-columns: 1fr;
-		}
-
-	}
-
-	.project__name {
-		@extend %header-whitespace-small;
-	}
-	.project__preview {
-		text-align: center;
-	}
-
-	//override default grid--two-columns
-	.desc__grid {
-		@media all and (max-width: $breakpoint_desktop) {
-			grid-row-gap: 2.75rem;
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			grid-row-gap: 2.5rem;
-		}
-	}
-
-	.client__name,
-	.contributors {
-		padding: .25rem 0; //align with item--tag, see: listing/_tag.scss
-	}
+    @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+        padding: $vertical-whitespace-phone 0;
+    }	
 
 
-	.project__tags {
-		margin: 3.75rem 0;
+    img {
+        max-width: 32rem;
+    }
 
-		//override default grid--four-columns
-		grid-row-gap: 2.75rem;
+    //override default grid--two-columns for both outer and inner grid (project__grid and desc__grid)
+    .grid--two-columns {
+        grid-row-gap: 3.75rem;
+        
+        @media all and (max-width: $breakpoint_laptop) {
+            grid-row-gap: 2.75rem;
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            grid-row-gap: 2.5rem;
+        }		
+    }
 
-		@media all and (max-width: $breakpoint_laptop) {
-			margin: 2.75rem 0;
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			margin: 2.5rem 0;
-			grid-row-gap: 2.5rem;
-		}
-	}
+    .project__grid {
+
+        @media all and (max-width: $breakpoint_desktop) {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    .project__name {
+        @extend %header-whitespace-small;
+    }
+    .project__preview {
+        text-align: center;
+    }
+
+    //override default grid--two-columns
+    .desc__grid {
+        @media all and (max-width: $breakpoint_desktop) {
+            grid-row-gap: 2.75rem;
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            grid-row-gap: 2.5rem;
+        }
+    }
+
+    .client__name,
+    .contributors {
+        padding: .25rem 0; //align with item--tag, see: listing/_tag.scss
+    }
 
 
-	&.project--open-source {
-		.project__desc {
-			margin: 3.75rem 0;
-			@media all and (max-width: $breakpoint_laptop) {
-				margin: 2.75rem 0;
-			}
-			@media all and (max-width: $breakpoint_desktop - 1px) {
-				margin: 0;
-			}			
-		}
+    .project__tags {
+        margin: 3.75rem 0;
 
-		.project__cta {
-			@media all and (max-width: $breakpoint_desktop) {
-				margin-top: 2.75rem;
-			}
-			@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-				margin-top: 2.5rem;
-			}
-		}
-	}
+        //override default grid--four-columns
+        grid-row-gap: 2.75rem;
+
+        @media all and (max-width: $breakpoint_laptop) {
+            margin: 2.75rem 0;
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            margin: 2.5rem 0;
+            grid-row-gap: 2.5rem;
+        }
+    }
+
+
+    &.project--open-source {
+        .project__desc {
+            margin: 3.75rem 0;
+            @media all and (max-width: $breakpoint_laptop) {
+                margin: 2.75rem 0;
+            }
+            @media all and (max-width: $breakpoint_desktop - 1px) {
+                margin: 0;
+            }			
+        }
+
+        .project__cta {
+            @media all and (max-width: $breakpoint_desktop) {
+                margin-top: 2.75rem;
+            }
+            @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+                margin-top: 2.5rem;
+            }
+        }
+    }
 
 
 }

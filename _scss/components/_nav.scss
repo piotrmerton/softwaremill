@@ -1,231 +1,231 @@
 //markup located in _twig/components/nav.twig
 
 .nav-top {
-	ul {
-		display: none;
-	}
+    ul {
+        display: none;
+    }
 
-	a {
-		display: block;
-		font-size: 1.063em;	
-		line-height: 1.7;
-		text-decoration: none;
-		
-	}	
+    a {
+        display: block;
+        font-size: 1.063em;	
+        line-height: 1.7;
+        text-decoration: none;
+        
+    }	
 
-	//by default show only top level
-	> ul {
-		display: block;
-	}
+    //by default show only top level
+    > ul {
+        display: block;
+    }
 
-	.submenu__title {
-		display: none;
-	}
-
-
-
-	@media all and (min-width: $breakpoint_desktop + 1px) {
-		a {
-			font-size: .938em;	
-			color: #fff;
-			&:hover {
-				color: $purple;
-			}
-		}
-		> ul {
-			display: flex;
-			justify-content: space-between;
-			> li {
-				> a {
-					display: flex;
-					align-items: center;
-					height: 2rem;					
-				}
-				&.item--has-submenu {
-
-					> a {
-						display: flex;
-						align-items: center;
-						
-						position: relative;
-						overflow: hidden;
-
-						//make space for submenu indicator
-						padding-right: 1.5rem;
-
-						&:after {
-							@include submenu-indicator(.5rem, #fff);
-						}
-						&:before {
-							@include submenu-indicator(.5rem, #fff);
-							transform: rotate(180deg) translateY(300%);
-						}
-						&:before,
-						&:after {
-							position: absolute;
-							right: 0;
-						}						
-						&:hover {
-							&:after {
-								border-top-color: $purple;
-							}
-						}
-					}
-
-					&.menu--open {
-						//nav__submenu
-						> a {
-							color: $purple;
-							overflow: hidden;
-							&:after {
-								transform: translateY(300%);
-							}
-							&:before {
-								transform: rotate(180deg) translateY(0);
-							}
-							&:before,
-							&:after {
-								border-top-color: $purple;
-							}
-						}
-						> ul {
-							display: block;
-							position: absolute;
-							padding-top: .75rem; //not on design spec (vs 1.875rem) because we need to take line-height into account as well
-							a {
-								line-height: 2;
-							}
-						}
-					}
-				}
-				&.item--cta {
-					> a {
-						padding: 0 1.25rem;
-						border: 2px solid #fff;
-						transition: all .2s;
-						&:hover {
-							color: #fff;
-							background: $purple;
-							border-color: $purple;
-
-						}
-					}
-					
-				}
-			}
-		}
-
-	}
+    .submenu__title {
+        display: none;
+    }
 
 
-	@media all and (max-width: $breakpoint_desktop) and (min-width: $breakpoint_phone + 1px) {
-		> ul {
-			> li {
-				&.item--has-submenu {
-					display: grid;
-					grid-template-columns: repeat(8, 1fr);
-					grid-column-gap: $grid-gutter-desktop;
 
-					> a {
-						grid-column: 1 / 3;
-					}
-					> ul {
-						display: block;
-						grid-column: 3 / -1;
-						> li {
-							&:not(:last-child) {
-								margin-bottom: .5rem;
-							}
-						}
-						@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-							grid-column-start: 4;
-						}
-					}
-				}
-				&:not(:last-child) {
-					margin-bottom: 2.75em;
-				}				
-			}
-		}
-	}
+    @media all and (min-width: $breakpoint_desktop + 1px) {
+        a {
+            font-size: .938em;	
+            color: #fff;
+            &:hover {
+                color: $purple;
+            }
+        }
+        > ul {
+            display: flex;
+            justify-content: space-between;
+            > li {
+                > a {
+                    display: flex;
+                    align-items: center;
+                    height: 2rem;					
+                }
+                &.item--has-submenu {
 
-	@media all and (max-width: $breakpoint_phone) {
+                    > a {
+                        display: flex;
+                        align-items: center;
+                        
+                        position: relative;
+                        overflow: hidden;
 
-		a {
-			// transition optimization for FF: for some reason we get better performance
-			// when paddings are moved down the DOM; not only transitions performs worse without this,
-			// but also they consistently bug out on Firefox
-			padding-left: $viewport-padding-phone;
-			padding-right: $viewport-padding-phone;			
-		}
+                        //make space for submenu indicator
+                        padding-right: 1.5rem;
 
-		li {
-			&:not(:last-child) {
-				margin-bottom: 2.5rem;
-			}
-		}
+                        &:after {
+                            @include submenu-indicator(.5rem, #fff);
+                        }
+                        &:before {
+                            @include submenu-indicator(.5rem, #fff);
+                            transform: rotate(180deg) translateY(300%);
+                        }
+                        &:before,
+                        &:after {
+                            position: absolute;
+                            right: 0;
+                        }						
+                        &:hover {
+                            &:after {
+                                border-top-color: $purple;
+                            }
+                        }
+                    }
 
-		.submenu__title {
-			display: block;
-			margin-bottom: 2.5rem;	
+                    &.menu--open {
+                        //nav__submenu
+                        > a {
+                            color: $purple;
+                            overflow: hidden;
+                            &:after {
+                                transform: translateY(300%);
+                            }
+                            &:before {
+                                transform: rotate(180deg) translateY(0);
+                            }
+                            &:before,
+                            &:after {
+                                border-top-color: $purple;
+                            }
+                        }
+                        > ul {
+                            display: block;
+                            position: absolute;
+                            padding-top: .75rem; //not on design spec (vs 1.875rem) because we need to take line-height into account as well
+                            a {
+                                line-height: 2;
+                            }
+                        }
+                    }
+                }
+                &.item--cta {
+                    > a {
+                        padding: 0 1.25rem;
+                        border: 2px solid #fff;
+                        transition: all .2s;
+                        &:hover {
+                            color: #fff;
+                            background: $purple;
+                            border-color: $purple;
 
-			a {
-				display: flex;
-				align-items: center;
-				&:before {
-					@include submenu-indicator(.5rem, $black);
-					margin: 0 1rem 0 0;
-					transform: rotate(90deg);
-				}
-			}	
-		}
+                        }
+                    }
+                    
+                }
+            }
+        }
 
-		> ul {
-			position: relative;
-			transition: transform .4s ease;
-			will-change: transform;
-			transform: translate3d(0, 0, 0);
+    }
 
-			//another transition optimization: in FF it seems that elements moved out of the viepowrt via tranlsate are removed from DOM, borders cheats this feature and ensures that transition is persistent;
-			border: 1px solid transparent;
-			
-			
-			&.menu--open {
-				transform: translate3d(-100%, 0, 0);
-			}
-			> li {
-				&.item--has-submenu {
-					> a {
-						display: flex;
-						align-items: center;
-						&:before {
-							@include submenu-indicator(.5rem, $black);
-							margin: 0 1rem 0 0;
-							transform: rotate(-90deg);							
-						}
-					}
-					> ul {			
-						display: block;
-						visibility: hidden;	
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						top: 0;
-									
-						transform: translateX(100%);
-						transition: visibility .4s;		
-					}	
-					&.menu--open {
-						> ul {
-							visibility: visible;
-							z-index: 2;
-						}
-					}				
-				}
-				
-			}
-		}
 
-	}	
+    @media all and (max-width: $breakpoint_desktop) and (min-width: $breakpoint_phone + 1px) {
+        > ul {
+            > li {
+                &.item--has-submenu {
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr);
+                    grid-column-gap: $grid-gutter-desktop;
+
+                    > a {
+                        grid-column: 1 / 3;
+                    }
+                    > ul {
+                        display: block;
+                        grid-column: 3 / -1;
+                        > li {
+                            &:not(:last-child) {
+                                margin-bottom: .5rem;
+                            }
+                        }
+                        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+                            grid-column-start: 4;
+                        }
+                    }
+                }
+                &:not(:last-child) {
+                    margin-bottom: 2.75em;
+                }				
+            }
+        }
+    }
+
+    @media all and (max-width: $breakpoint_phone) {
+
+        a {
+            // transition optimization for FF: for some reason we get better performance
+            // when paddings are moved down the DOM; not only transitions performs worse without this,
+            // but also they consistently bug out on Firefox
+            padding-left: $viewport-padding-phone;
+            padding-right: $viewport-padding-phone;			
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        .submenu__title {
+            display: block;
+            margin-bottom: 2.5rem;	
+
+            a {
+                display: flex;
+                align-items: center;
+                &:before {
+                    @include submenu-indicator(.5rem, $black);
+                    margin: 0 1rem 0 0;
+                    transform: rotate(90deg);
+                }
+            }	
+        }
+
+        > ul {
+            position: relative;
+            transition: transform .4s ease;
+            will-change: transform;
+            transform: translate3d(0, 0, 0);
+
+            //another transition optimization: in FF it seems that elements moved out of the viepowrt via tranlsate are removed from DOM, borders cheats this feature and ensures that transition is persistent;
+            border: 1px solid transparent;
+            
+            
+            &.menu--open {
+                transform: translate3d(-100%, 0, 0);
+            }
+            > li {
+                &.item--has-submenu {
+                    > a {
+                        display: flex;
+                        align-items: center;
+                        &:before {
+                            @include submenu-indicator(.5rem, $black);
+                            margin: 0 1rem 0 0;
+                            transform: rotate(-90deg);							
+                        }
+                    }
+                    > ul {			
+                        display: block;
+                        visibility: hidden;	
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                                    
+                        transform: translateX(100%);
+                        transition: visibility .4s;		
+                    }	
+                    &.menu--open {
+                        > ul {
+                            visibility: visible;
+                            z-index: 2;
+                        }
+                    }				
+                }
+                
+            }
+        }
+
+    }	
 
 }

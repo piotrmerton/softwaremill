@@ -42,8 +42,6 @@ export let tabs = {
 			});
 
 		}
-		
-
 
 	},
 
@@ -123,8 +121,6 @@ export let tabs = {
 			let contentHeight = tabContent.scrollHeight;
 			tabContent.style.maxHeight = contentHeight+"px";			
 		}
-
-
 	},
 
 	closeTab : function(tab) {
@@ -136,5 +132,4 @@ export let tabs = {
 		if( this.animate ) tabContent.removeAttribute('style');
 
 	}
-
 }

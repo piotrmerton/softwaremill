@@ -1,80 +1,80 @@
 {
-	
-	"page" : {
-		"slug" : "remote",
-		"title" : "Remote",
-		"content_type" : "company"
-	},
+    
+    "page" : {
+        "slug" : "remote",
+        "title" : "Remote",
+        "content_type" : "company"
+    },
 
-	"banner" : {
-		"title" : "Remote",
-		"desc" : "The best remote workplace for developers",
-		"cta" : {
-			"href" : "contact.html",
-			"text" : "Contact us now!"
-		},
-		"cover" : {
-			"desktop" : "assets/img/banner/default/desktop.jpg",
-			"tablet" : "assets/img/banner/default/tablet.jpg",
-			"mobile" : "assets/img/banner/default/mobile.jpg",
-			"alt" : "Text/caption for SEO"
-		}
+    "banner" : {
+        "title" : "Remote",
+        "desc" : "The best remote workplace for developers",
+        "cta" : {
+            "href" : "contact.html",
+            "text" : "Contact us now!"
+        },
+        "cover" : {
+            "desktop" : "assets/img/banner/default/desktop.jpg",
+            "tablet" : "assets/img/banner/default/tablet.jpg",
+            "mobile" : "assets/img/banner/default/mobile.jpg",
+            "alt" : "Text/caption for SEO"
+        }
 
-	},
+    },
 
-	"articles" : [
+    "articles" : [
 
-		{
-			"title" : "Onboarding in a remote company",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Tomasz Dziurko",
-				"image" : "assets/img/employees/tomasz-dziurko.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		},
-		{
-			"title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
-			"excerpt" : "",
-			"url" : "#",
-			"author" : {
-				"name" : "Ola Pluchta",
-				"image" : "assets/img/employees/ola-pluchta.jpg"
-			},
-			"tags" : [
-				"Cryptocurrency",
-				"Wallet"
-			],
-			"date" : "Jan 11",
-			"timeToRead" : "8 minutes"
-		}		
+        {
+            "title" : "Onboarding in a remote company",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Tomasz Dziurko",
+                "image" : "assets/img/employees/tomasz-dziurko.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        },
+        {
+            "title" : "How We Communicate as a Fully Remote Team — our approach, tools and best practices",
+            "excerpt" : "",
+            "url" : "#",
+            "author" : {
+                "name" : "Ola Pluchta",
+                "image" : "assets/img/employees/ola-pluchta.jpg"
+            },
+            "tags" : [
+                "Cryptocurrency",
+                "Wallet"
+            ],
+            "date" : "Jan 11",
+            "timeToRead" : "8 minutes"
+        }		
 
-	],
+    ],
 
 
-	"gallery" : [
+    "gallery" : [
 
-		{
-			"image" : "assets/img/gallery/team-1.jpg",
-			"caption" : "Nice title of the image. Even quite long one should work well."
-		},
-		{
-			"image" : "assets/img/gallery/team-2.jpg",
-			"caption" : "Placeholder title of the second image."
-		}		
+        {
+            "image" : "assets/img/gallery/team-1.jpg",
+            "caption" : "Nice title of the image. Even quite long one should work well."
+        },
+        {
+            "image" : "assets/img/gallery/team-2.jpg",
+            "caption" : "Placeholder title of the second image."
+        }		
 
-	],
+    ],
 
-	"video" : {
-		"id" : "brnq6RsVeN4",
-		"poster" : "assets/img/video/remote-video.jpg",
-		"title" : "Nice title of the video. Even quite long one should work well."
-	}
+    "video" : {
+        "id" : "brnq6RsVeN4",
+        "poster" : "assets/img/video/remote-video.jpg",
+        "title" : "Nice title of the video. Even quite long one should work well."
+    }
 
 }

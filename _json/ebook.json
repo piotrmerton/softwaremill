@@ -1,24 +1,24 @@
 {
-	
-	"page" : {
-		"slug" : "ebook",
-		"title" : "E-book"
-	},
+    
+    "page" : {
+        "slug" : "ebook",
+        "title" : "E-book"
+    },
 
-	"banner" : {
-		"title" : "Blockchain Adoption Kit",
-		"desc" : "Title describing the ebook in two sentences. Not too short, not too long.",
-		"cta" : {
-			"href" : "#",
-			"text" : "Download"
-		}
-	},
-	
-	"ebook" : {
-		"author" : "Maria Wąchal",
-		"title" : "Blockchain Adoption Kit",
-		"year" : "2018",
-		"url" : "#"
-	}
+    "banner" : {
+        "title" : "Blockchain Adoption Kit",
+        "desc" : "Title describing the ebook in two sentences. Not too short, not too long.",
+        "cta" : {
+            "href" : "#",
+            "text" : "Download"
+        }
+    },
+    
+    "ebook" : {
+        "author" : "Maria Wąchal",
+        "title" : "Blockchain Adoption Kit",
+        "year" : "2018",
+        "url" : "#"
+    }
 
 }

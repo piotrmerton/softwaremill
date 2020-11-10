@@ -1,48 +1,46 @@
-
-
 //blog archive (articles list)
 .banner--blog {
 
 
-	.banner__content {
-		
-		//overrides for default banner-whitespace-fixed, see components/_banner.scss
-		padding-top: 15rem;
+    .banner__content {
+        
+        //overrides for default banner-whitespace-fixed, see components/_banner.scss
+        padding-top: 15rem;
 
-		@media all and (max-width: $breakpoint_laptop) {
-			padding-top: 10rem;
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			padding-top: 7.5rem;
-		}
+        @media all and (max-width: $breakpoint_laptop) {
+            padding-top: 10rem;
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            padding-top: 7.5rem;
+        }
 
-	}
+    }
 
-	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-		.banner__desc {
-			display: none;
-		}
-	}
+    @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+        .banner__desc {
+            display: none;
+        }
+    }
 
-	//banner block
-	.block__title {
-		@extend %header-whitespace-medium;
-	}
+    //banner block
+    .block__title {
+        @extend %header-whitespace-medium;
+    }
 
-	//override for default partials/listing/_tag.scss
-	.tags__list {
-		.list__item {
-			margin: 0 1.25rem 1.25rem 0;
-		}
-	}
+    //override for default partials/listing/_tag.scss
+    .tags__list {
+        .list__item {
+            margin: 0 1.25rem 1.25rem 0;
+        }
+    }
 
-	.item--selected {
-		a {
-			border-color: #fff;
-			color: #fff;			
-		}
+    .item--selected {
+        a {
+            border-color: #fff;
+            color: #fff;			
+        }
 
-	}
+    }
 }
 
 
@@ -50,147 +48,147 @@
 //tabs JS logic in _js/partials/tabs.js
 .blog-tabs {
 
-	.item--tab {
+    .item--tab {
 
-		
-		@media all and (max-width: $breakpoint_mobile) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: flex-start;
+        
+        @media all and (max-width: $breakpoint_mobile) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
 
-			.tab__ui {
-				order: 2;
-			}
-			.item__body {
-				order: 3;
-				width: 100%;
-			}
-		}
+            .tab__ui {
+                order: 2;
+            }
+            .item__body {
+                order: 3;
+                width: 100%;
+            }
+        }
 
-		.item__body {
-			overflow: hidden;
-			transition: max-height .4s ease-in-out;
+        .item__body {
+            overflow: hidden;
+            transition: max-height .4s ease-in-out;
 
-			//by default show only three rows of keywords
-			max-height: 9.5rem;
-			
-			@media all and (max-width: $breakpoint_laptop) {
-				max-height: 7.25rem;
-			}		
+            //by default show only three rows of keywords
+            max-height: 9.5rem;
+            
+            @media all and (max-width: $breakpoint_laptop) {
+                max-height: 7.25rem;
+            }		
 
-		}
-
-
-		&.tab--keywords {
-			.item__body {
-
-				@media all and (max-width: $breakpoint_laptop) {
-					max-height: 6.25rem;
-					@media all and (min-width: $breakpoint_mobile + 1px) {
-						margin-bottom: 1rem; //ensure alignment of tabs__ui
-					}
-					
-				}	
-				@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-					max-height: 2rem;
-				}			
-			}
-
-		}
-
-		&.tab--authors {
-			.item__body {
-				//max-height: 8.25rem;
-
-				@media all and (max-width: $breakpoint_laptop - 1px) and (min-width: $breakpoint_mobile + 1px) {
-					max-height: 9.5rem;
-				}
-				@media all and (max-width: $breakpoint_mobile) {
-					max-height: 7.25rem;
-				}
-			}
-		}
-
-		&.tab--active {
-			.tab__ui {
-
-				&:after {
-					transform: translateY(300%);
-				}
-				&:before {
-					transform: rotate(180deg) translateY(0);
-				}
-
-				.label {
-					&.label--more {
-						display: none;
-					}
-					&.label--less {
-						display: block;
-					}
-				}
-			}
-		}
-	}
-
-	.tab__ui {
-
-		@extend %generic-h4;
-
-		display: inline-flex;
-		align-items: center;
-		
-		position: relative;
-		overflow: hidden;
-
-		margin-top: 3.75rem;
-
-		@media all and (max-width: $breakpoint_laptop) {
-			margin-top: 2.75rem;
-		}
-
-		@media all and (max-width: $breakpoint_mobile) {
-			margin: 0;
-		}
-
-		//make space for submenu indicator
-		padding-right: 1.5rem;
-
-		&:after {
-			@include submenu-indicator(.5rem, $black);
-		}
-		&:before {
-			@include submenu-indicator(.5rem, $black);
-			transform: rotate(180deg) translateY(300%);
-		}
-		&:before,
-		&:after {
-			
-			@media all and (min-width: $breakpoint_mobile + 1px) {
-				transition: unset; //the animations is unnoticeable due to tab being animated itself
-			}
-			position: absolute;
-			right: 0;
-		}			
-
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			&:hover {
-				&:before,
-				&:after {
-					border-top-color: $purple;
-				}
-			}			
-		}			
+        }
 
 
-		.label {
-			min-width: 9rem; //avoid changing position of indicator
-			&.label--less {
-				display: none;
-			}
-		}
-	}
+        &.tab--keywords {
+            .item__body {
+
+                @media all and (max-width: $breakpoint_laptop) {
+                    max-height: 6.25rem;
+                    @media all and (min-width: $breakpoint_mobile + 1px) {
+                        margin-bottom: 1rem; //ensure alignment of tabs__ui
+                    }
+                    
+                }	
+                @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+                    max-height: 2rem;
+                }			
+            }
+
+        }
+
+        &.tab--authors {
+            .item__body {
+                //max-height: 8.25rem;
+
+                @media all and (max-width: $breakpoint_laptop - 1px) and (min-width: $breakpoint_mobile + 1px) {
+                    max-height: 9.5rem;
+                }
+                @media all and (max-width: $breakpoint_mobile) {
+                    max-height: 7.25rem;
+                }
+            }
+        }
+
+        &.tab--active {
+            .tab__ui {
+
+                &:after {
+                    transform: translateY(300%);
+                }
+                &:before {
+                    transform: rotate(180deg) translateY(0);
+                }
+
+                .label {
+                    &.label--more {
+                        display: none;
+                    }
+                    &.label--less {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    .tab__ui {
+
+        @extend %generic-h4;
+
+        display: inline-flex;
+        align-items: center;
+        
+        position: relative;
+        overflow: hidden;
+
+        margin-top: 3.75rem;
+
+        @media all and (max-width: $breakpoint_laptop) {
+            margin-top: 2.75rem;
+        }
+
+        @media all and (max-width: $breakpoint_mobile) {
+            margin: 0;
+        }
+
+        //make space for submenu indicator
+        padding-right: 1.5rem;
+
+        &:after {
+            @include submenu-indicator(.5rem, $black);
+        }
+        &:before {
+            @include submenu-indicator(.5rem, $black);
+            transform: rotate(180deg) translateY(300%);
+        }
+        &:before,
+        &:after {
+            
+            @media all and (min-width: $breakpoint_mobile + 1px) {
+                transition: unset; //the animations is unnoticeable due to tab being animated itself
+            }
+            position: absolute;
+            right: 0;
+        }			
+
+        @media all and (min-width: $breakpoint_tablet + 1px) {
+            &:hover {
+                &:before,
+                &:after {
+                    border-top-color: $purple;
+                }
+            }			
+        }			
+
+
+        .label {
+            min-width: 9rem; //avoid changing position of indicator
+            &.label--less {
+                display: none;
+            }
+        }
+    }
 
 
 
@@ -200,122 +198,122 @@
 
 .authors__list {
 
-		grid-row-gap: 1.75rem;
+        grid-row-gap: 1.75rem;
 
-		@media all and (max-width: $breakpoint_fullhd - 1px) {
-			grid-template-columns: 1fr 1fr;
-		}
-		@media all and (max-width: $breakpoint_laptop) {
-			grid-row-gap: 1.375rem;
-		}
-		@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-			grid-template-columns: 1fr;
-		}
+        @media all and (max-width: $breakpoint_fullhd - 1px) {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media all and (max-width: $breakpoint_laptop) {
+            grid-row-gap: 1.375rem;
+        }
+        @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+            grid-template-columns: 1fr;
+        }
 
-	.author,
-	.role {
-		@extend %generic-p;
-	}
-	.author {
-		margin-bottom: .5rem;
-	}
-	.role {
-		font-size: .813em;
-	}
+    .author,
+    .role {
+        @extend %generic-p;
+    }
+    .author {
+        margin-bottom: .5rem;
+    }
+    .role {
+        font-size: .813em;
+    }
 
-	.item--author {
-		a {
-			@media all and (min-width: $breakpoint_tablet + 1px) {
-				&:hover {
-					color: $purple;
-				}
-			}
-		}
-	}
+    .item--author {
+        a {
+            @media all and (min-width: $breakpoint_tablet + 1px) {
+                &:hover {
+                    color: $purple;
+                }
+            }
+        }
+    }
 
 }
 
 .content--blog {
-	.section-articles {
-		@media all and (max-width: $breakpoint_mobile) {
-			padding-bottom: 0;
-		}		
-		.section__cta {
-			.ui-ico {
-				transform: rotate(90deg);
-			}
-		}
-	}
+    .section-articles {
+        @media all and (max-width: $breakpoint_mobile) {
+            padding-bottom: 0;
+        }		
+        .section__cta {
+            .ui-ico {
+                transform: rotate(90deg);
+            }
+        }
+    }
 }
 
 .articles__filters {
-	margin-bottom: $vertical-whitespace-desktop;
-	@media all and (max-width: $breakpoint_laptop) {
-		margin-bottom: $vertical-whitespace-laptop;
-	}
-	@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-		margin-bottom: $vertical-whitespace-phone;
-	}		
+    margin-bottom: $vertical-whitespace-desktop;
+    @media all and (max-width: $breakpoint_laptop) {
+        margin-bottom: $vertical-whitespace-laptop;
+    }
+    @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+        margin-bottom: $vertical-whitespace-phone;
+    }		
 
-	.filters__list {
-		display: flex;
-		flex-wrap: wrap;
+    .filters__list {
+        display: flex;
+        flex-wrap: wrap;
 
-		.list__item {
-			margin: 0 2rem 1.5rem 0;
+        .list__item {
+            margin: 0 2rem 1.5rem 0;
 
-			@media all and (max-width: $breakpoint_mobile) {
-				margin-bottom: .75rem;
-			}
+            @media all and (max-width: $breakpoint_mobile) {
+                margin-bottom: .75rem;
+            }
 
-			a {
-				@extend %generic-h3;
-				position: relative;
-				display: flex;
+            a {
+                @extend %generic-h3;
+                position: relative;
+                display: flex;
 
-				//extra space for ui-ico
-				padding-right: 1.75rem;
+                //extra space for ui-ico
+                padding-right: 1.75rem;
 
-				//non-svg ui-ico because maybe later we will need to render active filters via JS and svg will be a pain in the *** without UI library
-				.ui-ico {
-					width: .75rem;
-					height: .75rem;
-					margin: 0;
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%);
-					right: 0;
+                //non-svg ui-ico because maybe later we will need to render active filters via JS and svg will be a pain in the *** without UI library
+                .ui-ico {
+                    width: .75rem;
+                    height: .75rem;
+                    margin: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 0;
 
-					&:after,
-					&:before {
-						content: '';
-						display: block;
-						width: 2px;
-						height: 100%;
-						position: absolute;
-						background: $lightblue;
-					}	
-					&:before {
-						transform: rotate(-45deg);
-					}
-					&:after {
-						transform: rotate(45deg);
-					}				
-				}
+                    &:after,
+                    &:before {
+                        content: '';
+                        display: block;
+                        width: 2px;
+                        height: 100%;
+                        position: absolute;
+                        background: $lightblue;
+                    }	
+                    &:before {
+                        transform: rotate(-45deg);
+                    }
+                    &:after {
+                        transform: rotate(45deg);
+                    }				
+                }
 
-				@media all and (min-width: $breakpoint_tablet + 1px) {
-					&:hover {
-						color: inherit;
-						.ui-ico {
-							&:after,
-							&:before {
-								background: $purple;
-							}
-						}
-					}
-				}
+                @media all and (min-width: $breakpoint_tablet + 1px) {
+                    &:hover {
+                        color: inherit;
+                        .ui-ico {
+                            &:after,
+                            &:before {
+                                background: $purple;
+                            }
+                        }
+                    }
+                }
 
-			}
-		}
-	}	
+            }
+        }
+    }	
 }	

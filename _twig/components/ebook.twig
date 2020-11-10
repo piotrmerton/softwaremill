@@ -1,21 +1,21 @@
 <figure class="ebook{% if transparent is defined %} ebook--transparent{% endif %}">
-	<div class="ebook__layout">
-		<section class="ebook__header">
-			<figure class="ebook__logo">
-				{{ source(root_assetsDir~'svg/logo-shapes.svg') }}
-			</figure>
-			<div class="ebook__info">
-				E-book
-			</div>
-		</section>
+    <div class="ebook__layout">
+        <section class="ebook__header">
+            <figure class="ebook__logo">
+                {{ source(root_assetsDir~'svg/logo-shapes.svg') }}
+            </figure>
+            <div class="ebook__info">
+                E-book
+            </div>
+        </section>
 
-		<section class="ebook__meta">
-			<span class="ebook__author">{{ ebook.author }}</span>
-			<span class="ebook__title">{{ ebook.title }}</span>
-		</section>
+        <section class="ebook__meta">
+            <span class="ebook__author">{{ ebook.author }}</span>
+            <span class="ebook__title">{{ ebook.title }}</span>
+        </section>
 
-		<section class="ebook__footer">
-			<span class="ebook__year">{{ ebook.year }}</span>
-		</section>
-	</div>
+        <section class="ebook__footer">
+            <span class="ebook__year">{{ ebook.year }}</span>
+        </section>
+    </div>
 </figure>

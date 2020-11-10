@@ -2,34 +2,34 @@
 
 <div class="block-author{% if cssClass %} {{ cssClass }}{% endif %}">
 
-	<div class="author__meta">
-		<figure class="author__image">
-			<img src="{{ author.image }}" alt="{{ author.name }}"/>
-		</figure>
+    <div class="author__meta">
+        <figure class="author__image">
+            <img src="{{ author.image }}" alt="{{ author.name }}"/>
+        </figure>
 
-		<div class="author__desc">
-			<p class="name">{{ author.name }}</p>
-			<p class="article">
-				<span class="date">{{ article.date }}.</span>
-				<span class="time-to-read">{{ article.timeToRead }}</span>
-			</p>
-		</div>
-	</div>
+        <div class="author__desc">
+            <p class="name">{{ author.name }}</p>
+            <p class="article">
+                <span class="date">{{ article.date }}.</span>
+                <span class="time-to-read">{{ article.timeToRead }}</span>
+            </p>
+        </div>
+    </div>
 
-	{% if author.contact and show_contact %}
-		<div class="author__socialmedia block-socialmedia">
-			<ul class="socialmedia__list">
-				{% for key, contact in author.contact %}
-					<li>
-						<a target="_blank" href="{{ contact }}">
-							<figure class="socialmedia__ico ui-ico ico--black ico--{{ key }}">
-								{{ source(root_assetsDir~'svg/socialmedia/'~key~'.svg' ) }}
-							</figure>
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-	{% endif %}
+    {% if author.contact and show_contact %}
+        <div class="author__socialmedia block-socialmedia">
+            <ul class="socialmedia__list">
+                {% for key, contact in author.contact %}
+                    <li>
+                        <a target="_blank" href="{{ contact }}">
+                            <figure class="socialmedia__ico ui-ico ico--black ico--{{ key }}">
+                                {{ source(root_assetsDir~'svg/socialmedia/'~key~'.svg' ) }}
+                            </figure>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
 
 </div>

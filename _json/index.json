@@ -1,24 +1,24 @@
 {
-	
-	"page" : {
-		"slug" : "index",
-		"title" : "Homepage"
-	},
+    
+    "page" : {
+        "slug" : "index",
+        "title" : "Homepage"
+    },
 
-	"banner" : {
-		"title" : "Custom software development company to work with.",
-		"desc" : "",
-		"cta" : {
-			"href" : "contact.html",
-			"text" : "Contact us now!"
-		},
-		"cover" : {
-			"desktop" : "assets/img/banner/home/desktop.jpg",
-			"tablet" : "assets/img/banner/home/tablet.jpg",
-			"mobile" : "assets/img/banner/home/mobile.jpg",
-			"alt" : "Text/caption for SEO"
-		}
+    "banner" : {
+        "title" : "Custom software development company to work with.",
+        "desc" : "",
+        "cta" : {
+            "href" : "contact.html",
+            "text" : "Contact us now!"
+        },
+        "cover" : {
+            "desktop" : "assets/img/banner/home/desktop.jpg",
+            "tablet" : "assets/img/banner/home/tablet.jpg",
+            "mobile" : "assets/img/banner/home/mobile.jpg",
+            "alt" : "Text/caption for SEO"
+        }
 
-	}
+    }
 
 }

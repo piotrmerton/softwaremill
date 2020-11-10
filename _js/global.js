@@ -44,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 window.addEventListener('resize', () => { 
-	UI.recalc() 
+    UI.recalc() 
 
-	/*
-	 *	additional measure if you need extra bulletproof mobile menu for browser manual resizing
-	 */
-	//if(UI.windowWidth === UI.nav.mobileMenuBreakpoint) UI.nav.reset();
+    /*
+     *	additional measure if you need extra bulletproof mobile menu for browser manual resizing
+     */
+    //if(UI.windowWidth === UI.nav.mobileMenuBreakpoint) UI.nav.reset();
 
 
 });

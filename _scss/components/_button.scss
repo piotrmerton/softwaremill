@@ -1,120 +1,120 @@
 .button {
 
-	display: inline-flex;
-	justify-content: space-between;
-	align-items: center;
-	justify-content: center;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 
-	min-width: 12em;
-	min-height: 4rem;
-	padding: 0 1rem;
+    min-width: 12em;
+    min-height: 4rem;
+    padding: 0 1rem;
 
-	font-size: 1.75em;
-	line-height: 1.5;
+    font-size: 1.75em;
+    line-height: 1.5;
 
-	cursor: pointer;
+    cursor: pointer;
 
-	//default
-	background: $black;
-	color: #fff;
+    //default
+    background: $black;
+    color: #fff;
 
-	@media all and (max-width: $breakpoint_laptop) {
-		font-size: 1.25em;
-		min-height: 3.5rem;
-	}
+    @media all and (max-width: $breakpoint_laptop) {
+        font-size: 1.25em;
+        min-height: 3.5rem;
+    }
 
-	@media all and (min-width: $breakpoint_tablet + 1px) {
+    @media all and (min-width: $breakpoint_tablet + 1px) {
 
-		transition: all .4s ease;
+        transition: all .4s ease;
 
-		&:hover {
-			background: $purple;
-			color: #fff;
-		}
-	}
-	@media all and (max-width: $breakpoint_phone) {
-		width: 100%;
-	}
+        &:hover {
+            background: $purple;
+            color: #fff;
+        }
+    }
+    @media all and (max-width: $breakpoint_phone) {
+        width: 100%;
+    }
 
-	//modifiers
-	&.button--white {
-		background: #fff;
-		color: $black;
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			&:hover {
-				background: $purple;
-				color: #fff;
-			}
-		}		
-	}
-	&.button--transparent {
-		min-height: 0;
-		justify-content: unset;
-		padding: 0;
-		background: transparent;
-		color: $black;
+    //modifiers
+    &.button--white {
+        background: #fff;
+        color: $black;
+        @media all and (min-width: $breakpoint_tablet + 1px) {
+            &:hover {
+                background: $purple;
+                color: #fff;
+            }
+        }		
+    }
+    &.button--transparent {
+        min-height: 0;
+        justify-content: unset;
+        padding: 0;
+        background: transparent;
+        color: $black;
 
-		.button__ico {
-			height: 3.5rem;
-			margin: 0 2.5rem 0 0;
-		}
-		.button__label {
-			line-height: normal;
-		}
-		.svg__ico {
-			stroke: $lightblue;
-		}
-		&.button--white {
-			color: #fff;			
-			.svg__ico {
-				stroke: $lightblue;
-			}
-		}		
-		&.button--white-arrow {
-			.svg__ico {
-				stroke: #fff;
-			}			
-		}
-		@media all and (max-width: $breakpoint_laptop) {
-			.button__ico {
-				height: 2.75rem;
-				margin: 0 1.875rem 0 0;
-			}
-		}
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			&:hover {
-				background: transparent;
-				.svg__ico {
-					stroke: $purple;
-				}
-			}
-		}	
-	
-	}
-	&.button--compact {
+        .button__ico {
+            height: 3.5rem;
+            margin: 0 2.5rem 0 0;
+        }
+        .button__label {
+            line-height: normal;
+        }
+        .svg__ico {
+            stroke: $lightblue;
+        }
+        &.button--white {
+            color: #fff;			
+            .svg__ico {
+                stroke: $lightblue;
+            }
+        }		
+        &.button--white-arrow {
+            .svg__ico {
+                stroke: #fff;
+            }			
+        }
+        @media all and (max-width: $breakpoint_laptop) {
+            .button__ico {
+                height: 2.75rem;
+                margin: 0 1.875rem 0 0;
+            }
+        }
+        @media all and (min-width: $breakpoint_tablet + 1px) {
+            &:hover {
+                background: transparent;
+                .svg__ico {
+                    stroke: $purple;
+                }
+            }
+        }	
+    
+    }
+    &.button--compact {
 
-		@extend %generic-h4;
+        @extend %generic-h4;
 
-		justify-content: unset;
-		padding: 0;
-		min-height: 0;
+        justify-content: unset;
+        padding: 0;
+        min-height: 0;
 
-		background: none;
-		color: $black;
+        background: none;
+        color: $black;
 
-		@media all and (min-width: $breakpoint_tablet + 1px) {
-			&:hover {
-				color: $lightblue;
-			}
-		}
-		@media all and (max-width: $breakpoint_tablet-small) {
-			color: $lightblue;
-		}
-	}
+        @media all and (min-width: $breakpoint_tablet + 1px) {
+            &:hover {
+                color: $lightblue;
+            }
+        }
+        @media all and (max-width: $breakpoint_tablet-small) {
+            color: $lightblue;
+        }
+    }
 
-	&.button--center {
-		justify-content: center;
-	}
+    &.button--center {
+        justify-content: center;
+    }
 
 
 

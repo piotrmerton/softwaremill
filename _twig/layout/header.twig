@@ -1,35 +1,35 @@
 <header id="header-top" class="header-top{% if text_black %} header--black{% endif %} animated">
-	<div class="viewport">
-		<div class="header__layout">
+    <div class="viewport">
+        <div class="header__layout">
 
-			<section class="header__branding">
-				<a class="header__logo" href="{{ base_url }}">
-					<figure class="logo__text">
-						{{ source(root_assetsDir~'svg/logo-text.svg') }}
-					</figure>
-					<figure class="logo__shapes">
-						{{ source(root_assetsDir~'svg/logo-shapes.svg') }}
-					</figure>					
-				</a>
+            <section class="header__branding">
+                <a class="header__logo" href="{{ base_url }}">
+                    <figure class="logo__text">
+                        {{ source(root_assetsDir~'svg/logo-text.svg') }}
+                    </figure>
+                    <figure class="logo__shapes">
+                        {{ source(root_assetsDir~'svg/logo-shapes.svg') }}
+                    </figure>					
+                </a>
 
-				<a class="header__ui ui-nav do-toggle-nav" href="#" role="button">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</a>				
-			</section>
-			
-			<section class="header__menu">
-				{% include '../components/nav.twig' %}
-			</section>
+                <a class="header__ui ui-nav do-toggle-nav" href="#" role="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>				
+            </section>
+            
+            <section class="header__menu">
+                {% include '../components/nav.twig' %}
+            </section>
 
-			<section class="header__socialmedia">
-				{% include '../blocks/socialmedia.twig' %}
-			</section>
+            <section class="header__socialmedia">
+                {% include '../blocks/socialmedia.twig' %}
+            </section>
 
 
-		</div>
-	</div><!-- /viewport -->
+        </div>
+    </div><!-- /viewport -->
 
 </header>

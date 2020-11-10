@@ -1,79 +1,77 @@
-
 //modifier of generic .banner, see components/banner.scss
 .banner--index {
-	.banner__logo {
-		grid-column: 1 / -1;
+    .banner__logo {
+        grid-column: 1 / -1;
 
-		width: 132px;
-		height: auto;
+        width: 132px;
+        height: auto;
 
-		.svg__ico {
-			fill: #fff;
-		}
-	}
+        .svg__ico {
+            fill: #fff;
+        }
+    }
 
 }
 
-
 .content--index {
 
-	.section-team {
-		.section__grid {
-			> * {
-				grid-column: auto / span 6;
-				@media all and (max-width: $breakpoint_mobile) {
-					grid-column: 1 / -1;
-				}				
-			}
-			.section__cta {
-				@media all and (min-width: $breakpoint_mobile + 1px) {
-					margin: 0;
-				}
-			}
-		}
-	}
+    .section-team {
+        .section__grid {
+            > * {
+                grid-column: auto / span 6;
+                @media all and (max-width: $breakpoint_mobile) {
+                    grid-column: 1 / -1;
+                }				
+            }
+            .section__cta {
+                @media all and (min-width: $breakpoint_mobile + 1px) {
+                    margin: 0;
+                }
+            }
+        }
+    }
 
-	.section-partners {
-		@media all and (max-width: $breakpoint_mobile) {
-			padding-bottom: 0;
-		}
-		.partners__list {
-			display: flex;
-			justify-content: space-between;
+    .section-partners {
+        @media all and (max-width: $breakpoint_mobile) {
+            padding-bottom: 0;
+        }
+        .partners__list {
+            display: flex;
+            justify-content: space-between;
 
-			img {
-				width: auto;
-				height: 2.625em;
-				transition: all .4s;
-				filter: grayscale(100%);
-			}
+            img {
+                width: auto;
+                height: 2.625em;
+                transition: all .4s;
+                filter: grayscale(100%);
+            }
 
-			a {
-				@media all and (min-width: $breakpoint_tablet + 1px) {
-					&:hover {
-						img {
-							filter: grayscale(0);
-						}
-					}				
-				}
-			}
+            a {
+                @media all and (min-width: $breakpoint_tablet + 1px) {
+                    &:hover {
+                        img {
+                            filter: grayscale(0);
+                        }
+                    }				
+                }
+            }
 
-			@media all and (max-width: $breakpoint_laptop) {
-				li {
-					text-align: center;
-				}
-			}
-			@media all and (max-width: $breakpoint_mobile) {
-				li {
-					padding: 0 1.5rem;
-					img {
-						width: 100%;
-						height: auto;
-						max-height: 2.625em;
-					}
-				}
-			}
-		}
-	}
+            @media all and (max-width: $breakpoint_laptop) {
+                li {
+                    text-align: center;
+                }
+            }
+            @media all and (max-width: $breakpoint_mobile) {
+                li {
+                    padding: 0 1.5rem;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-height: 2.625em;
+                    }
+                }
+            }
+        }
+    }
 
 }

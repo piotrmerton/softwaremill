@@ -4,24 +4,24 @@
 // TO DO: optimize fonts for quicker rendering or add system font stack to avoid "flash of unloaded content";
 
 @font-face {
-	font-family: 'EuclidCircularB-Regular';
-	src: 
-		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.eot?#iefix') format('embedded-opentype'),  
-		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.otf') format('opentype'),
-		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.woff') format('woff'),
-		url('#{$assetsPath}/fonts/EuclidCircularB-Regular.ttf') format('truetype');
+    font-family: 'EuclidCircularB-Regular';
+    src: 
+        url('#{$assetsPath}/fonts/EuclidCircularB-Regular.eot?#iefix') format('embedded-opentype'),  
+        url('#{$assetsPath}/fonts/EuclidCircularB-Regular.otf') format('opentype'),
+        url('#{$assetsPath}/fonts/EuclidCircularB-Regular.woff') format('woff'),
+        url('#{$assetsPath}/fonts/EuclidCircularB-Regular.ttf') format('truetype');
 
-	font-weight: normal;
-	font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 
 
 @font-face {
-	font-family: 'roboto_ffibold';
-	src: 
-		url("#{$assetsPath}/fonts/robotoffi-bold-webfont.woff2") format("woff2"), 
-		url("#{$assetsPath}/fonts/robotoffi-bold-webfont.woff") format("woff");
+    font-family: 'roboto_ffibold';
+    src: 
+        url("#{$assetsPath}/fonts/robotoffi-bold-webfont.woff2") format("woff2"), 
+        url("#{$assetsPath}/fonts/robotoffi-bold-webfont.woff") format("woff");
 
-	font-weight: normal;
-	font-style: normal; 
+    font-weight: normal;
+    font-style: normal; 
 }

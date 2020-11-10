@@ -1,24 +1,24 @@
 {
-	
-	"page" : {
-		"slug" : "services",
-		"title" : "Services"
-	},
+    
+    "page" : {
+        "slug" : "services",
+        "title" : "Services"
+    },
 
-	"banner" : {
-		"title" : "Services",
-		"desc" : "We specialize in backend and end-to-end project development: distributed and big data systems, machine learning, data analytics, blockchain and more.",
-		"cta" : {
-			"href" : "#",
-			"text" : "Contact us now"
-		},
-		"cover" : {
-			"desktop" : "assets/img/banner/default/desktop.jpg",
-			"tablet" : "assets/img/banner/default/tablet.jpg",
-			"mobile" : "assets/img/banner/default/mobile.jpg",
-			"alt" : "Text/caption for SEO"
-		}
+    "banner" : {
+        "title" : "Services",
+        "desc" : "We specialize in backend and end-to-end project development: distributed and big data systems, machine learning, data analytics, blockchain and more.",
+        "cta" : {
+            "href" : "#",
+            "text" : "Contact us now"
+        },
+        "cover" : {
+            "desktop" : "assets/img/banner/default/desktop.jpg",
+            "tablet" : "assets/img/banner/default/tablet.jpg",
+            "mobile" : "assets/img/banner/default/mobile.jpg",
+            "alt" : "Text/caption for SEO"
+        }
 
-	}
+    }
 
 }

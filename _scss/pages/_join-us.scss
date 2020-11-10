@@ -1,68 +1,65 @@
 .banner--join-us {
 
-	//adapt for extra long desc (not ideal solution, bo it provides better flexibility for dynamic and long desc at the expense of design spec whitespaces)
-	.banner__content {
-		@extend %banner-whitespace-dynamic;
-	}
+    //adapt for extra long desc (not ideal solution, bo it provides better flexibility for dynamic and long desc at the expense of design spec whitespaces)
+    .banner__content {
+        @extend %banner-whitespace-dynamic;
+    }
 }
 
 .content--join-us {
-	// .section-hiring-path {
-	// 	.hiring-path__steps {
+    // .section-hiring-path {
+    // 	.hiring-path__steps {
 
-	// 		//here is some inconsistency on design spec: every other header has size of 1.75, but here for some reason is 1.875 which might be
-	// 		//a mistake but let's keep this for now;
-	// 		h3 {
-	// 			@media all and (min-width: $breakpoint_laptop + 1px) {
-	// 				font-size: 1.875em;
-	// 			}
-	// 		}
-	// 	}
-	// }
+    // 		//here is some inconsistency on design spec: every other header has size of 1.75, but here for some reason is 1.875 which might be
+    // 		//a mistake but let's keep this for now;
+    // 		h3 {
+    // 			@media all and (min-width: $breakpoint_laptop + 1px) {
+    // 				font-size: 1.875em;
+    // 			}
+    // 		}
+    // 	}
+    // }
 
-	.section-cv {
+    .section-cv {
 
-		.section__cta {
-			margin-top: 0;
-			@extend %header-whitespace-medium;
-		}
+        .section__cta {
+            margin-top: 0;
+            @extend %header-whitespace-medium;
+        }
 
-		.section__grid {
-			@media all and (min-width: $breakpoint_desktop + 1px) {
-				.grid__item {
-					grid-column: auto / span 3;
+        .section__grid {
+            @media all and (min-width: $breakpoint_desktop + 1px) {
+                .grid__item {
+                    grid-column: auto / span 3;
 
-					&.item--cta {
-						grid-column: auto / span 6;
-						p {
-							max-width: 620px;
-						}
-					}
-				}					
-			}
-			@media all and (max-width: $breakpoint_desktop) {
-				grid-template-columns: 1fr 1fr;
-				grid-row-gap: $vertical-whitespace-laptop;
-				.grid__item {
-					&.item--cta {
-						grid-column: 1 / -1;
+                    &.item--cta {
+                        grid-column: auto / span 6;
+                        p {
+                            max-width: 620px;
+                        }
+                    }
+                }					
+            }
+            @media all and (max-width: $breakpoint_desktop) {
+                grid-template-columns: 1fr 1fr;
+                grid-row-gap: $vertical-whitespace-laptop;
+                .grid__item {
+                    &.item--cta {
+                        grid-column: 1 / -1;
 
-						.button {
-							width: 100%;
-							max-width: 100%;
-						}
-					}
-				}
-			}
-			@media all and (max-width: $breakpoint_tablet-portrait - 1px) {
-				grid-template-columns: 1fr;
-				grid-row-gap: $vertical-whitespace-phone;
-			}
+                        .button {
+                            width: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+            @media all and (max-width: $breakpoint_tablet-portrait - 1px) {
+                grid-template-columns: 1fr;
+                grid-row-gap: $vertical-whitespace-phone;
+            }
 
-		}
-	}
+        }
+    }
 
 }
-
-
-

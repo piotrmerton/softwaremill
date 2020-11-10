@@ -1,37 +1,29 @@
-
 {% extends "layout/base.twig" %}
-
-
-
 
 {% block banner %}
 
-	{% include 'components/banner/default.twig' %}
+    {% include 'components/banner/default.twig' %}
 
 {% endblock %}
 
 
 {% block content %}
 
-	<section class="content__section section-projects section--no-padding">
-		<div class="viewport">
+    <section class="content__section section-projects section--no-padding">
+        <div class="viewport">
 
-			<ul class="projects__list list--clients">
+            <ul class="projects__list list--clients">
 
-				{% for project in projects %}
+                {% for project in projects %}
 
-					{% include 'listing/project/client.twig' %}
+                    {% include 'listing/project/client.twig' %}
 
-				{% endfor %}
+                {% endfor %}
 
 
-			</ul><!-- /projects__list -->
+            </ul><!-- /projects__list -->
 
-		</div><!-- /viewport -->
-	</section>
+        </div><!-- /viewport -->
+    </section>
 
 {% endblock %}
-
-
-
-

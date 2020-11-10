@@ -1,150 +1,150 @@
 {
-	
-	"page" : {
-		"slug" : "portfolio-clients",
-		"title" : "Portfolio Clients",
-		"content_type" : "portfolio"
-	},
+    
+    "page" : {
+        "slug" : "portfolio-clients",
+        "title" : "Portfolio Clients",
+        "content_type" : "portfolio"
+    },
 
-	"banner" : {
-		"title" : "Clients projects",
-		"desc" : "Our portfolio for our clients speaks for itself",
-		"cta" : {
-			"href" : "contact.html",
-			"text" : "Contact us now!"
-		},
-		"cover" : {
-			"desktop" : "assets/img/banner/home/desktop.jpg",
-			"tablet" : "assets/img/banner/home/tablet.jpg",
-			"mobile" : "assets/img/banner/home/mobile.jpg",
-			"alt" : "Text/caption for SEO"
-		}
+    "banner" : {
+        "title" : "Clients projects",
+        "desc" : "Our portfolio for our clients speaks for itself",
+        "cta" : {
+            "href" : "contact.html",
+            "text" : "Contact us now!"
+        },
+        "cover" : {
+            "desktop" : "assets/img/banner/home/desktop.jpg",
+            "tablet" : "assets/img/banner/home/tablet.jpg",
+            "mobile" : "assets/img/banner/home/mobile.jpg",
+            "alt" : "Text/caption for SEO"
+        }
 
-	},
+    },
 
-	"projects" : [
+    "projects" : [
 
-		{
-			"name" : "Tipster",
-			"type" : "client",
-			"client" : "Tipster",
-			"preview" : "assets/img/projects/clients/tipster.png",
-			"desc" : [
-				{
-					"block_name" : "Client had",
-					"block_content" : "Legacy system with zero test coverage, tightly coupled with Microsoft infrastructure and difficult to scale/maintain. Web interface was full of bugs and not mobile friendly."
-				},
-				{
-					"block_name" : "Client needed",
-					"block_content" : "High quality, scalable code and architecture that will be easy to extend and maintain. Also test coverage and infrastructure automation were two of the most important goals."
-				},
-				{
-					"block_name" : "We did",
-					"block_content" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. We built a mobile-aware, WYSIWYG CMS and made static content management straightforward. We made deployment & infrastructure management declarative and fully automated."
-				},
-				{
-					"block_name" : "Outcome",
-					"block_content" : "No vendor lock-in and help with spinning up client's own dev team. Due to high automated tests coverage (> 80%) and zero-downtime Continuous Delivery clutched with advantages of applying git-flow patterns, deployments are just a matter of formality. Project gained more confidence."
-				}
-			],
-			"tags" : [
-				{
-					"group_name" : "Industry",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				},
-				{
-					"group_name" : "Category",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				},
-				{
-					"group_name" : "Technologies",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				}								
-			],
-			"url" : "#"			
+        {
+            "name" : "Tipster",
+            "type" : "client",
+            "client" : "Tipster",
+            "preview" : "assets/img/projects/clients/tipster.png",
+            "desc" : [
+                {
+                    "block_name" : "Client had",
+                    "block_content" : "Legacy system with zero test coverage, tightly coupled with Microsoft infrastructure and difficult to scale/maintain. Web interface was full of bugs and not mobile friendly."
+                },
+                {
+                    "block_name" : "Client needed",
+                    "block_content" : "High quality, scalable code and architecture that will be easy to extend and maintain. Also test coverage and infrastructure automation were two of the most important goals."
+                },
+                {
+                    "block_name" : "We did",
+                    "block_content" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. We built a mobile-aware, WYSIWYG CMS and made static content management straightforward. We made deployment & infrastructure management declarative and fully automated."
+                },
+                {
+                    "block_name" : "Outcome",
+                    "block_content" : "No vendor lock-in and help with spinning up client's own dev team. Due to high automated tests coverage (> 80%) and zero-downtime Continuous Delivery clutched with advantages of applying git-flow patterns, deployments are just a matter of formality. Project gained more confidence."
+                }
+            ],
+            "tags" : [
+                {
+                    "group_name" : "Industry",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                },
+                {
+                    "group_name" : "Category",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                },
+                {
+                    "group_name" : "Technologies",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                }								
+            ],
+            "url" : "#"			
 
-		},
-		{
-			"name" : "High-performance SMS broker",
-			"type" : "client",
-			"client" : "IntelliSMS",
-			"preview" : "assets/img/projects/clients/intellisms.png",
-			"desc" : [
-				{
-					"block_name" : "Client had",
-					"block_content" : "Legacy system with zero test coverage, tightly coupled with Microsoft infrastructure and difficult to scale/maintain. Web interface was full of bugs and not mobile friendly."
-				},
-				{
-					"block_name" : "Client needed",
-					"block_content" : "High quality, scalable code and architecture that will be easy to extend and maintain. Also test coverage and infrastructure automation were two of the most important goals."
-				},
-				{
-					"block_name" : "We did",
-					"block_content" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. We built a mobile-aware, WYSIWYG CMS and made static content management straightforward. We made deployment & infrastructure management declarative and fully automated."
-				},
-				{
-					"block_name" : "Outcome",
-					"block_content" : "No vendor lock-in and help with spinning up client's own dev team. Due to high automated tests coverage (> 80%) and zero-downtime Continuous Delivery clutched with advantages of applying git-flow patterns, deployments are just a matter of formality. Project gained more confidence."
-				}
-			],
-			"tags" : [
-				{
-					"group_name" : "Industry",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				},
-				{
-					"group_name" : "Category",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				},
-				{
-					"group_name" : "Technologies",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				}								
-			],
-			"url" : "#"			
+        },
+        {
+            "name" : "High-performance SMS broker",
+            "type" : "client",
+            "client" : "IntelliSMS",
+            "preview" : "assets/img/projects/clients/intellisms.png",
+            "desc" : [
+                {
+                    "block_name" : "Client had",
+                    "block_content" : "Legacy system with zero test coverage, tightly coupled with Microsoft infrastructure and difficult to scale/maintain. Web interface was full of bugs and not mobile friendly."
+                },
+                {
+                    "block_name" : "Client needed",
+                    "block_content" : "High quality, scalable code and architecture that will be easy to extend and maintain. Also test coverage and infrastructure automation were two of the most important goals."
+                },
+                {
+                    "block_name" : "We did",
+                    "block_content" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. We built a mobile-aware, WYSIWYG CMS and made static content management straightforward. We made deployment & infrastructure management declarative and fully automated."
+                },
+                {
+                    "block_name" : "Outcome",
+                    "block_content" : "No vendor lock-in and help with spinning up client's own dev team. Due to high automated tests coverage (> 80%) and zero-downtime Continuous Delivery clutched with advantages of applying git-flow patterns, deployments are just a matter of formality. Project gained more confidence."
+                }
+            ],
+            "tags" : [
+                {
+                    "group_name" : "Industry",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                },
+                {
+                    "group_name" : "Category",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                },
+                {
+                    "group_name" : "Technologies",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                }								
+            ],
+            "url" : "#"			
 
-		},
-		{
-			"name" : "Energy meets Big Data",
-			"type" : "client",
-			"client" : "Energy",
-			"preview" : "assets/img/projects/clients/energy.png",
-			"desc" : [
-				{
-					"block_name" : "Client had",
-					"block_content" : "Legacy system with zero test coverage, tightly coupled with Microsoft infrastructure and difficult to scale/maintain. Web interface was full of bugs and not mobile friendly."
-				},
-				{
-					"block_name" : "Client needed",
-					"block_content" : "High quality, scalable code and architecture that will be easy to extend and maintain. Also test coverage and infrastructure automation were two of the most important goals."
-				},
-				{
-					"block_name" : "We did",
-					"block_content" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. We built a mobile-aware, WYSIWYG CMS and made static content management straightforward. We made deployment & infrastructure management declarative and fully automated."
-				},
-				{
-					"block_name" : "Outcome",
-					"block_content" : "No vendor lock-in and help with spinning up client's own dev team. Due to high automated tests coverage (> 80%) and zero-downtime Continuous Delivery clutched with advantages of applying git-flow patterns, deployments are just a matter of formality. Project gained more confidence."
-				}
-			],
-			"tags" : [
-				{
-					"group_name" : "Industry",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				},
-				{
-					"group_name" : "Category",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				},
-				{
-					"group_name" : "Technologies",
-					"tags" : ["Cryptocurrency", "Wallet"]
-				}								
-			],
-			"url" : "#"			
+        },
+        {
+            "name" : "Energy meets Big Data",
+            "type" : "client",
+            "client" : "Energy",
+            "preview" : "assets/img/projects/clients/energy.png",
+            "desc" : [
+                {
+                    "block_name" : "Client had",
+                    "block_content" : "Legacy system with zero test coverage, tightly coupled with Microsoft infrastructure and difficult to scale/maintain. Web interface was full of bugs and not mobile friendly."
+                },
+                {
+                    "block_name" : "Client needed",
+                    "block_content" : "High quality, scalable code and architecture that will be easy to extend and maintain. Also test coverage and infrastructure automation were two of the most important goals."
+                },
+                {
+                    "block_name" : "We did",
+                    "block_content" : "New responsive web front-end, developed in a “mobile-first” spirit. Highly scalable API bridge that provides consistent and uniform REST API and makes further migration to Scala micro services fully transparent. We built a mobile-aware, WYSIWYG CMS and made static content management straightforward. We made deployment & infrastructure management declarative and fully automated."
+                },
+                {
+                    "block_name" : "Outcome",
+                    "block_content" : "No vendor lock-in and help with spinning up client's own dev team. Due to high automated tests coverage (> 80%) and zero-downtime Continuous Delivery clutched with advantages of applying git-flow patterns, deployments are just a matter of formality. Project gained more confidence."
+                }
+            ],
+            "tags" : [
+                {
+                    "group_name" : "Industry",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                },
+                {
+                    "group_name" : "Category",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                },
+                {
+                    "group_name" : "Technologies",
+                    "tags" : ["Cryptocurrency", "Wallet"]
+                }								
+            ],
+            "url" : "#"			
 
-		}						
+        }						
 
-	]
+    ]
 
 }

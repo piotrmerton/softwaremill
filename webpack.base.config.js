@@ -19,79 +19,79 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-	entry: {
-		global: './_js/global.js',
-	},
-	output: {
-		path: path.resolve(__dirname, '../assets/js'),
-		filename: '[name].js',
-	},
-	module: {
-		rules: [
-			{ 
-				test: /\.(js|jsx)$/,
-				exclude: [
-					path.resolve(__dirname, 'node_modules'), 
-					path.resolve(__dirname, 'webpack')
-				],            
-	            use: [
-					{
-						// https://github.com/babel/babel-loader
-	                    loader: "babel-loader",	                    
-	                    options: {
-	                        presets: ['@babel/preset-env']
-	                    }
-	                }
-	            ] 
-	        },
+    entry: {
+        global: './_js/global.js',
+    },
+    output: {
+        path: path.resolve(__dirname, '../assets/js'),
+        filename: '[name].js',
+    },
+    module: {
+        rules: [
+            { 
+                test: /\.(js|jsx)$/,
+                exclude: [
+                    path.resolve(__dirname, 'node_modules'), 
+                    path.resolve(__dirname, 'webpack')
+                ],            
+                use: [
+                    {
+                        // https://github.com/babel/babel-loader
+                        loader: "babel-loader",	                    
+                        options: {
+                            presets: ['@babel/preset-env']
+                        }
+                    }
+                ] 
+            },
 
-			{
-				test: /\.(sa|sc|c)ss$/,
-				use: [
-					{
-						loader: MiniCssExtractPlugin.loader,
-						options : {
-							publicPath: '../assets/',
-							sourceMap : true,
-						}						
-					},
-					{
-						loader: 'css-loader',
-						options : {
-							url : false,
-							sourceMap : true,
-						}
-					},
-					{
-						loader: 'sass-loader',
-						options : {
-							sourceMap : true,
-						}
-					},
-				],
-			},	
-		]
-	},
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options : {
+                            publicPath: '../assets/',
+                            sourceMap : true,
+                        }						
+                    },
+                    {
+                        loader: 'css-loader',
+                        options : {
+                            url : false,
+                            sourceMap : true,
+                        }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options : {
+                            sourceMap : true,
+                        }
+                    },
+                ],
+            },	
+        ]
+    },
 
-	devtool: "source-map",
-	resolve: {
-		extensions: ['*', '.js', '.jsx']
-	},  	
-	plugins: [
+    devtool: "source-map",
+    resolve: {
+        extensions: ['*', '.js', '.jsx']
+    },  	
+    plugins: [
 
-		new MiniCssExtractPlugin({
-			// Options similar to the same options in webpackOptions.output
-			// both options are optional
-			filename: "../css/[name].css",
-			chunkFilename: "../css/[id].css"
-		}),
-		new OptimizeCSSAssetsPlugin({
-			cssProcessorOptions: {
-				map: {
-					inline: false,
-					annotation: true,
-				}
-			}
-		}),
-	]
+        new MiniCssExtractPlugin({
+            // Options similar to the same options in webpackOptions.output
+            // both options are optional
+            filename: "../css/[name].css",
+            chunkFilename: "../css/[id].css"
+        }),
+        new OptimizeCSSAssetsPlugin({
+            cssProcessorOptions: {
+                map: {
+                    inline: false,
+                    annotation: true,
+                }
+            }
+        }),
+    ]
 };

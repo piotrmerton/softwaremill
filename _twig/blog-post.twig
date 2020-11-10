@@ -2,73 +2,73 @@
 {% extends "layout/base.twig" %}
 
 {% block header %}
-	{% include 'layout/header.twig' with {'text_black' : 'true'} %}
+    {% include 'layout/header.twig' with {'text_black' : 'true'} %}
 {% endblock %}
 
 
 {% block banner %}
-	{% include 'components/banner/blog-post.twig' with {'text_black' : 'true'} %}
+    {% include 'components/banner/blog-post.twig' with {'text_black' : 'true'} %}
 {% endblock %}
 
 
 {% block content %}
 
-	<section class="content__section section-post">
-		<div class="viewport">
-			<div class="post__grid grid--content">
-				<article class="post__content text--rich" role="main">
+    <section class="content__section section-post">
+        <div class="viewport">
+            <div class="post__grid grid--content">
+                <article class="post__content text--rich" role="main">
 
-					{# blog post content start #}
+                    {# blog post content start #}
 
-					<p>Correlation IDs are unique identifiers attached to a single “business transaction”, which can span a number of requests, events or messages. Such identifiers are most useful when developing microservice-based systems, to trace the request flow graph. But the use-cases are not limited to development: distributed tracing might be useful in production as well. Systems such as Zipkin allow to collect, visualise and manage the gathered traces.</p>
+                    <p>Correlation IDs are unique identifiers attached to a single “business transaction”, which can span a number of requests, events or messages. Such identifiers are most useful when developing microservice-based systems, to trace the request flow graph. But the use-cases are not limited to development: distributed tracing might be useful in production as well. Systems such as Zipkin allow to collect, visualise and manage the gathered traces.</p>
 
-					<figure>
-						<img src="assets/img/content/post-image.png" alt=""/>
-						<figcaption>Example of optional figcaption</figcaption>
-					</figure>
+                    <figure>
+                        <img src="assets/img/content/post-image.png" alt=""/>
+                        <figcaption>Example of optional figcaption</figcaption>
+                    </figure>
 
-					<p>In synchronous frameworks, correlation IDs are typically implemented by setting a <code>ThreadLocal</code> value while the request, message or event is being processed. This value can then be read by loggers, messaging and HTTP libraries. However, implementing support for correlation IDs in an asynchronous setup (e.g. when using <code><a href="#not-sure-wheter-link-or-not">Futures</a></code>), has always been challenging — how to reliably pass the correlation ID across thread boundaries?</p>
+                    <p>In synchronous frameworks, correlation IDs are typically implemented by setting a <code>ThreadLocal</code> value while the request, message or event is being processed. This value can then be read by loggers, messaging and HTTP libraries. However, implementing support for correlation IDs in an asynchronous setup (e.g. when using <code><a href="#not-sure-wheter-link-or-not">Futures</a></code>), has always been challenging — how to reliably pass the correlation ID across thread boundaries?</p>
 
-					<p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
+                    <p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
 
-					<blockquote>
-						<p>For some motivation on why to use wrappers in the first place, and more background on the Task execution model..</p>
-					</blockquote>
-
-
-					<p>In synchronous frameworks, correlation IDs are typically implemented by setting a <code>ThreadLocal</code> value while the request, message or event is being processed. This value can then be read by loggers, messaging and HTTP libraries. However, implementing support for correlation IDs in an asynchronous setup (e.g. when using <code><a href="#not-sure-wheter-link-or-not">Futures</a></code>), has always been challenging — how to reliably pass the correlation ID across thread boundaries?</p>
-
-					<p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
+                    <blockquote>
+                        <p>For some motivation on why to use wrappers in the first place, and more background on the Task execution model..</p>
+                    </blockquote>
 
 
-					{# should you need syntax highlighting, use something like prismajs #}
-					<pre>
-						<code>.executeWithOptions(_.localContextPropagation)</code>
-					</pre>
+                    <p>In synchronous frameworks, correlation IDs are typically implemented by setting a <code>ThreadLocal</code> value while the request, message or event is being processed. This value can then be read by loggers, messaging and HTTP libraries. However, implementing support for correlation IDs in an asynchronous setup (e.g. when using <code><a href="#not-sure-wheter-link-or-not">Futures</a></code>), has always been challenging — how to reliably pass the correlation ID across thread boundaries?</p>
 
-					<script src="https://gist.github.com/adamw/0c201084515f09fc359b2e16fc078207.js"></script>
+                    <p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
 
 
-					<p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
+                    {# should you need syntax highlighting, use something like prismajs #}
+                    <pre>
+                        <code>.executeWithOptions(_.localContextPropagation)</code>
+                    </pre>
 
-					{# blog post content end #}
-
-				</article>
-
-				<aside class="post__meta">
-					{% include 'blocks/author.twig' with { author : author, article : post } %}
-				</aside>
-			</div>
+                    <script src="https://gist.github.com/adamw/0c201084515f09fc359b2e16fc078207.js"></script>
 
 
-			<a class="section__cta button button--transparent" href="blog.html">
-				<figure class="button__ico ui-ico">
-					{{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
-				</figure>
-				<span class="button__label">Find more articles like this in Blog section</span>
-			</a>
-		</div>
-	</section>
+                    <p>One possibility is of course to add an additional parameter to each method, log statement etc., however I think we will all agree that such an approach is not very practical. In Scala this can be done using an implicit parameter but still, all methods involved need to be correlation-ID aware.</p>
+
+                    {# blog post content end #}
+
+                </article>
+
+                <aside class="post__meta">
+                    {% include 'blocks/author.twig' with { author : author, article : post } %}
+                </aside>
+            </div>
+
+
+            <a class="section__cta button button--transparent" href="blog.html">
+                <figure class="button__ico ui-ico">
+                    {{ source(root_assetsDir~'svg/ui/arrow.svg' ) }}
+                </figure>
+                <span class="button__label">Find more articles like this in Blog section</span>
+            </a>
+        </div>
+    </section>
 
 {% endblock %}
 
