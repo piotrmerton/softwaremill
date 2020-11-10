@@ -23,7 +23,7 @@ module.exports = {
         global: './_js/global.js',
     },
     output: {
-        path: path.resolve(__dirname, '../assets/js'),
+        path: path.resolve(__dirname, '../dist/assets/js'),
         filename: '[name].js',
     },
     module: {
@@ -51,7 +51,7 @@ module.exports = {
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options : {
-                            publicPath: '../assets/',
+                            publicPath: '../dist/assets/',
                             sourceMap : true,
                         }						
                     },
