@@ -2,6 +2,12 @@
 
 Front-end development based on Adobe XD files provided by the external client
 
+## Tools used:
+* webpack
+* Babel
+* SASS
+* Twig
+
 ## Preview
 * [Homepage](https://piotrmerton.github.io/softwaremill/index.html)
 * [How We Work](https://piotrmerton.github.io/softwaremill/how-we-work.html)
